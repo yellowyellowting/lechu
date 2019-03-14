@@ -44,7 +44,7 @@ gulp.task('js', function () {
                 ['babelify', { presets: ['@babel/preset-env'] }],
             ]
         }))
-        .pipe(plugins.uglify())
+        // .pipe(plugins.uglify())
         .pipe(plugins.rename({ dirname: '' }))
         .pipe(gulp.dest('dist/js'))
 });

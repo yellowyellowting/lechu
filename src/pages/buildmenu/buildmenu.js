@@ -1,3 +1,7 @@
 import $ from 'jquery';
-var f = $('#footer');
-console.log(f);
+$(function(){
+    $(".nav-tabs a").click(function(e){
+        $(this).
+      
+    });
+})

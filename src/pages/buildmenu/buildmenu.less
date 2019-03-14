@@ -108,16 +108,16 @@
         margin-top: 3*@size;
         .avatar-box{
                 &{
-                width: 20*@size;
-                height: 20*@size;
+                width: 16*@size;
+                height: 16*@size;
                 background: #cccccc;
                 border-radius: 10*@size;
                 float: left;
 
                 } 
                 img{
-                    width: 20*@size;
-                    height: 20*@size;
+                    width: 16*@size;
+                    height: 16*@size;
                     border-radius: 10*@size;
                 }
         }
@@ -129,7 +129,9 @@
                 }
             .person{
                 float: right;
-                margin-top:  2*@size;
+                margin-top:  4*@size;
+                margin-right: 7*@size;
+                font-size: 1.2*@size;
                 color: @text-color;
                 font-weight: 300;
             }
@@ -142,21 +144,26 @@
         }
         .tips{
             &{
-                width: 14*@size;
-                height: 6*@size;
-                padding:  1*@size 1.5*@size;
+                width: 15*@size;
+                height: 6.5*@size;
+                padding:  1.5*@size 1.5*@size;
                 background-color:@itembg-color;
                 float: right;
+                margin-top: 10px;
             }
             .tips-attention{
                 float: left;
                 text-align: center;
                 font-size: 1.2*@size;
                 border-right: 0.1*@size solid #cccccc;
-                padding-right: 0.9*@size;
+                padding-right: 1.1*@size;
                 margin-bottom: 0;
+                p{
+                    margin-bottom: 0;
+                }
                 .number{
                     font-size: 1.6*@size;
+                    color: @primary-color;
                    }
             }
             .tips-attentioned{
@@ -164,12 +171,29 @@
                 text-align: center;
                 margin-bottom: 0;
                 font-size: 1.2*@size;
+                p{
+                    margin-bottom: 0;
+                }
                .number{
                 font-size: 1.6*@size;
+                color: @primary-color;
                }
             }
-         
-
+        }
+        .selectcards{
+            margin-top: 3*@size;
+            padding: 0 2*@size;
+            .tabbable{
+               
+                .nav-tabs{
+                    a{
+                        font-size: 1.6*@size;
+                        background:@itembg-color;
+                        color: #3f3d3d;
+                    }
+            }
+           
+            }
         }
     }
 }
