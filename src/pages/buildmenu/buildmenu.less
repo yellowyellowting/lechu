@@ -1,0 +1,96 @@
+@import '../../styles/base.less';
+
+#header{
+    &{
+        width: 100%;
+        height:  7*@size;
+    };
+    .wrapper{
+       &{
+        width: 80%;
+        height:  100%;
+        margin: auto;
+       };
+    //    .navbar{
+    //     border: 0;
+    //    }
+        .navbar-brand img{
+            width: 10*@size;
+            height: 4*@size;
+            line-height: 7*@size;
+        }
+        .nav-header{
+        &{
+            height: 7*@size;
+            line-height: 7*@size;
+            background: #ffffff;
+        }
+      
+        .input-box{
+            display: inline-block;
+            height: 7*@size;
+            float: left;
+        }
+        .navbar-form {
+            margin: 0;
+        }
+        .form-control{
+            width: 30*@size;
+            height: 4*@size;
+            line-height: 7*@size;
+            float: left;
+            border-top-right-radius: 0;
+            border-bottom-right-radius: 0;
+            border-color: #f0ecec;
+            box-shadow: none;
+            font-weight: 300;
+        }
+        .btn-default{
+            height: 4*@size;
+            width:  6*@size;
+            float: left;
+            border-left: 0;
+            border-top-left-radius: 0;
+            border-bottom-left-radius: 0;
+            border-color: @primary-color;
+            background-color: @primary-color;
+            color: @white-color;
+            font-weight: 300;
+        }
+
+        .nav-menu{
+            &{
+                float: left;
+                width: 30*@size;
+                font-size: 1.8*@size;
+                display: flex;
+                justify-content: space-around;
+             
+            }
+            a{
+                color: @primary-color;
+            }
+        }
+        .navbar-right{
+            &{
+                height: 7*@size;
+                line-height: 7*@size;
+            }
+            li{
+                padding: @size;
+                .line{
+                    height: 4@size;
+                    border-right:0.1@size solid #cccccc;
+                }
+            }
+           
+        }
+        
+
+       }
+    }
+}
+#main{
+    font-size: 2*@size;
+    
+}
