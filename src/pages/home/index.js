@@ -1,10 +1,7 @@
-import { getTaoSeats, login } from '../../utils/api';
+import { getPopRecipes } from '../../utils/api';
 
-login({
-    username: '',
-    password: ''
-}).then((response) => {
-    console.log(response);
+getPopRecipes().then((result) => {
+    document.write(JSON.stringify(result.data));
 }).catch((err) => {
     console.log(err);
 })

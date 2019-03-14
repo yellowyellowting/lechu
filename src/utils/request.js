@@ -1,17 +1,17 @@
 let baseUrl
 if (process.env.NODE_ENV === 'dev') {
-	baseUrl = "https://www.easy-mock.com/mock/5c49adc80ae62c756dd9af6b/test";
+	baseUrl = "https://www.easy-mock.com/mock/5c89ec568b272d3a471ce06e/luchu";
 } else {
-	baseUrl = "https://www.easy-mock.com/mock/5c49adc80ae62c756dd9af6b/test";
+	baseUrl = "https://www.easy-mock.com/mock/5c89ec568b272d3a471ce06e/luchu";
 }
 
-export default (url = '', data = {}, type = 'GET', method = 'fetch') => {
+export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 	type = type.toUpperCase();
 	url = baseUrl + url;
 
 	if (type == 'GET') {
 		let dataStr = ''; //数据拼接字符串
-		Object.keys(data).forEach(key => {
+		data && Object.keys(data).forEach(key => {
 			dataStr += key + '=' + data[key] + '&';
 		})
 
@@ -39,7 +39,13 @@ export default (url = '', data = {}, type = 'GET', method = 'fetch') => {
 			})
 		}
 		
-		return fetch(url, requestConfig);
+		try {
+			const response = await fetch(url, requestConfig);
+			const responseJson = await response.json();
+			return responseJson
+		} catch (error) {
+			throw new Error(error)
+		}
 	} else {
 		return new Promise((resolve, reject) => {
 			let requestObj;

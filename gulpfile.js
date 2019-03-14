@@ -26,69 +26,88 @@ const jsFiles = files.filter(fileName => fileName.endsWith('.js'));
 const lessFiles = files.filter(fileName => fileName.endsWith('.less'));
 const htmlFiles = files.filter(fileName => fileName.endsWith('.html'));
 
-// 删除dist目录
-gulp.task('clean', function () {
-    gulp.src('dist', {
-        read: false
-    })
-    .pipe(plugins.clean({
-        force: true
-    }));
-});
-
 // 打包js
 gulp.task('js', function () {
-    gulp.src(jsFiles)
+    return gulp.src(jsFiles)
         .pipe(plugins.bro({
             transform: [
-                ['babelify', { presets: ['@babel/preset-env'] }],
+                ['babelify', {
+                    presets: [
+                        ['@babel/preset-env', {
+                            targets: {
+                                "esmodules": true,
+                            },
+                            useBuiltIns: 'usage'
+                        }]
+                    ]
+                }],
             ]
         }))
         // .pipe(plugins.uglify())
-        .pipe(plugins.rename({ dirname: '' }))
-        .pipe(gulp.dest('dist/js'))
+        .pipe(plugins.rename({
+            dirname: ''
+        }))
+        .pipe(gulp.dest('dist/js'));
 });
 
 // 打包css
 gulp.task('less', function () {
-    gulp.src(lessFiles)
+    return gulp.src(lessFiles)
         .pipe(plugins.less())
         .pipe(plugins.cleanCss())
-        .pipe(plugins.rename({ dirname: '' }))
+        .pipe(plugins.rename({
+            dirname: ''
+        }))
         .pipe(gulp.dest('dist/css'));
 });
 
 // 打包图片
 gulp.task('img', function () { 
-    gulp.src('src/assets/img/*.*')
+    return gulp.src('src/assets/img/*.*')
     .pipe(plugins.imagemin({progressive: true}))
     .pipe(gulp.dest('dist/img'))
 });
 
 // 打包html
 gulp.task('html', function () {
-    gulp.src(htmlFiles)
+    return gulp.src(htmlFiles)
         .pipe(plugins.htmlmin())
-        .pipe(plugins.rename({ dirname: '' }))
+        .pipe(plugins.rename({
+            dirname: ''
+        }))
         .pipe(gulp.dest('dist'));
 });
 
 gulp.task('watch', function () {
-    gulp.watch('src/**', ['js', 'less', 'img', 'html']);
+    gulp.watch('src/**/*.*', ({
+        path
+    }) => {
+        switch (true) {
+            case path.endsWith('.js'):
+                gulp.start('js');
+                break;
+            case path.endsWith('.less'):
+                gulp.start('less');
+                break;
+            case path.endsWith('.html'):
+                gulp.start('html');
+                break;
+        }
+    });
 });
 
 // 启动live reload server
 gulp.task('server', function () {
-    setTimeout(() => {
-        gulp.src('dist')
+    return gulp.src('dist')
         .pipe(plugins.webserver({
             port: 8081,
             livereload: true,
-            open: true
+            open: true,
+            directoryListing: {
+                enable: true,
+                path: 'dist'
+            }
         }));
-    }, 3000);
 });
 
-gulp.task('default', ['clean'], function () {
-    gulp.start('server', 'js', 'less', 'img', 'html', 'watch');
-});
+gulp.task('default', plugins.sequence('js', 'less', 'img', 'html', 'watch', 'server'));
