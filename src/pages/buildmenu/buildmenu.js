@@ -1,3 +1,3 @@
-// import $ from "jquery";
+import $ from 'jquery';
 var f = $('#footer');
 console.log(f);

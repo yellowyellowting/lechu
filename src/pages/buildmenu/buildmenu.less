@@ -4,16 +4,19 @@
     &{
         width: 100%;
         height:  7*@size;
+
     };
     .wrapper{
        &{
-        width: 80%;
         height:  100%;
+        width: 82%;
+        padding: 0 0;
         margin: auto;
+        min-width: 100*@size;
        };
-    //    .navbar{
-    //     border: 0;
-    //    }
+       .navbar{
+        border: 0;
+       }
         .navbar-brand img{
             width: 10*@size;
             height: 4*@size;
@@ -25,11 +28,12 @@
             line-height: 7*@size;
             background: #ffffff;
         }
-      
+        .navbar-header{
+            margin-right: 13*@size;
+        }
         .input-box{
             display: inline-block;
             height: 7*@size;
-            float: left;
         }
         .navbar-form {
             margin: 0;
@@ -91,6 +95,81 @@
     }
 }
 #main{
-    font-size: 2*@size;
-    
+    &{
+        width: 100%;
+       
+    }
+    .main-wrapper{
+        width: 83%;
+        margin: auto;
+        min-width: 102*@size;
+        height: 900px;
+        border: 1px sol #cccccc;
+        margin-top: 3*@size;
+        .avatar-box{
+                &{
+                width: 20*@size;
+                height: 20*@size;
+                background: #cccccc;
+                border-radius: 10*@size;
+                float: left;
+
+                } 
+                img{
+                    width: 20*@size;
+                    height: 20*@size;
+                    border-radius: 10*@size;
+                }
+        }
+        .title{
+            h1{
+                float: left;
+                padding-left: 2*@size;
+                
+                }
+            .person{
+                float: right;
+                margin-top:  2*@size;
+                color: @text-color;
+                font-weight: 300;
+            }
+        }
+        .time{
+            margin-top: 8*@size;
+            padding-left:  25*@size;
+            color: @text-color;
+            font-weight: 300;
+        }
+        .tips{
+            &{
+                width: 14*@size;
+                height: 6*@size;
+                padding:  1*@size 1.5*@size;
+                background-color:@itembg-color;
+                float: right;
+            }
+            .tips-attention{
+                float: left;
+                text-align: center;
+                font-size: 1.2*@size;
+                border-right: 0.1*@size solid #cccccc;
+                padding-right: 0.9*@size;
+                margin-bottom: 0;
+                .number{
+                    font-size: 1.6*@size;
+                   }
+            }
+            .tips-attentioned{
+                float: right;
+                text-align: center;
+                margin-bottom: 0;
+                font-size: 1.2*@size;
+               .number{
+                font-size: 1.6*@size;
+               }
+            }
+         
+
+        }
+    }
 }
