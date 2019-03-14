@@ -53,6 +53,7 @@ gulp.task('js', function () {
 // 打包css
 gulp.task('less', function () {
     return gulp.src(lessFiles)
+        .pipe(plugins.plumber())
         .pipe(plugins.less())
         .pipe(plugins.cleanCss())
         .pipe(plugins.rename({
@@ -71,6 +72,7 @@ gulp.task('img', function () {
 // 打包html
 gulp.task('html', function () {
     return gulp.src(htmlFiles)
+        .pipe(plugins.plumber())
         .pipe(plugins.htmlmin())
         .pipe(plugins.rename({
             dirname: ''
@@ -82,7 +84,6 @@ gulp.task('watch', function () {
     gulp.watch('src/**/*.*', ({
         path
     }) => {
-        console.log(path + ' change');
         switch (true) {
             case path.endsWith('.js'):
                 gulp.start('js');

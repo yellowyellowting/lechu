@@ -14,7 +14,7 @@
         margin: auto;
         min-width: 100*@size;
        };
-       .navbar{
+        .navbar{
         border: 0;
        }
         .navbar-brand img{
@@ -61,20 +61,18 @@
             color: @white-color;
             font-weight: 300;
         }
-
         .nav-menu{
-            &{
-                float: left;
-                width: 30*@size;
-                font-size: 1.8*@size;
-                display: flex;
-                justify-content: space-around;
-             
+                &{
+                    float: left;
+                    width: 30*@size;
+                    font-size: 1.8*@size;
+                    display: flex;
+                    justify-content: space-around;
+                }
+                a{
+                    color: @primary-color;
+                }
             }
-            a{
-                color: @primary-color;
-            }
-        }
         .navbar-right{
             &{
                 height: 7*@size;
@@ -87,17 +85,13 @@
                     border-right:0.1@size solid #cccccc;
                 }
             }
-           
         }
-        
-
-       }
+    }
     }
 }
 #main{
     &{
         width: 100%;
-       
     }
     .main-wrapper{
         width: 83%;
@@ -107,19 +101,19 @@
         border: 1px sol #cccccc;
         margin-top: 3*@size;
         .avatar-box{
-                &{
+            &{
+            width: 16*@size;
+            height: 16*@size;
+            background: #cccccc;
+            border-radius: 10*@size;
+            float: left;
+
+            } 
+            img{
                 width: 16*@size;
                 height: 16*@size;
-                background: #cccccc;
                 border-radius: 10*@size;
-                float: left;
-
-                } 
-                img{
-                    width: 16*@size;
-                    height: 16*@size;
-                    border-radius: 10*@size;
-                }
+            }
         }
         .title{
             h1{
