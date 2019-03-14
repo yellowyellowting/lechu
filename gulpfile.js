@@ -82,6 +82,7 @@ gulp.task('watch', function () {
     gulp.watch('src/**/*.*', ({
         path
     }) => {
+        console.log(path + ' change');
         switch (true) {
             case path.endsWith('.js'):
                 gulp.start('js');

@@ -184,23 +184,73 @@
             margin-top: 3*@size;
             padding: 0 2*@size;
             .tabbable{
-               
+              
                 .nav-tabs{
+                    &{
+                        position: relative;
+                    }
                     a{
                         font-size: 1.6*@size;
                         background:@itembg-color;
                         color: #3f3d3d;
-                        font-weight: 300;
+                        font-weight: 350;
                     }
-                    a:hover{
-                        background:@primary-color;
+                    .draft{
+                        position: absolute;
+                        right: 0px;
+                       a{
+                        background: @primary-color;
                         color: #ffffff;
+                       }
                     }
+                    .clicked{
+                        color: #ffffff;
+                        background: @primary-color;
+                    }
+                }
+                
+                .tab-content{
                     
-                    
-            }
-           
+                        .content-box{
+                            margin-bottom: 50px;
+                    }
+                    .item{
+                        .username{
+                            margin-top:2*@size;
+                            margin-bottom:1*@size;
+                            font-size: 1.6*@size;
+                            font-weight: 500;
+                        }
+                        a{
+                            color: #666666;
+                            text-decoration: none;
+                        }
+                        .title{
+                            padding-top: 2*@size;
+                            padding-left: 1*@size;
+                            font-size: 1.6*@size;
+                            color: aquamarine;
+                        }
+                        .info{
+                            padding-left: 1*@size;
+                            font-size: 1.2*@size;
+                            font-weight: 300;
+                            color: #cccccc;
+                            a{
+                                color: #cccccc;
+                                text-decoration: none;
+                            }
+                        }
+                    }
+                }
             }
         }
+        .btn-box{
+            margin-top: 10*@size;
+        }
+
+       
+
     }
+
 }
