@@ -1,0 +1,182 @@
+.container {
+    width: 1020px;
+    margin-top: 30px;
+}
+
+.attention {
+    background-color: #f5f6f5;
+    width: 660px;
+    height: 48px;
+    display: flex;
+    &>.left-nav-attention {
+        background-color: #dd3915;
+        color: white;
+    }
+}
+
+.nav-attention {
+    font-size: 16px;
+    padding: 13px 22px 13px 22px;
+    border-right: 2px solid white;
+    cursor: pointer;
+    &:hover {
+        background-color: #dd3915;
+        color: white;
+        border-right: 2px solid white;
+    }
+}
+
+.works-right {
+    & {
+        padding-right: 0;
+    }
+    &>.container-work-right {
+        font-size: 16px;
+        padding: 18px 15px;
+        height: 58px;
+        margin-bottom: 40px;
+        background-color: #f5f6f5;
+        &>a {
+            color: #dd3915;
+            text-decoration: none;
+        }
+        &>a:hover {
+            color: white;
+            background-color: #dd3915;
+        }
+    }
+}
+
+.works-main {
+    border: 1px solid rgb(236, 236, 236);
+    margin-top: 25px;
+    width: 660px;
+    font-size: 16px;
+    &>.top-works-main {
+        margin: 0 20px;
+        padding: 14px 0;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        &>.top-works-main-left {
+            width: 540px;
+            &>.works-items:hover {
+                color: white;
+                background-color: #dd3915;
+            }
+            &>span {
+                font-weight: bold;
+            }
+            &>a {
+                color: #dd3915;
+                text-decoration: none;
+                &>img {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+            }
+        }
+        &>.top-works-main-right {
+            line-height: 48px;
+            font-size: 12px;
+            color: rgb(129, 129, 129);
+        }
+    }
+    &>.mid-works-main {
+        &>.mid-works-main-image {
+            float: left;
+            width: 280px;
+            height: 280px; // border: 1px solid red;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            &>.works-image {
+                width: 280px;
+                height: 280px;
+                position: absolute;
+                cursor: pointer;
+            }
+            &>.on-works-image {
+                float: left;
+                position: relative;
+                left: 95px;
+                top: 120px;
+                background-color: #cc2e0a;
+                width: 100px;
+                height: 45px;
+                border: 3px solid rgba(255, 255, 255, 0.4);
+                border-radius: 2px;
+                text-align: center;
+                line-height: 40px;
+                color: #ffffff;
+                background-clip: padding-box;
+                display: none;
+                cursor: pointer;
+                
+                &:hover{
+                    filter:brightness(108%);
+                }
+                &>i{
+                    font-size: 15px;
+                    font-family: back;
+                }
+            }
+        }
+        &>.works-intro {
+            float: right;
+            margin: 0 20px;
+            width: 318px;
+            &>span {
+                color: #dd3915;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover {
+                    background-color: #dd3915;
+                    color: white;
+                }
+            }
+            &>.works-like {
+                float: right;
+                margin-top: 190px;
+                &>i {
+                    font-size: 20px;
+                    color: #8d8986;
+                    cursor: pointer;
+                }
+                &>.works-like-number {
+                    color: #8d8986;
+                    font-size: 12px;
+                }
+                &>.works-like-button-new {
+                    color: #e8afa6;
+                }
+            }
+        }
+    }
+}
+
+.bottom-works-main {
+    background-color: #f5f6f5;
+    height: 70px;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    display: flex;
+    &>input:nth-child(1) {
+        width: 100%;
+        font-size: 12px;
+        border: none;
+        outline: none;
+    }
+    &>input:nth-child(2) {
+        width: 70px;
+        font-size: 14px;
+        border: none;
+        outline: none;
+        margin-left: 15px;
+        background-color: #dd3915;
+        color: white;
+        display: none;
+    }
+}
