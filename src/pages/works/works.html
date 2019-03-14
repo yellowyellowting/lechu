@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+  <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+    integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+    integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+  <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+    integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+    crossorigin="anonymous"></script>
+  <script src="./works.js" defer async="true"></script>
+  <link rel="stylesheet" href="./works.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1022393_bq4vwddqfy9.css">
+</head>
+
+<body>
+  <header id="header">
+    <div class="wrapper">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid  nav-header">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="">
+              < img src='./img/logo.png'>
+              </ a>
+          </div>
+          <div class="input-box">
+            <!-- <input type="text" class="form-control" placeholder="Text input"> -->
+            <form class="navbar-form navbar-left" role="search">
+              <div class="form-group">
+                <input type="text" class="form-control" placeholder="搜索菜谱、美食">
+                <button type="submit" class="btn btn-default">搜索</button>
+              </div>
+            </form>
+          </div>
+          <div class="nav-menu">
+            <a href="#">首页</a>
+            <a href="#">菜谱分类</a>
+            <a href="#">菜单</a>
+            <a href="#">作品动态</a>
+          </div>
+          <div class=" navbar-right">
+            <i class="iconfont icon-gongneng"></i>
+            <i class="iconfont icon-gongneng"></i>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <div class="container ">
+    <div class="row row-no1">
+      <div class="col-sm-8 col-no1">
+        <div class="row attention">
+          <div class="nav-attention left-nav-attention">
+            我关注的更新
+          </div>
+          <div class="nav-attention">
+            全站更新
+          </div>
+        </div>
+
+        <div class="row works-main">
+          <div class="top-works-main">
+            <div class="top-works-main-left">
+              <a href="javascript:void(0);">
+                <img src="../../assets/img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg" alt="">
+                <span>悦己2016</span>
+              </a>
+              <span>做过</span>
+              <a class="works-items" href="javascript:void(0);">双菇菠菜粉丝汤</a>
+            </div>
+            <div class="top-works-main-right">
+              刚刚
+            </div>
+          </div>
+          <div class="mid-works-main">
+            <div class="mid-works-main-image">
+              <img class="works-image" src="../../assets/img/07ba7240d0af421897a074a01334f6e6_1280w_922h.jpg" alt="">
+              <div class="on-works-image"><i class="iconfont icon-taoxin"> 赞</i></div>
+            </div>
+            <div class="works-intro">
+              <p>#午餐 • 2019年3月14日# 满满的一锅 吃得干干净净😋duaiduai表示很好吃</p>
+              <span>双菇菠菜粉丝汤的做法</span>
+              <div class="works-like">
+                <i class="iconfont icon-weibiaoti1-copy works-like-button"></i>
+                <span class="works-like-number works-like-number-num">0</span><span class="works-like-number">赞</span>
+              </div>
+            </div>
+          </div>
+          <div class="bottom-works-main">
+            <input class="works-comment" type="text" placeholder="评论">
+            <input class="works-comment-button" type="button" value="评论">
+          </div>
+        </div>
+      </div>
+      <div class="col-sm-4 works-right">
+        <div class="container-work-right">> <a href="javascript:void(0);">查看全部提醒</a></div>
+        <div class="container-work-right">> <a href="javascript:void(0);">下厨房的厨友</a></div>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
