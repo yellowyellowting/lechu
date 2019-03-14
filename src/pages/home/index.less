@@ -1,5 +1,93 @@
 @import '../../styles/base';
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
 
-.text {
-    color: 'blue';
+.container nav {
+    & {
+        min-width: 1020px;
+        box-sizing: border-box;
+        padding-left: 0;
+        padding-right: 0;
+    }
+    .container-fluid {
+        height: 70px;
+    }
+    .navbar-header {
+        img {
+            display: inline-block;
+            height: 40px;
+        }
+    }
+    .navbar-nav {
+        & {
+            height: 70px;
+        }
+        li {
+            a {
+                line-height: 40px;
+                color: @primary-color;
+            }
+        }
+    } // 搜索栏
+    .navbar-form {
+        margin-top: 20px;
+    }
+}
+
+.container .content {
+    & {
+        padding-left: 0;
+        padding-right: 0;
+    }
+    ul {
+        & {
+            padding-left: 0;
+            width: 130px;
+            border: 1px solid red;
+            list-style: none;
+            margin-right: 40px;
+        }
+        li {
+            width: 130px;
+            height: 32px;
+            line-height: 32px;
+            margin-bottom: 10px;
+            a {
+                display: inline-block;
+                width: 130px;
+                height: 32px;
+                color: @text-color;
+                text-decoration: none;
+                i{
+                    display: inline-block;
+                    height: 32px;
+                    width: 32px;
+                }
+            }
+            a:hover{
+                color: @primary-color;
+            }
+        }
+    }
+
+    .center{
+        width: 490px;
+        height: 260px;
+        .swiper-container{
+            width: 490px;
+            height: 260px;
+        }
+        .swiper-pagination-bullet-active{
+            background-color: @primary-color;
+        }
+        .box{
+            width: 500px;
+            height: 170px;
+            border: 1px solid red;
+            margin-top: 40px;
+        }
+    }
 }
