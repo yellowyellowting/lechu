@@ -6,62 +6,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>乐厨网</title>
-  <!-- <link rel="stylesheet" href="../../utils/bootstap/css/bootstrap.css"> -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+    crossorigin="anonymous">
   <link rel="stylesheet" href="./css/index.css">
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1087847_jwrhqu8gpu.css">
-  <!-- <link rel="stylesheet" href="../../utils/plugs/swiper/swiper.css"> -->
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1087847_3r479whzakc.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
 </head>
 
 <body>
   <!-- 导航栏 -->
-  <div class="container nav">
-    <nav class="navbar navbar-default" role="navigation">
-      <div class="container-fluid">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
-        </div>
-        <div>
-          <ul class="nav navbar-nav">
-            <li><a href="#">首页</a></li>
-            <li><a href="#">菜单</a></li>
-            <li><a href="#">作品动态</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-                菜谱分类
-                <b class="caret"></b>
-              </a>
-              <ul class="dropdown-menu">
-                <li><a href="#">jmeter</a></li>
-                <li><a href="#">EJB</a></li>
-                <li><a href="#">Jasper Report</a></li>
-                <li class="divider"></li>
-                <li><a href="#">分离的链接</a></li>
-                <li class="divider"></li>
-                <li><a href="#">另一个分离的链接</a></li>
-              </ul>
-            </li>
+  <div style="height:70px;background-color: #f8f8f8;" class="head">
+    <div class="container nav">
+      <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid">
+          <div class="navbar-header">
+            <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+          </div>
+          <div>
+            <ul class="nav navbar-nav">
+              <li><a href="#">首页</a></li>
+              <li><a href="#">菜单</a></li>
+              <li><a href="#">作品动态</a></li>
+              <li class="dropdown">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                  菜谱分类
+                  <b class="caret"></b>
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a href="#">jmeter</a></li>
+                  <li><a href="#">EJB</a></li>
+                  <li><a href="#">Jasper Report</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">分离的链接</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">另一个分离的链接</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <!-- 搜索栏 -->
+          <form class="navbar-form navbar-left" role="search">
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="搜索食谱、食材">
+            </div>
+            <button type="submit" class="btn btn-default">搜索</button>
+          </form>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
           </ul>
         </div>
-        <!-- 搜索栏 -->
-        <form class="navbar-form navbar-left" role="search">
-          <div class="form-group">
-            <input type="text" class="form-control" placeholder="搜索食谱、食材">
-          </div>
-          <button type="submit" class="btn btn-default">搜索</button>
-        </form>
+      </nav>
+    </div>
+  </div>
 
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
-          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
-        </ul>
-      </div>
-    </nav>
-
-    <div class="container content">
+  <div class="container content">
+    <div class="pull-left">
+      <!-- 左边列表 -->
       <ul class="list pull-left">
+        <p class="text-center"><a href="#">全部菜谱分类</a></p>
+        <div>
+          <img src="./img/app.png" alt="">
+        </div>
       </ul>
+
       <div class="center pull-left">
         <!-- 轮播1 -->
         <div class="swiper-container">
@@ -75,25 +84,136 @@
           <!-- 分页器 -->
           <div class="swiper-pagination"></div>
         </div>
-        <!-- 轮播2 -->
-        <div class ='box' id="nba">
-          a
+        <!-- 新秀菜谱 -->
+        <div>
+          <div class='row box'>
+            <h3>新秀菜谱
+              <a href="#">全部</a>
+            </h3>
+            <div class="col-sm-4 col-md-4">
+              <div class="thumbnail">
+                <img src="./img/1.jpg" alt="通用的占位符缩略图">
+                <div class="caption text-center">
+                  <p>一些示例文本。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+              <div class="thumbnail">
+                <img src="./img/1.jpg" alt="通用的占位符缩略图">
+                <div class="caption text-center">
+                  <p>一些示例文本。</p>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+              <div class="thumbnail">
+                <img src="./img/1.jpg" alt="通用的占位符缩略图">
+                <div class="caption text-center">
+                  <p>一些示例文本</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 最近流行 -->
+        <div>
+          <div class="row fash">
+            <h3 class="fash_h3">最近流行
+              <a href="#">全部</a>
+            </h3>
+          </div>
+        </div>
+        <!-- 时令食材 -->
+        <div>
+          <div class="row time">
+            <h3 class="">时令食材
+              <a href="#">全部</a>
+            </h3>
+            <div class="time_list">
+            </div>
+          </div>
         </div>
       </div>
-      <div class="pull-left">34</div>
+      <div class=".clearfix"></div>
+      <!-- 作品 -->
+      <div class="zp pull-left">
+        <a href="#" class="list-group-item" style="height:100px">
+          <h2 class="list-group-item-heading">
+            参照 <span>12664868</span> 菜谱，大家做出 <span>49610820</span> 作品
+          </h2>
+          <p class="list-group-item-text">
+            <span class="s">最新上传</span>&nbsp;&nbsp;&nbsp;
+            <span>正在流行</span>&nbsp;&nbsp;&nbsp;
+            <span>24小时最佳</span>
+          </p>
+        </a>
+        <div class="zp_item">
+        </div>
+      </div>
     </div>
+
+    <!-- 右边 -->
+    <div class="pull-left right row">
+      <!-- 登陆信息 -->
+      <div class="info text-center col-xs-12 col-sm-12">
+        <button type="button" class="btn btn-danger">
+          <i class="iconfont icon-qq"></i>
+          <span>QQ登陆</span>
+        </button><br>
+        <button type="button" class="btn btn-danger">
+          <i class="iconfont icon-weibo"></i>
+          <span>微博登陆</span>
+        </button>
+        <p>
+          <a href="#">手机/邮箱登录</a>
+          <span>|</span>
+          <a href="#">注册</a>
+        </p>
+        <p><a href="#">网上不良信息举报专区</a></p>
+      </div>
+
+      <!-- 流行搜索 -->
+      <div class="search">
+        <div class="row col-xs-12 col-sm-12">
+          <h3 class="">流行搜索</h3>
+          <div class="row col-xs-6">
+            <ul>
+              <li class="row col-xs-12 left">
+                <span>1</span>
+                <span>可乐鸡翅</span>
+                <i class="iconfont icon-up"></i>
+              </li>
+              <li class="row col-xs-12 left">
+                  <span>2</span>
+                  <span>可乐鸡翅</span>
+                  <i class="iconfont icon-down"></i>
+                </li>
+            </ul>
+          </div>
+          <div class="row col-xs-6 right">
+            <ul>
+              
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+
   </div>
+  </div>
+
 
 
 
 </body>
 
-<!-- <script src="../../utils/jquery-3.3.1.js"></script> -->
-<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
-<!-- <script src="../../utils/bootstap/js/bootstrap.js"></script> -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 <script src="./js/index.js"></script>
-<!-- <script src="../../utils/plugs/swiper/swiper.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+  crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
-<script src="../../utils/plugs/jquery_carousel_slider/jquery_carousel_slider.js"></script>
+
 </html>

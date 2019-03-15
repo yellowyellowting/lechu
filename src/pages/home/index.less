@@ -1,11 +1,35 @@
 @import '../../styles/base';
+.titleH3(){
+    color:  @yellow-text-color;
+    padding-left: 15px;
+    padding-top: 0;
+}
+.aHover(){
+    background-color: @primary-color;
+    text-decoration: none;
+    color: @white-color;
+}
+.aPinter(){
+    color: @primary-color;
+    cursor: pointer;
+}
 html,
 body {
     margin: 0;
     padding: 0;
 }
-
+.head{
+    height: 70px;
+    background-color: #f8f8f8;
+    border: 1px solid #f8f8f8;
+    display: block;
+    margin-bottom: 30px;
+    .navbar{
+        border: none;
+    }
+}
 .container nav {
+    background-color: #f8f8f8;
     & {
         min-width: 1020px;
         box-sizing: border-box;
@@ -37,7 +61,7 @@ body {
     }
 }
 
-.container .content {
+.content {
     & {
         padding-left: 0;
         padding-right: 0;
@@ -46,9 +70,18 @@ body {
         & {
             padding-left: 0;
             width: 130px;
-            border: 1px solid red;
+            // border: 1px solid red;
             list-style: none;
             margin-right: 40px;
+        }
+        &>div{
+            // border: 1px solid green;
+            height: 500px;
+        }
+        &>p{
+            a:hover{
+                .aHover();
+            }
         }
         li {
             width: 130px;
@@ -85,9 +118,131 @@ body {
         }
         .box{
             width: 500px;
-            height: 170px;
-            border: 1px solid red;
-            margin-top: 40px;
+            height: 200px;
+            h3{
+                .titleH3();
+                a{
+                    font-size: 14px;
+                }
+                a:hover{
+                    .aHover();
+                }
+            }
+            .caption{
+                p{
+                    font-size: 14px;
+                }
+            }
+        }
+    }
+    .fash{
+        h3{
+            .titleH3();
+            a{
+                font-size: 14px;
+            }
+            a:hover{
+                .aHover();
+            }
+        }
+        .caption:hover{
+            .aPinter();
+        }
+    }
+    .time{
+        background-color: #F5F6F5;
+        h3{
+            .titleH3();
+            a{
+                font-size: 14px;
+            }
+            a:hover{
+                .aHover();
+            }
+        }
+        .caption{
+            height: 20px;
+            padding: 0;
+        }
+        .caption:hover{
+            .aPinter();
+        }
+    }
+    .zp{
+        margin-top: 880px;
+        width: 666px;
+        a{
+            background-color: #F5F6F5;
+            border: none;
+            display: inline-block;
+            height: 120px;
+            width: 666px;
+            img{
+                width: 80px;
+                height: 80px;
+                float: right;
+            }
+            p{
+                float: left;
+            }
+            .des{
+                width: 300px;
+                float: left;
+            }
+        }
+        a:first-child{
+            margin-bottom: 5px;
+            h2{
+                color: @yellow-text-color;
+            }
+            span{
+                color: @primary-color;
+            }
+            p{
+                span:hover{
+                    .aHover();
+                }
+            }
+        }
+        .item{
+            margin: 1px 0;
+        }
+    }
+    .right{
+        margin-left: 70px;
+        .info{
+            width: 435px;
+            height: 260px;
+            background-color: #F5F6F5;
+            padding-top: 40px;
+            button{
+                width: 200px;
+                margin: 5px;
+            }
+            p{
+                a:hover{
+                    .aHover();
+                }
+                a{
+                    font-size: 14px;
+                }
+            }
+            p:last-child{
+                margin-top: 60px;
+            }
+        }
+        // 流行搜索
+        .search{
+            ul{
+                li{
+                    .icon-up{
+                        color: #F49576;
+                    }
+                    .icon-down{
+                        color: #8BD0DC;
+                    }
+                }
+            }
         }
     }
 }
