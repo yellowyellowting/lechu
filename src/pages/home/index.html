@@ -1,21 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-    <link rel="stylesheet" href="./css/index.css">
-    <link rel="stylesheet" href="../src/utils/bootstap/css/bootstrap.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>乐厨网</title>
+  <!-- <link rel="stylesheet" href="../../utils/bootstap/css/bootstrap.css"> -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/index.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1087847_jwrhqu8gpu.css">
+  <!-- <link rel="stylesheet" href="../../utils/plugs/swiper/swiper.css"> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.css">
 </head>
+
 <body>
-    <header id="header">
-        
-    </header>
-    <main id="main">正在获取网络数据。。。</main>
-    <footer id="footer"></footer>
+  <!-- 导航栏 -->
+  <div class="container nav">
+    <nav class="navbar navbar-default" role="navigation">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+        </div>
+        <div>
+          <ul class="nav navbar-nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">菜单</a></li>
+            <li><a href="#">作品动态</a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                菜谱分类
+                <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">jmeter</a></li>
+                <li><a href="#">EJB</a></li>
+                <li><a href="#">Jasper Report</a></li>
+                <li class="divider"></li>
+                <li><a href="#">分离的链接</a></li>
+                <li class="divider"></li>
+                <li><a href="#">另一个分离的链接</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+        <!-- 搜索栏 -->
+        <form class="navbar-form navbar-left" role="search">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="搜索食谱、食材">
+          </div>
+          <button type="submit" class="btn btn-default">搜索</button>
+        </form>
+
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+          <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container content">
+      <ul class="list pull-left">
+      </ul>
+      <div class="center pull-left">
+        <!-- 轮播1 -->
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="./img/1.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/2.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/3.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/4.jpg" alt=""></div>
+            <div class="swiper-slide"><img src="./img/5.jpg" alt=""></div>
+          </div>
+          <!-- 分页器 -->
+          <div class="swiper-pagination"></div>
+        </div>
+        <!-- 轮播2 -->
+        <div class ='box' id="nba">
+          a
+        </div>
+      </div>
+      <div class="pull-left">34</div>
+    </div>
+  </div>
 
 
-    <script src="./js/index.js"></script>
+
 </body>
+
+<!-- <script src="../../utils/jquery-3.3.1.js"></script> -->
+<script src="https://cdn.bootcss.com/jquery/3.3.1/jquery.js"></script>
+<!-- <script src="../../utils/bootstap/js/bootstrap.js"></script> -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="./js/index.js"></script>
+<!-- <script src="../../utils/plugs/swiper/swiper.js"></script> -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.js"></script>
+<script src="../../utils/plugs/jquery_carousel_slider/jquery_carousel_slider.js"></script>
 </html>
