@@ -1,6 +1,28 @@
-.container {
-    width: 1020px;
-    margin-top: 30px;
+@media (max-width: 768px) {
+    .container {
+        width: 660px;
+        margin-top: 15px;
+    }
+    .works-right {
+        display: none;
+    }
+}
+
+@media (max-width: 1200px) {
+    .container {
+        max-width: 1020px;
+        margin-top: 30px;
+    }
+    .works-right {
+        display: none;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1020px;
+        margin-top: 30px;
+    }
 }
 
 .attention {
@@ -85,6 +107,8 @@
         }
     }
     &>.mid-works-main {
+        width: 660px;
+        height: 280px;
         &>.mid-works-main-image {
             float: left;
             width: 280px;
@@ -113,13 +137,11 @@
                 background-clip: padding-box;
                 display: none;
                 cursor: pointer;
-                
-                &:hover{
-                    filter:brightness(108%);
+                &:hover {
+                    filter: brightness(108%);
                 }
-                &>i{
+                &>.icon-taoxin {
                     font-size: 15px;
-                    font-family: back;
                 }
             }
         }
@@ -148,20 +170,21 @@
                     color: #8d8986;
                     font-size: 12px;
                 }
-                &>.works-like-button-new {
-                    color: #e8afa6;
-                }
             }
         }
     }
 }
 
+.works-like-button-new {
+    color: #e8afa6;
+}
+
 .bottom-works-main {
     background-color: #f5f6f5;
-    height: 70px;
+    height: 62px;
     width: 100%;
-    margin-top: 20px;
-    padding: 20px;
+
+    padding: 18px 20px;
     display: flex;
     &>input:nth-child(1) {
         width: 100%;
@@ -178,5 +201,32 @@
         background-color: #dd3915;
         color: white;
         display: none;
+    }
+}
+
+//评论区域
+.comment-allin{
+    &{
+        margin-top: 18px;
+        
+    }
+    & .mytextarea{
+        margin-left: 20px;
+    }
+    &>.comment-list {
+        // &>*{
+        //     border: 1px red solid;
+        // }
+        
+        background-color: #f5f6f5;
+        font-size: 12px;
+        padding: 0 20px;
+        padding-top: 20px;
+        & img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
     }
 }
