@@ -1,1 +1,3 @@
-// let a = 100;
+import $ from 'jquery';
+import '../homepage/homepage';
+import 'bootstrap';

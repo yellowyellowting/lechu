@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>创建菜谱</title>
     <link rel="stylesheet" href="./css/homepage.css">
-    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1085898_0e1qxy4cpn3.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1085898_6ugth8v3lkc.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
     <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -16,6 +16,7 @@
         <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 </head>
+
 <body>
     <header id="header">
         <div class="wrapper">
@@ -54,53 +55,47 @@
             <div class="container-fuiled">
                 <div class="row clearfix">
                     <div class="col-md-8 column">
-                        <div class="add">
-                            <p>添加菜谱名称</p>
-                        </div>
+                        <input type='text' class="add" value="添加菜谱名称"></input>
                         <div class="jumbotron">
-                            +
+                            <p class="cover">+菜谱封面</p>
                         </div>
                     </div>
                     <div class="col-md-4 column">
-                        <p class="draft">草稿箱</p>
+                        <p class="draft">
+                            <span>草稿箱</span>
+                        </p>
                         <h3>
                             推荐至分类
                         </h3>
                         <div>
                             <form class="form-inline">
                                 <div class="form-group">
-                                    <input type="text" class="form-control ipt" id="exampleInputName2" placeholder="请输入">
+                                    <input type="text" class="form-control ipt" id="exampleInputName2" placeholder="添加">
                                 </div>
                                 <div class="example">如：快手菜、早餐、汤羹、饼干、零食等，不建议输入食材名。 (使用空格或逗号来分隔分类)</div>
                             </form>
                         </div>
-                        <h3>
-                            同步
-                        </h3>
+                        <h3>同步</h3>
                         <div>
                             <label class="checkbox-inline">
                                 <input type="checkbox" id="inlineCheckbox1" value="option1"> 豆瓣网
                             </label>
-                            <br/>
+                            <br />
                             <label class="checkbox-inline">
                                 <input type="checkbox" id="inlineCheckbox2" value="option2"> QQ空间
                             </label>
-                            <br/>
+                            <br />
                             <label class="checkbox-inline">
                                 <input type="checkbox" id="inlineCheckbox3" value="option3"> 新浪微博
                             </label>
                         </div>
-                        <h3>
-                            允许改编
-                        </h3>
+                        <h3>允许改编</h3>
                         <div>
                             <label class="checkbox-inline">
                                 <input type="checkbox" id="inlineCheckbox1" value="option1"> 其他人可使用或改编文字，生成新菜谱
                             </label>
                         </div>
-                        <h3>
-                            独家菜谱
-                        </h3>
+                        <h3>独家菜谱</h3>
                         <div>
                             <label class="checkbox-inline">
                                 <input type="checkbox" id="inlineCheckbox1" value="option1"> 独家菜谱仅在下厨房发布，拥有特殊标识
@@ -109,189 +104,57 @@
                     </div>
                 </div>
             </div>
-        <div class="content-wrapper">
+            <div class="content-wrapper">
                 <div class="container-fuiled">
-                        <div class="row clearfix">
-                            <div class="col-md-8 column">
-                                <div class="page-header">
-                                    <div class="img-box">
-                                        <img src="./img/logo.png"/>
-                                    </div>
-                                    <div class="name">
-                                      用户xxxx
-                                    </div>
+                    <div class="row clearfix">
+                        <div class="col-md-8 column column_1">
+                            <div class="page-header">
+                                <div class="img-box">
+                                    <img src="./img/logo.png" />
                                 </div>
-                                <p class="describe">
-                                     <em>Git</em> 是一个分布式的版本控制系统，最初由 <strong>Linus Torvalds</strong> 编写，用作Linux内核代码的管理。在推出后，Git在其它项目中也取得了很大成功，尤其是在 <small>Ruby</small> 社区中。
-                                </p>
-                                <h3>
-                                    h3. 这是一套可视化布局系统.
-                                </h3>
-                                <table class="table">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                编号
-                                            </th>
-                                            <th>
-                                                产品
-                                            </th>
-                                            <th>
-                                                交付时间
-                                            </th>
-                                            <th>
-                                                状态
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>
-                                                TB - Monthly
-                                            </td>
-                                            <td>
-                                                01/04/2012
-                                            </td>
-                                            <td>
-                                                Default
-                                            </td>
-                                        </tr>
-                                        <tr class="success">
-                                            <td>
-                                                1
-                                            </td>
-                                            <td>
-                                                TB - Monthly
-                                            </td>
-                                            <td>
-                                                01/04/2012
-                                            </td>
-                                            <td>
-                                                Approved
-                                            </td>
-                                        </tr>
-                                        <tr class="error">
-                                            <td>
-                                                2
-                                            </td>
-                                            <td>
-                                                TB - Monthly
-                                            </td>
-                                            <td>
-                                                02/04/2012
-                                            </td>
-                                            <td>
-                                                Declined
-                                            </td>
-                                        </tr>
-                                        <tr class="warning">
-                                            <td>
-                                                3
-                                            </td>
-                                            <td>
-                                                TB - Monthly
-                                            </td>
-                                            <td>
-                                                03/04/2012
-                                            </td>
-                                            <td>
-                                                Pending
-                                            </td>
-                                        </tr>
-                                        <tr class="info">
-                                            <td>
-                                                4
-                                            </td>
-                                            <td>
-                                                TB - Monthly
-                                            </td>
-                                            <td>
-                                                04/04/2012
-                                            </td>
-                                            <td>
-                                                Call in to confirm
-                                            </td>
-                                        </tr>
-                                    </tbody>
-                                </table> <button type="button" class="btn btn-default">按钮</button>
-                                <h3>
-                                    h3. 这是一套可视化布局系统.
-                                </h3>
-                                <div class="row">
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="300x200" src="v3/default4.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Thumbnail label
-                                                </h3>
-                                                <p>
-                                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                                </p>
-                                                <p>
-                                                     <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="300x200" src="v3/default5.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Thumbnail label
-                                                </h3>
-                                                <p>
-                                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                                </p>
-                                                <p>
-                                                     <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <div class="col-md-4">
-                                        <div class="thumbnail">
-                                            <img alt="300x200" src="v3/default6.jpg" />
-                                            <div class="caption">
-                                                <h3>
-                                                    Thumbnail label
-                                                </h3>
-                                                <p>
-                                                    Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.
-                                                </p>
-                                                <p>
-                                                     <a class="btn btn-primary" href="#">Action</a> <a class="btn" href="#">Action</a>
-                                                </p>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div> <button type="button" class="btn btn-default">按钮</button>
-                                <div class="jumbotron">
-                                    <h1>
-                                        Hello, world!
-                                    </h1>
-                                    <p>
-                                        This is a template for a simple marketing or informational website. It includes a large callout called the hero unit and three supporting pieces of content. Use it as a starting point to create something more unique.
-                                    </p>
-                                    <p>
-                                         <a class="btn btn-primary btn-large" href="#">Learn more</a>
-                                    </p>
-                                </div> <button type="button" class="btn btn-default">按钮</button>
+                                <div class="name">
+                                    用户xxxx
+                                </div>
                             </div>
-                            <div class="col-md-4 column">
+                            <div class="describe">
+                                <textarea class="textcontent" rows="5" cols="5"></textarea>
+                                <span class="placehoder">
+                                    <i class="iconfont icon-bi"></i>
+                                    点击添加菜谱描述
+                                </span>
                             </div>
+                            <h3 class="title material">用料</h3>
+                            <table class="table">
+                                <tbody></tbody>
+                            </table>
+                            <button type="button" class="btn btn-default addline addmaterial"> 追加一行用料 </button>
+                            <div class="title-box">
+                                <h1 class="title practice">
+                                    做法
+                                </h1>
+                                <div class="red">
+                                    批量上传步骤图
+                                    <span class="gray">按住“⌘”批量选择文件</span>
+                                </div>
+                            </div>
+                            <div class="step_box"></div>
+                            <button type="button" class="btn btn-default addline addstep"> 追加一个步骤 </button>
+                            <div class="jumbotron">
+                                <p class="title">小贴士</p>
+                                <textarea class="addtip"></textarea>
+                                <span class="placehoder">
+                                    <i class="iconfont icon-bi"></i>
+                                    点击添加小贴士
+                                </span>
+                            </div>
+                            <button type="button" class="btn btn-default addline relase">发布菜谱 </button>
+                            <button type="button" class="btn btn-default addline temporary"> 存为草稿 </button>
                         </div>
                     </div>
-        </div>
+                </div>
+            </div>
         </div>
     </main>
-    <footer id="footer"></footer>
-
-
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script src="./js/homepage.js"></script>
