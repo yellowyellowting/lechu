@@ -1,4 +1,5 @@
 import $ from 'jquery';
+import upload from '../../utils/upload';
 
 //输入框点击时间
 (function ipt() {
@@ -133,6 +134,7 @@ for (var step = 0; step <= 3; step++) {
                     <div class="thumbnail  add_img">
                         <div class="caption">
                             <p class="center">+上传步骤图</p>
+                            <input class="fileupload" type="file" name="files[]" />
                         </div>
                     </div>
                 </div>
@@ -181,6 +183,7 @@ $('.content-wrapper').on('click', '.addstep', function () {
                         <div class="thumbnail  add_img">
                             <div class="caption">
                                 <p class="center">+上传步骤图</p>
+                                <input class="fileupload" type="file" name="files[]" />
                             </div>
                         </div>
                     </div>
@@ -254,3 +257,26 @@ $('.thumbnail').on('blur', '.add_decription', function () {
 
     })
 
+    // 上传文件
+    function uploadFiles(files) {
+        if (!files) {
+            return;
+        }
+        for (let i = 0; i < files.length; i++) {
+            let file = files[i];
+            
+            upload('/upload/recipe', file)//后端接头地址，图片传至后端，后端把数据处理，生成url后再返给前端
+            .then(result => {
+                console.log(result);
+            })
+            .catch(error => {
+                console.log(error);
+            });
+        }
+    }
+
+    //未来事件使用on()方法；value改变之后触发事件，所以使用change事件；
+    $('.step_box').on('change', '.fileupload', function() {
+        console.log(this.files);
+        uploadFiles(this.files);
+    });

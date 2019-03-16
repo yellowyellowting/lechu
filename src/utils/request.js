@@ -1,9 +1,4 @@
-let baseUrl
-if (process.env.NODE_ENV === 'dev') {
-	baseUrl = "https://www.easy-mock.com/mock/5c89ec568b272d3a471ce06e/luchu";
-} else {
-	baseUrl = "https://www.easy-mock.com/mock/5c89ec568b272d3a471ce06e/luchu";
-}
+import { baseUrl } from '../config/env';
 
 export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 	type = type.toUpperCase();
