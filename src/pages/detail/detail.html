@@ -7,7 +7,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>详情页</title>
   <link rel="stylesheet" href="./css/detail.css">
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1085898_6ugth8v3lkc.css">
+  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1085898_p982w3t3sp.css">
+  <link rel="shortcuticon" href="/favicon.ico" />
   <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> -->
   <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
   <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -19,7 +20,7 @@
 
 <body>
   <header id="header">
-    <div class="wrapper">
+    <div class="wrapper" id="topAnchor">
       <nav class="navbar navbar-default" role="navigation">
         <div class="container-fluid  nav-header">
           <div class="navbar-header">
@@ -56,7 +57,7 @@
         <div class="row clearfix">
           <div class="col-md-8 column">
             <input type='text' class="add" value="添加菜谱名称"></input>
-            <div class="jumbotron">
+            <div class="jumbotron cover_box">
               <div class="cover"></div>
             </div>
           </div>
@@ -93,8 +94,48 @@
                 </div>
               </div>
             </div>
-            <div class="col-md-12 column">
-              <div class="">6666</div>
+            <div class="row clearfix right_siderbar right_siderbar_3">
+              <div class="row clearfix">
+                <div class="col-md-12 column">
+                  <div class="carousel slide" id="carousel-647249">
+                    <ol class="carousel-indicators">
+                      <li class="active" data-slide-to="0" data-target="#carousel-647249">
+                      </li>
+                      <li data-slide-to="1" data-target="#carousel-647249">
+                      </li>
+                      <li data-slide-to="2" data-target="#carousel-647249">
+                      </li>
+                    </ol>
+                    <div class="carousel-inner">
+                      <div class="item active">
+                        <img alt="【红糖发糕】" src="http://i1.chuimg.com/e500755479a24f71ac1e71b9804022cb_465w_620h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh" />
+                        <div class="carousel-caption">
+                          <h4>
+                              【红糖发糕】
+                          </h4>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img alt="戚风蛋糕" src="http://i2.chuimg.com/e98ea8f05edd11e7bc9d0242ac110002_3024w_4032h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
+                        <div class="carousel-caption">
+                          <h4>
+                              戚风蛋糕
+                          </h4>
+                        </div>
+                      </div>
+                      <div class="item">
+                        <img alt="虾仁鸡蛋羹" src="http://i2.chuimg.com/8fa6950242d411e7947d0242ac110002_3024w_3024h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
+                        <div class="carousel-caption">
+                          <h4>
+                              虾仁鸡蛋羹
+                          </h4>
+                        </div>
+                      </div>
+                    </div> <a class="left carousel-control" href="#carousel-647249" data-slide="prev"><i class="iconfont icon-arrow-left"></i></a>
+                    <a class="right carousel-control" href="#carousel-647249" data-slide="next"><i class="iconfont icon-arrow-right"></i></a>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
@@ -150,7 +191,16 @@
       </div>
     </div>
   </main>
+  <footer id="footer">
+    <a href="#topAnchor">
+      <img class='top' src="https://s.chuimg.com/pic/2013/scroll_top.png">
+    </a>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+  <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
   <script src="./js/detail.js"></script>
+
+
 </body>
 
 </html>

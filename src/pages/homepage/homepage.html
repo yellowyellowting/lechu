@@ -19,7 +19,7 @@
 
 <body>
     <header id="header">
-        <div class="wrapper">
+        <div class="wrapper" id="topAnchor">
             <nav class="navbar navbar-default" role="navigation">
                 <div class="container-fluid  nav-header">
                     <div class="navbar-header">
@@ -58,6 +58,7 @@
                         <input type='text' class="add" value="添加菜谱名称"></input>
                         <div class="jumbotron">
                             <p class="cover">+菜谱封面</p>
+                            <input class="fileupload cover_img" type="file" name="files[]" />
                         </div>
                     </div>
                     <div class="col-md-4 column">
@@ -155,6 +156,11 @@
             </div>
         </div>
     </main>
+    <footer id="footer">
+        <a href="#topAnchor">
+            <img class='top' src="https://s.chuimg.com/pic/2013/scroll_top.png">
+        </a>
+    </footer>
     <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
     <script src="./js/homepage.js"></script>
