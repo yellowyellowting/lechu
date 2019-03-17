@@ -1,15 +1,13 @@
-import { baseUrl } from '../config/env'; //导入地址
+import { baseUrl } from '../config/env';
 
-// 请求模块
-export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
+export default (url = '', data = {}, type = 'GET', method = 'fetch') => {
 	type = type.toUpperCase();
 	url = baseUrl + url;
 
-	//GET请求
 	if (type == 'GET') {
 		let dataStr = ''; //数据拼接字符串
 		data && Object.keys(data).forEach(key => {
-			dataStr += key + '=' + data[key] + '&'; //与下一个键值对之间要添加 & 符号
+			dataStr += key + '=' + data[key] + '&';
 		})
 
 		if (dataStr !== '') {
@@ -18,34 +16,38 @@ export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 		}
 	}
 
-	// window.fetch 如果浏览器支持fetch 便执行fetch方法
-	if (window.fetch && method == 'fetch') {
-		let requestConfig = {
-			credentials: 'include',
-			method: type,
-			headers: {
-				'Accept': 'application/json',
-				'Content-Type': 'application/json'
-			},
-			mode: "cors", //跨域
-			cache: "force-cache"
-		}
+	return new Promise((resolve, reject) => {
+		if (window.fetch && method == 'fetch') {
+			let requestConfig = {
+				// credentials: 'include',
+				method: type,
+				headers: {
+					'Accept': 'application/json',
+					'Content-Type': 'application/json'
+				},
+				mode: "cors",
+				cache: "force-cache"
+			}
 
-		if (type == 'POST') {
-			Object.defineProperty(requestConfig, 'body', {
-				value: JSON.stringify(data)
-			})
-		}
-		
-		try {
-			const response = await fetch(url, requestConfig);
-			const responseJson = await response.json();
-			return responseJson;
-		} catch (error) {
-			throw new Error(error)
-		}
-	} else {
-		return new Promise((resolve, reject) => {
+			if (type == 'POST') {
+				Object.defineProperty(requestConfig, 'body', {
+					value: JSON.stringify(data)
+				})
+			}
+
+			fetch(url, requestConfig)
+				.then(response => response.json())
+				.then(result => {
+					if (result.code == 0) {
+						resolve(result.data);
+					} else {
+						reject(result.message);
+					}
+				})
+				.catch(error => {
+					reject(error);
+				});
+		} else {
 			let requestObj;
 			if (window.XMLHttpRequest) {
 				requestObj = new XMLHttpRequest();
@@ -75,7 +77,6 @@ export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 					}
 				}
 			}
-		})
-	}
+		}
+	});
 }
-

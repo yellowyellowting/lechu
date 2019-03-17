@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="./css/login.css" rel="stylesheet">
+</head>
+
+<body>
+    <main id="content">
+        <div class="content-wrapper">
+            <img src="./img/bg_login_banner.jpg" />
+            <div class="login-panel">
+                <div class="validate-tip"></div>
+                <div class="title">
+                    <span class="tip">账号登录</span>
+                    <a href="#" class="code">手机动态密码登录
+                        <i class="iconfont icon-iphone"></i>
+                    </a>
+                </div>
+                <form action="">
+                    <div class="formitem">
+                        <i class="iconfont icon-people inner"></i>
+                        <input class="mobile form-item-field" name="mobile" type="text" placeholder="手机号" />
+                    </div>
+                    <div class="formitem">
+                        <i class="iconfont icon-mima inner"></i>
+                        <input class="password form-item-field" name="password" type="password"  placeholder="密码" />
+                    </div>
+                    <div class="forget">忘记密码?</div>
+                    <div class="submit formitem">
+                        <input type="button" class="login-btn" value="登录" />
+                    </div>
+                    <div class="admin">
+                        <label for=""><input type="checkbox" class="check">7天免登陆</label>
+                    </div>
+
+                    <div class="formitem toregiset">
+                        <span class="signup-guide">还没有账号？</span>
+                        <a href="register.html">免费注册</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </main>
+    <script src="./js/login.js"></script>
+</body>
+
+</html>
