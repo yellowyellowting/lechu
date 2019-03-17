@@ -12,7 +12,6 @@ function getBody(xhr) {
         return text;
     }
 }
-
 /*
 option {
     withCredentials: Boolean,

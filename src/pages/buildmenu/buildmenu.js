@@ -6,3 +6,4 @@ $(".nav-tabs li").on("click",function(){
     $(this).siblings().children('a').removeClass('clicked');
   });
 
+  

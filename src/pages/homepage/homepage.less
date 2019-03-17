@@ -1,95 +1,6 @@
 @import '../../styles/base.less';
+@import '../../styles/header';
 
-#header {
-    & {
-        width: 100%;
-        height:  7*@size;
-
-    };
-    .wrapper {
-        & {
-            height:  100%;
-            width: 82%;
-            padding: 0 0;
-            margin: auto;
-            min-width: 100*@size;
-        };
-        .navbar {
-            border: 0;
-        }
-        .navbar-brand img {
-            width: 10*@size;
-            height: 4*@size;
-            line-height: 7*@size;
-        }
-        .nav-header {
-            & {
-                height: 7*@size;
-                line-height: 7*@size;
-                background: #ffffff;
-            }
-            .navbar-header {
-                margin-right: 13*@size;
-            }
-            .input-box {
-                display: inline-block;
-                height: 7*@size;
-            }
-            .navbar-form {
-                margin: 0;
-            }
-            .form-control {
-                width: 30*@size;
-                height: 4*@size;
-                line-height: 7*@size;
-                float: left;
-                border-top-right-radius: 0;
-                border-bottom-right-radius: 0;
-                border-color: #f0ecec;
-                box-shadow: none;
-                font-weight: 300;
-            }
-            .btn-default {
-                height: 4*@size;
-                width:  6*@size;
-                float: left;
-                border-left: 0;
-                border-top-left-radius: 0;
-                border-bottom-left-radius: 0;
-                border-color: @primary-color;
-                background-color: @primary-color;
-                color: @white-color;
-                font-weight: 300;
-            }
-            .nav-menu {
-                & {
-                    float: left;
-                    width: 30*@size;
-                    font-size: 1.8*@size;
-                    display: flex;
-                    justify-content: space-around;
-                
-                }
-                a {
-                    color: @primary-color;
-                }
-            }
-            .navbar-right {
-                & {
-                    height: 7*@size;
-                    line-height: 7*@size;
-                }
-                li {
-                    padding: @size;
-                    .line {
-                        height: 4@size;
-                        border-right:0.1@size solid #cccccc;
-                    }
-                }
-            }
-        }
-    }
-}
 #main{
     &{
         width: 100%;
@@ -99,7 +10,7 @@
             width: 83%;
             margin: auto;
             min-width: 102*@size;
-            height: 900px;
+            // height: 900px;
             border: 1px sol #cccccc;
             margin-top: 3*@size;
         }
@@ -132,6 +43,13 @@
                 bottom: 0px;
                 margin:auto;
                 text-align: center;
+            }
+            .cover_img{
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 48.8*@size;
+                opacity: 0;
             }
         }
         .draft{
@@ -322,6 +240,13 @@
                         color: #b3aeae;
                         font-weight: 300;
                     }
+                    .stepe_img{
+                        position: absolute;
+                        top: 0;
+                        width: 100%;
+                        height: 100%;
+                        opacity: 0;
+                    }
                 }
                 .oprating_box{
                        display: flex;
@@ -380,5 +305,14 @@
                 background: @primary-color;
             }   
         }
+    }
+}
+
+#footer {
+    position: relative;
+    .top {
+        position: absolute;
+        bottom: 2.5*@size;
+        right: 1.5*@size;
     }
 }

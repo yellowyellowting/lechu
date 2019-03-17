@@ -1,13 +1,15 @@
-import { baseUrl } from '../config/env';
+import { baseUrl } from '../config/env'; //导入地址
 
+// 请求模块
 export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 	type = type.toUpperCase();
 	url = baseUrl + url;
 
+	//GET请求
 	if (type == 'GET') {
 		let dataStr = ''; //数据拼接字符串
 		data && Object.keys(data).forEach(key => {
-			dataStr += key + '=' + data[key] + '&';
+			dataStr += key + '=' + data[key] + '&'; //与下一个键值对之间要添加 & 符号
 		})
 
 		if (dataStr !== '') {
@@ -16,6 +18,7 @@ export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 		}
 	}
 
+	// window.fetch 如果浏览器支持fetch 便执行fetch方法
 	if (window.fetch && method == 'fetch') {
 		let requestConfig = {
 			credentials: 'include',
@@ -24,7 +27,7 @@ export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json'
 			},
-			mode: "cors",
+			mode: "cors", //跨域
 			cache: "force-cache"
 		}
 
@@ -37,7 +40,7 @@ export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 		try {
 			const response = await fetch(url, requestConfig);
 			const responseJson = await response.json();
-			return responseJson
+			return responseJson;
 		} catch (error) {
 			throw new Error(error)
 		}
@@ -75,3 +78,4 @@ export default async (url = '', data = {}, type = 'GET', method = 'fetch') => {
 		})
 	}
 }
+
