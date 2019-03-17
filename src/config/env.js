@@ -1,4 +1,4 @@
-const DEVELOP_HOST = 'https://www.easy-mock.com/mock/5c89ec568b272d3a471ce06e/luchu';//'http://127.0.0.1:3000';//开发地址
+const DEVELOP_HOST = 'http://127.0.0.1:3000';//开发地址
 const RELEASE_HOST = 'http://118.24.134.191/lechu-api';//部署服务器地址
 
 //process.env node的内置环境变量，只要在node环境下运行就含有process对象以及env属性 
