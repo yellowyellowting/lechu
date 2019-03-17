@@ -23,7 +23,8 @@ export default (url = '', data = {}, type = 'GET', method = 'fetch') => {
 				method: type,
 				headers: {
 					'Accept': 'application/json',
-					'Content-Type': 'application/json'
+					'Content-Type': 'application/json',
+					'x-access-token': localStorage.getItem('token'),
 				},
 				mode: "cors",
 				cache: "force-cache"

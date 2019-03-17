@@ -259,26 +259,29 @@ $('.temporary').on('click', function() {
 
 })
 
-// 上传文件
-function uploadFiles(files) {
-    if (!files) {
-        return;
-    }
-    for (let i = 0; i < files.length; i++) {
-        let file = files[i];
+// // 上传文件
+// function uploadFiles(files) {
+//     if (!files) {
+//         return;
+//     }
+//     for (let i = 0; i < files.length; i++) {
+//         let file = files[i];
         
-        upload('/upload/recipe', file)//后端接头地址，图片传至后端，后端把数据处理，生成url后再返给前端
-        .then(result => {
-            console.log(result);
-        })
-        .catch(error => {
-            console.log(error);
-        });
-    }
-}
+//         upload('/upload/recipe', file)//后端接头地址，图片传至后端，后端把数据处理，生成url后再返给前端
+//         .then(result => {
+//             console.log(result);
+//         })
+//         .catch(error => {
+//             console.log(error);
+//         });
+//     }
+// }
 
-//未来事件使用on()方法；value改变之后触发事件，所以使用change事件；
-$('.step_box').on('change', '.fileupload', function() {
-    console.log(this.files);
-    uploadFiles(this.files);
-});
+// //未来事件使用on()方法；value改变之后触发事件，所以使用change事件；
+// $('.step_box').on('change', '.fileupload', function() {
+//     console.log(this.files);
+//     uploadFiles(this.files);
+// });
+
+// 数据渲染
+
