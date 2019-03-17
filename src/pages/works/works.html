@@ -25,7 +25,37 @@
 </head>
 
 <body>
-
+  <header id="header">
+    <div class="wrapper">
+        <nav class="navbar navbar-default" role="navigation">
+            <div class="container-fluid  nav-header">
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="#">
+                        <img src='./img/logo.png'>
+                    </a>
+                </div>
+                <div class="input-box">
+                    <form class="navbar-form navbar-left" role="search">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="搜索菜谱、美食">
+                            <button type="submit" class="btn btn-default">搜索</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="nav-menu">
+                    <a href="#">首页</a>
+                    <a href="#">菜谱分类</a>
+                    <a href="#">菜单</a>
+                    <a href="#">作品动态</a>
+                </div>
+                <div class=" navbar-right">
+                    <i class="iconfont icon-gongneng"></i>
+                    <i class="iconfont icon-gongneng"></i>
+                </div>
+            </div>
+        </nav>
+    </div>
+</header>
   <div class="container">
     <div class="row row-no1">
       <div class="col-sm-8 col-no1">
@@ -71,7 +101,7 @@
             </div>
             <div class="bottom-works-main">
               <input class="works-comment" id="content" type="text" placeholder="评论">
-              <input class="works-comment-button comment" type="button" value="评论">
+              <input class="works-comment-button comment" id="comment" type="button" value="评论">
             </div>
           </div>
         </div>
