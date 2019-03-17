@@ -1,0 +1,80 @@
+@import '../../styles/base.less';
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    font-size: 100px;
+}
+
+body{
+    font-size: 0.16rem;
+}
+
+#content {
+    width: 9.8rem;
+    height: 4rem;
+    margin: auto;
+    padding-top: 0.4rem;
+    .form-item {
+        width: 8.7rem;
+        height: 0.36rem;
+        padding: 0.08rem 0;
+        > label {
+            width: 1rem;
+            height: 0.38rem;
+            line-height: 0.38rem;
+            text-align: right;
+            font-size: 0.14rem;
+            padding-right: 0.1rem;
+            color: #8a8686;
+            float: left;
+        }
+        > input {
+            width: 2.48rem;
+            height: 0.24rem;
+            padding: 0.05rem;
+            font-size: 0.14rem;
+            float: left;
+            outline: none;
+        }
+        > input:focus {
+            border: 1px solid #2db3a6;
+        }
+        .right {
+            border: 1px solid #cccccc;
+        }
+        .err {
+            border: 1px solid #db470d;
+        }
+        .tip {
+            margin: 0 0.08rem;
+            height: 0.38rem;
+            line-height: 0.38rem;
+            padding: 0 0.24rem;
+            color: #666666;
+            font-size: 0.12rem;
+            background: url('../img/ic_error_tip.png') left center no-repeat;
+            display: none;
+        }
+        > .register-btn {
+            width: 1.8rem;
+            height: 0.35rem;
+            background: @primary-color;
+            color: #FFFFFF;
+            margin-left: 1.1rem;
+            cursor: pointer;
+        }
+    }
+    .form-item-btn {
+        height: auto;
+        > .verifycode-btn {
+            width: 1.2rem;
+            height: 0.25rem;
+            margin-left: 1.1rem;
+            cursor: pointer;
+        }
+    }
+}
