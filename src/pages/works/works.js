@@ -89,13 +89,9 @@ $(function () {
                                 </div>
                         </div>
                     </div>         
-        `
+                `
         return el;
     }
-
-
-
-
 
     $.fn.addCommentList = function (options) {
         var defaults = {
@@ -114,29 +110,20 @@ $(function () {
             }
             $(this).append(totalString)
         }
-        
-
         //添加新数据
         if (option.add != "") {
             obj = option.add;
             var str = crateCommentInfo(obj);
-            $(this).prepend(str).find(".reply-btn").click(function () {
-                // replyClick($(this));
-            });
+            $(this).append(str)
         }
-        // else if(option.add = ""){
-        //     alert("评论不能为空!")
-        // }
     }
-
     //初始化数据
     var arr = [{
             id: 1,
             img: "./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg",
-            replyName: "帅大叔",
+            replyName: "叔",
             beReplyName: "匿名",
             content: "同学聚会。",
-            replyBody: []
         },
         {
             id: 2,
@@ -144,13 +131,6 @@ $(function () {
             replyName: "匿名",
             beReplyName: "",
             content: "到菜市场买菜，看到一个孩子在看摊，我问：“一只鸡多少钱？” 那孩子回答：“23。” 我又问：“两只鸡多少钱？” 孩子愣了一下，一时间没算过来，急中生智大吼一声：“一次只能买一只！”",
-            replyBody: [{
-                id: 3,
-                img: "",
-                replyName: "帅大叔",
-                beReplyName: "匿名",
-                content: "来啊，我们一起吃鸡"
-            }]
         }
     ];
     //评论
@@ -159,21 +139,24 @@ $(function () {
         add: ""
     });
     $("#comment").click(function () {
-        var obj = new Object();
-        obj.img = "./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg";
-        obj.replyName = "懒人";
-        obj.content = $("#content").val();
-        obj.replyBody = "";
-        $(".comment-list").addCommentList({
-            data: [],
-            add: obj
-        });
-    });
+        if ($(this).siblings(".works-comment").val() == "") {
+            alert("评论不能为空!")
+        } else {
+            var obj = new Object();
+            obj.img = "./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg";
+            obj.replyName = "懒人";
+            obj.content = $("#content").val();
+            $(".comment-list").addCommentList({
+                data: [],
+                add: obj
+            });
+            $(this).parents(".comment-allin").find(".works-comment").val("")
+        }
+        //返回每个回复体内容
+        $(".reply-btn").on("click", function () {
+            var replayuser = $(this).parent().parent().find(".username-content").text()
+            $(this).parents(".comment-allin").find(".works-comment").val("@" + replayuser + " ")
 
-    //返回每个回复体内容
-    $(".reply-btn").on("click", function () {
-        var replayuser = $(this).parent().parent().find(".username-content").text()
-        $(this).parents(".comment-allin").find(".works-comment").val("@"+replayuser+" ")
-        // console.log(sss)
-    })
+        })
+    });
 })
