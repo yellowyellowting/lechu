@@ -84,6 +84,7 @@ $('.addmaterial').on('click', function () {
     $('.table tbody').append(addmaterial);
 })
 
+//用料添加行表格聚焦事件
 $('.table tbody').on('mouseover', '.ipts', function () {
     $(this).css('background', '#fffcea');
     $(this).parents('td').css('background', '#fffcea');
@@ -134,7 +135,7 @@ for (var step = 0; step <= 3; step++) {
                     <div class="thumbnail  add_img">
                         <div class="caption">
                             <p class="center">+上传步骤图</p>
-                            <input class="fileupload" type="file" name="files[]" />
+                            <input class="fileupload stepe_img" type="file" name="files[]" />
                         </div>
                     </div>
                 </div>
@@ -153,7 +154,7 @@ for (var step = 0; step <= 3; step++) {
     $('.step_box').append(stepcontent);
 }
 
-
+// 步骤点击添加行
 $('.content-wrapper').on('click', '.addstep', function () {
     var steps = $('.step');
     var number = steps.length;
@@ -179,11 +180,11 @@ $('.content-wrapper').on('click', '.addstep', function () {
                             </span>
                         </div>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-5">
                         <div class="thumbnail  add_img">
                             <div class="caption">
                                 <p class="center">+上传步骤图</p>
-                                <input class="fileupload" type="file" name="files[]" />
+                                <input class="fileupload stepe_img" type="file" name="files[]" />
                             </div>
                         </div>
                     </div>
@@ -202,7 +203,7 @@ $('.content-wrapper').on('click', '.addstep', function () {
     $('.step_box').append(addstep);
 })
 
-
+//步骤添加聚焦事件
 $('.thumbnail').on('mouseover', '.add_decription', function () {
     $(this).css('background', '#fffcea');
     $(this).parents('td').css('background', '#fffcea');
@@ -225,58 +226,60 @@ $('.thumbnail').on('blur', '.add_decription', function () {
     }
 })
 
-
-    function changecolor(parent, child, color) {
-        $(parent).on('mouseover',child, function () {
-            $(this).css('background', '#fffcea');
-            $(this).parents('td').css('background', '#fffcea');
-        })
-        $(parent).on('mouseout', child, function () {
-            $(this).css('background', color);
-            $(this).parents('td').css('background', color);
-        })
-        $(parent).on('focus', child, function () {
-            $(this).css('background', '#fffcea');
-            $(this).parents('td').css('background', '#fffcea');
-            $(this).siblings('span').hide();
-        })
-        $(parent).on('blur', child, function () {
-            $(this).css('background', color);
-            $(this).parents('td').css('background', color);
-            var value = $(this).val();
-            if (!value) {
-                $(this).siblings('span').show();
-            }
-        })
-    }
-    changecolor('.jumbotron', '.addtip', '#eeeeee');
-    
-    $('.temporary').on('click', function() {
-        $(this).css('background', '#ed9d91');
-        $(this).css('border', '1px solid #ed9d91');
-
+//小贴士聚焦事件
+function changecolor(parent, child, color) {
+    $(parent).on('mouseover',child, function () {
+        $(this).css('background', '#fffcea');
+        $(this).parents('td').css('background', '#fffcea');
     })
+    $(parent).on('mouseout', child, function () {
+        $(this).css('background', color);
+        $(this).parents('td').css('background', color);
+    })
+    $(parent).on('focus', child, function () {
+        $(this).css('background', '#fffcea');
+        $(this).parents('td').css('background', '#fffcea');
+        $(this).siblings('span').hide();
+    })
+    $(parent).on('blur', child, function () {
+        $(this).css('background', color);
+        $(this).parents('td').css('background', color);
+        var value = $(this).val();
+        if (!value) {
+            $(this).siblings('span').show();
+        }
+    })
+}
 
-    // 上传文件
-    function uploadFiles(files) {
-        if (!files) {
-            return;
-        }
-        for (let i = 0; i < files.length; i++) {
-            let file = files[i];
-            
-            upload('/upload/recipe', file)//后端接头地址，图片传至后端，后端把数据处理，生成url后再返给前端
-            .then(result => {
-                console.log(result);
-            })
-            .catch(error => {
-                console.log(error);
-            });
-        }
+//聚焦事件函数
+changecolor('.jumbotron', '.addtip', '#eeeeee');
+
+$('.temporary').on('click', function() {
+    $(this).css('background', '#ed9d91');
+    $(this).css('border', '1px solid #ed9d91');
+
+})
+
+// 上传文件
+function uploadFiles(files) {
+    if (!files) {
+        return;
     }
+    for (let i = 0; i < files.length; i++) {
+        let file = files[i];
+        
+        upload('/upload/recipe', file)//后端接头地址，图片传至后端，后端把数据处理，生成url后再返给前端
+        .then(result => {
+            console.log(result);
+        })
+        .catch(error => {
+            console.log(error);
+        });
+    }
+}
 
-    //未来事件使用on()方法；value改变之后触发事件，所以使用change事件；
-    $('.step_box').on('change', '.fileupload', function() {
-        console.log(this.files);
-        uploadFiles(this.files);
-    });
+//未来事件使用on()方法；value改变之后触发事件，所以使用change事件；
+$('.step_box').on('change', '.fileupload', function() {
+    console.log(this.files);
+    uploadFiles(this.files);
+});

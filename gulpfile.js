@@ -1,32 +1,34 @@
-const path = require('path');
-const fs = require('fs');
+const path = require('path'); //
+const fs = require('fs');  //常量使用const
 const gulp = require('gulp');
 const loadPlugins = require('gulp-load-plugins');
-
 const plugins = loadPlugins();
 
+
+//指定读取src下的文件，并放在fileArr数组内
 const readDir = (path, fileArr) => {
-    let ret = fs.readdirSync(path)
+    let ret = fs.readdirSync(path) //fs.readdirSync方法将返回一个包含“指定目录下所有文件名称”的数组对象。由于该方法属于fs模块，使用前需要引入fs模块
     ret.map((fileName) => {
         let curPath = path + '/' + fileName
         const stats = fs.statSync(curPath)
-        if (stats.isFile()) {
+        if (stats.isFile()) {                 //isFile()判断是否为正常文件
             fileArr.push(curPath)
-        } else if (stats.isDirectory()) {
+        } else if (stats.isDirectory()) {    //isDirectory()判断是否为目录
             readDir(curPath, fileArr)
         }
     });
 }
 
-const filePath = path.resolve() + '/src/pages/';
+const filePath = path.resolve() + '/src/pages/'; // path.resolve() 获取当前文件的完整地址
 let files = [];
 readDir(filePath, files);
 
+//过滤
 const jsFiles = files.filter(fileName => fileName.endsWith('.js'));
 const lessFiles = files.filter(fileName => fileName.endsWith('.less'));
 const htmlFiles = files.filter(fileName => fileName.endsWith('.html'));
 
-// 打包js
+// 打包js, Browserify构建es6环境下的自动化前端项目
 gulp.task('js', function () {
     return gulp.src(jsFiles)
         .pipe(plugins.bro({
@@ -63,10 +65,10 @@ gulp.task('less', function () {
 });
 
 // 打包图片
-gulp.task('img', function () { 
+gulp.task('img', function () {
     return gulp.src('src/assets/img/*.*')
-    .pipe(plugins.imagemin({progressive: true}))
-    .pipe(gulp.dest('dist/img'))
+        .pipe(plugins.imagemin({ progressive: true }))
+        .pipe(gulp.dest('dist/img'))
 });
 
 // 打包html
@@ -80,6 +82,7 @@ gulp.task('html', function () {
         .pipe(gulp.dest('dist'));
 });
 
+//监听
 gulp.task('watch', function () {
     gulp.watch('src/**/*.*', ({
         path
