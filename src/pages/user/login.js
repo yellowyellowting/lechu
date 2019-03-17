@@ -82,7 +82,7 @@ function doLogin(mobile, password) {
     .then(({ token, user }) => {
         alert("登录成功");
         localStorage.setItem('token', token);
-        localStorage.setItem('user', user);
+        localStorage.setItem('user', JSON.stringify(user));
         location.assign("./index.html");
     })
     .catch(error => {
