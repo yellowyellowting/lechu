@@ -1,6 +1,7 @@
 // import $ from 'jquery';
 import $ from 'jquery';
 import upload from '../../utils/upload';
+import { showDetail } from '../../utils/api';
 
 //输入框点击时间
 (function ipt() {
@@ -227,7 +228,7 @@ $('.thumbnail').on('blur', '.add_decription', function () {
 
 //小贴士聚焦事件
 function changecolor(parent, child, color) {
-    $(parent).on('mouseover',child, function () {
+    $(parent).on('mouseover', child, function () {
         $(this).css('background', '#fffcea');
         $(this).parents('td').css('background', '#fffcea');
     })
@@ -253,35 +254,91 @@ function changecolor(parent, child, color) {
 //聚焦事件函数
 changecolor('.jumbotron', '.addtip', '#eeeeee');
 
-$('.temporary').on('click', function() {
+$('.temporary').on('click', function () {
     $(this).css('background', '#ed9d91');
     $(this).css('border', '1px solid #ed9d91');
 
 })
 
-// // 上传文件
-// function uploadFiles(files) {
-//     if (!files) {
-//         return;
-//     }
-//     for (let i = 0; i < files.length; i++) {
-//         let file = files[i];
-        
-//         upload('/upload/recipe', file)//后端接头地址，图片传至后端，后端把数据处理，生成url后再返给前端
-//         .then(result => {
-//             console.log(result);
-//         })
-//         .catch(error => {
-//             console.log(error);
-//         });
-//     }
-// }
-
-// //未来事件使用on()方法；value改变之后触发事件，所以使用change事件；
-// $('.step_box').on('change', '.fileupload', function() {
-//     console.log(this.files);
-//     uploadFiles(this.files);
-// });
 
 // 数据渲染
 
+//获取节点
+var name = $('.add');
+var cover = $('.cover');
+var description = $('.describe .textcontent');
+var title = $('.title-box')
+var addDecription = $('.add_decription');
+var stepsImgs = $('.add_img');
+
+// 详情页跳转，获取地址栏的ID
+function getQueryString(name) {
+    var reg = new RegExp("(^|&)" + name + "=([^&]*)(&|$)", "i"); //获取id
+    var r = window.location.search.substr(1).match(reg); //返回从？开始的url
+    if (r != null) {
+        return unescape(r[2]); //使用 unescape() 对其解码
+    }
+    return null;
+}
+
+/**
+ * 显示上传的预览图片
+ */
+function showPreviewImage(target, url) {
+    // console.log(target);
+    const previewBox = `<div class="upload-preview">
+        <img class="preview-image" src=${data.cover} />
+        <div class="preview-close-btn"></div>
+    </div>`;
+    const title = `
+    <h2>${data.name}的做法</h2>
+    `
+    $(target).append(previewBox);
+    getImageDimen(url)
+        .then(({ width, height }) => {
+            let adjustHeight = $(target).width() / width * height;
+            if (adjustHeight > $(target).height()) {
+                $(target).attr('original-height', $(target).height());
+                $(target).height(adjustHeight);
+            }
+        });
+}
+
+(function () {
+    var id = getQueryString("id");
+    console.log(id);
+    if (!id) {
+        alert("餐馆ID不能为空");
+        location.assign('./home.html');
+        return;
+    }
+
+    function render(id) {
+        showDetail(id)
+            .then((data) => {
+                console.log(data);
+                const previewBox = `<div class="upload-preview">
+                <img class="preview-image" src=${data.cover} />
+                <div class="preview-close-btn"></div>
+                </div>`;
+                const picUrl = `<div class="upload-preview">
+                <img class="preview-image" src=${data.picUrl} />
+                <div class="preview-close-btn"></div>
+                </div>`;
+                name.val(data.name);
+                cover.html(previewBox);
+                description.val(data.description);
+                title.html(title);
+                data.steps.forEach((ele, index) => {
+                    addDecription[index].val(ele.description);
+                    stepsImgs[index].append(picUrl)
+                });
+
+
+            })
+            .catch(error => {
+                console.log(error);
+            });
+
+    }
+})();

@@ -55,19 +55,8 @@
             <div class="container-fuiled">
                 <div class="row clearfix">
                     <div class="col-md-8 column">
-                        <input type='text' class="add" value="添加菜谱名称"></input>
-                        <div class="upload-box recipe-cover-box">
-                            <div class="upload-tip">
-                                <span class="upload-text">
-                                    <span class="main-title">+ 上传菜谱封面</span><br>
-                                    <span class="sub-title">最佳尺寸：1280 × 1024</span>
-                                </span>
-                            </div>
-                            <input class="fileupload stepe_img" type="file" name="files[]" />
-                            <div class="upload-progress">
-                                <span class="upload-progress-text">上传中•••</span>
-                            </div>
-                        </div>
+                        <input type='text' class="add" name='add' placeholder="添加菜谱名称"></input>
+                        <div class="recipe-cover-box"></div>
                     </div>
                     <div class="col-md-4 column">
                         <p class="draft">
@@ -126,17 +115,15 @@
                                 </div>
                             </div>
                             <div class="describe">
-                                <textarea class="textcontent" rows="5" cols="5"></textarea>
+                                <textarea class="textcontent" rows="5" cols="5" ></textarea>
                                 <span class="placehoder">
                                     <i class="iconfont icon-bi"></i>
                                     点击添加菜谱描述
                                 </span>
                             </div>
                             <h3 class="title material">用料</h3>
-                            <table class="table">
-                                <tbody></tbody>
-                            </table>
-                            <button type="button" class="btn btn-default addline addmaterial"> 追加一行用料 </button>
+                            <table class="material-table"></table>
+                            <button type="button" class="btn btn-default addline add-material-btn"> 追加一行用料 </button>
                             <div class="title-box">
                                 <h1 class="title practice">
                                     做法
@@ -148,7 +135,7 @@
                                 </div>
                             </div>
                             <div class="step_box"></div>
-                            <button type="button" class="btn btn-default addline addstep"> 追加一个步骤 </button>
+                            <button type="button" class="btn btn-default addline add-step-btn"> 追加一个步骤 </button>
                             <div class="jumbotron">
                                 <p class="title">小贴士</p>
                                 <textarea class="addtip"></textarea>

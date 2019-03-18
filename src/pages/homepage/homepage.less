@@ -126,14 +126,15 @@
             .title{
                 color: #bfad80;
             }
-            .table{
-                &{
+            .material-table{
+                & {
+                    margin: 5px 0 10px;
                     background-color: #ffffff;
                     border-collapse:collapse;
                 }
-                tr{
+                tr {
                     height: 5*@size;
-                    td{
+                    .text-input {
                         line-height: 3.5*@size;
                         width: 25.3*@size;
                         background-color: #ffffff;
@@ -149,25 +150,38 @@
                             left: 0.8*@size;
                         }
                     }
-                    .ipt_ingredients{
-                        width: 32*@size;
-                        height: 5*@size;
-                        padding: 0.8*@size;
+                    .ipts {
+                        width: 100%;
+                        height: 50px;
+                        padding: 8px 16px;
                         outline: none;
                         border: 0;
+                        color: #000000;
+                        font-weight: 400;
                     }
-                    .opreat{
+                    .ipts::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+                        color:#909090;
+                    }
+                    .ipts:-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+                       color: #909090;
+                    }
+                    .ipts::-moz-placeholder { /* Mozilla Firefox 19+ */
+                       color: #909090;
+                    }
+                    .ipts:-ms-input-placeholder { /* Internet Explorer 10-11 */
+                       color: #909090;
+                    }
+                    .ipts:hover {
+                        background-color: #fffcea;
+                    }
+                    .opreat {
                         width: 10*@size;
                         border: 0;
-                        img{
+                        img {
                             padding: 0 @size 0 0.5*@size;
                         }
                     }
-                    .ingredients:hover, .dosage:hover {
-                        background-color: #fffcea;
-                    }
                 }
-
             }
             .addline{
                 background-color: #c5bfb6;
@@ -201,70 +215,78 @@
                     opacity: 0;
                 }
             }
-            .step{
-                &{
-                    margin-bottom: 2*@size;
-                }
-                .thumbnail{
-                    border: 0;
-                    height: 22.2*@size;
-                    position: relative;
-                    .caption{
-                        height: 100%;
-                    }
-                    span {
-                        position: absolute;
-                        top: 2* @size;
-                        left: 2*@size;
-                        font-size: 1.6*@size;
-                    }
-                    .number{
-                        font-size: 3*@size;
-                        color: #bfad80;
-                    }
-                    .add_decription{
-                        font-size: 1.6*@size;
-                        height: 22.2*@size;
-                        border: 0;
-                        resize:none;
-                        outline: none;
-                    }
-
-                }
-                .add_img{
+            
+            position: relative;
+            .step_box {
+                .step{
                     &{
+                        margin-bottom: 2*@size;
+                        background-color: #FFFFFF; 
+                    }
+                    .thumbnail{
+                        border: 0;
+                        height: 22.2*@size;
                         position: relative;
-                        background: #faf7f7;
+                        .caption{
+                            height: 100%;
+                        }
+                        span {
+                            position: absolute;
+                            top: 2* @size;
+                            left: 2*@size;
+                            font-size: 1.6*@size;
+                        }
+                        .number{
+                            font-size: 3*@size;
+                            color: #bfad80;
+                        }
+                        .add_decription{
+                            font-size: 1.6*@size;
+                            height: 22.2*@size;
+                            border: 0;
+                            resize:none;
+                            outline: none;
+                        }
+    
                     }
-                    .center{
-                        border-radius: 0;
-                        position: absolute;
-                        left:0px;
-                        right: 0px;
-                        top: 40%;
-                        bottom: 0px;
-                        margin:auto;
-                        text-align: center;
-                        color: #b3aeae;
-                        font-weight: 300;
+                    .add_img{
+                        &{
+                            position: relative;
+                            background: #faf7f7;
+                        }
+                        .center{
+                            border-radius: 0;
+                            position: absolute;
+                            left:0px;
+                            right: 0px;
+                            top: 40%;
+                            bottom: 0px;
+                            margin:auto;
+                            text-align: center;
+                            color: #b3aeae;
+                            font-weight: 300;
+                        }
+                        .stepe_img{
+                            position: absolute;
+                            top: 0;
+                            width: 100%;
+                            height: 100%;
+                            opacity: 0;
+                        }
                     }
-                    .stepe_img{
-                        position: absolute;
-                        top: 0;
-                        width: 100%;
-                        height: 100%;
-                        opacity: 0;
+                    .step-cover-box {
+                        width: 280px;
+                        height: 240px;
                     }
-                }
-                .step-cover-box {
-                    width: 280px;
-                    height: 240px;
-                }
-                .oprating_box{
-                    padding-top: 30px;
-                    img{
-                       float: left;
-                       margin-right: @size;
+                    .oprating_box{
+                        padding-top: 30px;
+                        img{
+                           float: left;
+                           margin-right: @size;
+                        }
+                        .oprating_drag {
+                            cursor: move;
+                        }
                     }
                 }
             }
