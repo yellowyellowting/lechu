@@ -138,7 +138,7 @@ $(function () {
         data: arr,
         add: ""
     });
-    $("#comment").click(function () {
+    $("#comment").on("click", function () {
         if ($(this).siblings(".works-comment").val() == "") {
             alert("评论不能为空!")
         } else {
@@ -153,10 +153,15 @@ $(function () {
             $(this).parents(".comment-allin").find(".works-comment").val("")
         }
         //返回每个回复体内容
+
         $(".reply-btn").on("click", function () {
             var replayuser = $(this).parent().parent().find(".username-content").text()
             $(this).parents(".comment-allin").find(".works-comment").val("@" + replayuser + " ")
-
         })
     });
+    //返回每个回复体内容
+    $(".reply-btn").on("click", function () {
+        var replayuser = $(this).parent().parent().find(".username-content").text()
+        $(this).parents(".comment-allin").find(".works-comment").val("@" + replayuser + " ")
+    })
 })
