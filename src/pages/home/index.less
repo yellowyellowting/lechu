@@ -1,33 +1,59 @@
 @import '../../styles/base';
-.titleH3(){
-    color:  @yellow-text-color;
+.titleH3() {
+    color: @yellow-text-color;
     padding-left: 15px;
     padding-top: 0;
 }
-.aHover(){
+
+.aHover() {
     background-color: @primary-color;
     text-decoration: none;
     color: @white-color;
 }
-.aPinter(){
+
+.aPinter() {
     color: @primary-color;
     cursor: pointer;
 }
+
 html,
 body {
     margin: 0;
     padding: 0;
 }
-.head{
+
+.head {
     height: 70px;
     background-color: #f8f8f8;
     border: 1px solid #f8f8f8;
     display: block;
     margin-bottom: 30px;
-    .navbar{
+    .navbar {
         border: none;
     }
+    .userinfo {
+        li {
+            a {
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+            .icon-favorite {
+                font-size: 30px;
+                display: inline-block;
+                margin-top: 15px;
+                cursor: pointer;
+            }
+            .icon-vertical_line {
+                font-size: 30px;
+                display: inline-block;
+                margin-top: 15px;
+            }
+        }
+    }
 }
+
 .container nav {
     background-color: #f8f8f8;
     & {
@@ -69,17 +95,16 @@ body {
     ul {
         & {
             padding-left: 0;
-            width: 130px;
-            // border: 1px solid red;
+            width: 130px; // border: 1px solid red;
             list-style: none;
             margin-right: 40px;
         }
-        &>div{
+        &>div {
             // border: 1px solid green;
             height: 500px;
         }
-        &>p{
-            a:hover{
+        &>p {
+            a:hover {
                 .aHover();
             }
         }
@@ -94,154 +119,264 @@ body {
                 height: 32px;
                 color: @text-color;
                 text-decoration: none;
-                i{
+                i {
                     display: inline-block;
                     height: 32px;
                     width: 32px;
                 }
             }
-            a:hover{
+            a:hover {
                 color: @primary-color;
             }
         }
     }
-
-    .center{
+    .center {
         width: 490px;
         height: 260px;
-        .swiper-container{
+        .swiper-container {
             width: 490px;
             height: 260px;
         }
-        .swiper-pagination-bullet-active{
+        .swiper-pagination-bullet-active {
             background-color: @primary-color;
         }
-        .box{
+        .box {
             width: 500px;
             height: 200px;
-            h3{
+            h3 {
                 .titleH3();
-                a{
+                a {
                     font-size: 14px;
                 }
-                a:hover{
+                a:hover {
                     .aHover();
                 }
             }
-            .caption{
-                p{
+            .caption {
+                p {
                     font-size: 14px;
                 }
             }
         }
     }
-    .fash{
-        h3{
+    .fash {
+        h3 {
             .titleH3();
-            a{
+            a {
                 font-size: 14px;
             }
-            a:hover{
+            a:hover {
                 .aHover();
             }
         }
-        .caption:hover{
+        .caption:hover {
             .aPinter();
         }
     }
-    .time{
+    .time {
         background-color: #F5F6F5;
-        h3{
+        h3 {
             .titleH3();
-            a{
+            a {
                 font-size: 14px;
             }
-            a:hover{
+            a:hover {
                 .aHover();
             }
         }
-        .caption{
+        .caption {
             height: 20px;
             padding: 0;
         }
-        .caption:hover{
+        .caption:hover {
             .aPinter();
         }
     }
-    .zp{
+    .zp {
         margin-top: 880px;
         width: 666px;
-        a{
+        a {
             background-color: #F5F6F5;
             border: none;
             display: inline-block;
             height: 120px;
             width: 666px;
-            img{
+            img {
                 width: 80px;
                 height: 80px;
                 float: right;
             }
-            p{
+            p {
                 float: left;
             }
-            .des{
+            .des {
                 width: 300px;
                 float: left;
             }
         }
-        a:first-child{
+        a:first-child {
             margin-bottom: 5px;
-            h2{
+            h2 {
                 color: @yellow-text-color;
             }
-            span{
+            span {
                 color: @primary-color;
             }
-            p{
-                span:hover{
+            p {
+                span:hover {
                     .aHover();
                 }
             }
         }
-        .item{
+        .item {
             margin: 1px 0;
         }
     }
-    .right{
+    .right {
         margin-left: 70px;
-        .info{
+        .info {
             width: 435px;
             height: 260px;
             background-color: #F5F6F5;
             padding-top: 40px;
-            button{
+            button {
                 width: 200px;
                 margin: 5px;
             }
-            p{
-                a:hover{
+            p {
+                a:hover {
                     .aHover();
                 }
-                a{
+                a {
                     font-size: 14px;
                 }
             }
-            p:last-child{
+            p:last-child {
                 margin-top: 60px;
             }
-        }
-        // 流行搜索
-        .search{
-            ul{
-                li{
-                    .icon-up{
+            .haslogin {
+                .headimg {
+                    img {
+                        height: 50px;
+                        width: 50px;
+                    }
+                }
+                h4 {
+                    color: @primary-color;
+                    span {
+                        color: @primary-color;
+                    }
+                }
+                .create {
+                    a {
+                        display: inline-block;
+                        background-color: @primary-color;
+                        color: white;
+                        text-decoration: none;
+                        width: 100px;
+                        height: 50px;
+                        line-height: 50px;
+                    }
+                }
+                p {
+                    margin-top: 10px;
+                }
+            }
+        } // 流行搜索
+        .search {
+            ul {
+                li {
+                    width: 150px;
+                    .icon-up {
                         color: #F49576;
                     }
-                    .icon-down{
+                    .icon-down {
                         color: #8BD0DC;
                     }
                 }
+            }
+            h3 {
+                .titleH3();
+            }
+        }
+    }
+    .menu {
+        h3 {
+            .titleH3();
+            a {
+                font-size: 14px;
+            }
+            a:hover {
+                .aHover();
+            }
+        }
+        .item {
+            img {
+                width: 435px;
+            }
+        }
+    }
+    .friends {
+        h3{
+            .titleH3();
+            a{
+                font-size: 14px;
+            }
+            a:hover{
+                .aHover();
+            }
+        }
+        h5{
+            text-align: center;
+            a:hover{
+                .aHover();
+            }
+        }
+        .itemlist {
+            .item {
+                width: 435px;
+                padding-right: 0;
+                border-bottom: 1px solid rgb(235, 229, 229);
+                img {
+                    width: 80px;
+                    height: 80px;
+                    margin-top: 10px;
+                }
+                #watch {
+                    span {
+                        background-color: @primary-color;
+                        color: white;
+                        cursor: pointer;
+                        display: inline-block;
+                        height: 40px;
+                        width: 80px;
+                        line-height: 40px;
+                        text-align: center;
+                        margin-top: 30px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.foot {
+    .btn {
+        a {
+            display: inline-block;
+            background-color: @grenn-color;
+            padding: 15px;
+            color: white;
+            margin-right: 15px;
+            text-decoration: none;
+        }
+    }
+    .des {
+        p {
+            font-size: 14px;
+            a {
+                color: black;
+                text-decoration: none;
             }
         }
     }
