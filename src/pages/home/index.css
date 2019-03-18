@@ -23,6 +23,21 @@ body {
 .head .navbar {
   border: none;
 }
+.head .userinfo li a img {
+  width: 30px;
+  height: 30px;
+}
+.head .userinfo li .icon-favorite {
+  font-size: 30px;
+  display: inline-block;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.head .userinfo li .icon-vertical_line {
+  font-size: 30px;
+  display: inline-block;
+  margin-top: 15px;
+}
 .container nav {
   background-color: #f8f8f8;
   min-width: 1020px;
@@ -222,9 +237,112 @@ body {
 .content .right .info p:last-child {
   margin-top: 60px;
 }
+.content .right .info .haslogin .headimg img {
+  height: 50px;
+  width: 50px;
+}
+.content .right .info .haslogin h4 {
+  color: #dd3915;
+}
+.content .right .info .haslogin h4 span {
+  color: #dd3915;
+}
+.content .right .info .haslogin .create a {
+  display: inline-block;
+  background-color: #dd3915;
+  color: white;
+  text-decoration: none;
+  width: 100px;
+  height: 50px;
+  line-height: 50px;
+}
+.content .right .info .haslogin p {
+  margin-top: 10px;
+}
+.content .right .search ul li {
+  width: 150px;
+}
 .content .right .search ul li .icon-up {
   color: #F49576;
 }
 .content .right .search ul li .icon-down {
   color: #8BD0DC;
+}
+.content .right .search h3 {
+  color: #fad800;
+  padding-left: 15px;
+  padding-top: 0;
+}
+.content .menu h3 {
+  color: #fad800;
+  padding-left: 15px;
+  padding-top: 0;
+}
+.content .menu h3 a {
+  font-size: 14px;
+}
+.content .menu h3 a:hover {
+  background-color: #dd3915;
+  text-decoration: none;
+  color: #ffffff;
+}
+.content .menu .item img {
+  width: 435px;
+}
+.content .friends h3 {
+  color: #fad800;
+  padding-left: 15px;
+  padding-top: 0;
+}
+.content .friends h3 a {
+  font-size: 14px;
+}
+.content .friends h3 a:hover {
+  background-color: #dd3915;
+  text-decoration: none;
+  color: #ffffff;
+}
+.content .friends h5 {
+  text-align: center;
+}
+.content .friends h5 a:hover {
+  background-color: #dd3915;
+  text-decoration: none;
+  color: #ffffff;
+}
+.content .friends .itemlist .item {
+  width: 435px;
+  padding-right: 0;
+  border-bottom: 1px solid #ebe5e5;
+}
+.content .friends .itemlist .item img {
+  width: 80px;
+  height: 80px;
+  margin-top: 10px;
+}
+.content .friends .itemlist .item #watch span {
+  background-color: #dd3915;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  height: 40px;
+  width: 80px;
+  line-height: 40px;
+  text-align: center;
+  margin-top: 30px;
+}
+.foot .btn a {
+  display: inline-block;
+  background-color: #87ce73;
+  padding: 15px;
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.foot .des p {
+  font-size: 14px;
+}
+.foot .des p a {
+  color: black;
+  text-decoration: none;
 }
