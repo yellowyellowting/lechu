@@ -1,0 +1,223 @@
+.container {
+  width: 1020px;
+}
+.container > .class-left-up > .nav-min {
+  color: #dd3915;
+  font-size: 16px;
+  cursor: pointer;
+}
+.container > .class-left-up > .nav-min:hover {
+  color: white;
+  background-color: #dd3915;
+}
+.container > .class-left-up > .nav-last {
+  color: gray;
+  font-size: 16px;
+}
+.container > .class-left-down {
+  font-size: 16px;
+}
+.container > .class-left-down ul {
+  list-style: none;
+  padding: 0;
+}
+.container > .class-left-down ul > li {
+  padding-top: 14px;
+  cursor: pointer;
+}
+.container > .class-left-down ul > li:hover {
+  color: #dd3915;
+}
+.container > .class-left-down > div > .class-li-tips {
+  margin-bottom: 48px;
+}
+.container > .class-left-down > div > .classleft {
+  border-top: 1px solid #ebe9e7;
+}
+.container > .class-left-down > div > .classleft > a {
+  width: 170px;
+  color: gray;
+  padding: 9px 8px;
+  display: block;
+  text-decoration: none;
+}
+.container > .class-left-down > div > .classleft > a:hover {
+  background-color: #ebe9e7;
+  color: black;
+}
+.container > .class-left-down > div > .classleft > ul > li {
+  padding-top: 0;
+}
+.container > .class-left-down > div > .classleft-last {
+  border-bottom: 1px solid #ebe9e7;
+}
+.container .classmid > .classmid-tit > h1 {
+  font-weight: 700;
+}
+.container .classmid > .classmid-tittoo {
+  margin-bottom: 20px;
+}
+.container .classmid > .classmid-tittoo > span {
+  color: #dd3915;
+  cursor: pointer;
+}
+.container .classmid > .classmid-content div {
+  padding-left: 0;
+}
+.container .classmid > .classmid-content div > img {
+  width: 215px;
+  height: 136px;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .classmid-tit-small > h4 {
+  font-weight: 700;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .class-tips > span:nth-child(1) {
+  background-color: #ffcd00;
+  color: white;
+  padding: 3px 12px;
+  font-size: 12px;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .class-tips > span:nth-child(2) {
+  background-color: #f3f3f3;
+  color: #a7a7a7;
+  padding: 3px 8px;
+  font-size: 12px;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .classmid-material {
+  margin-top: 8px;
+  font-size: 14px;
+  color: #9c6730;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .classmid-material > span {
+  cursor: pointer;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .classmid-material > span:hover {
+  color: #dd3915;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .classmid-score {
+  font-size: 14px;
+  margin-top: 4px;
+  color: #a7a7a7;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .classmid-score > span:nth-child(2) {
+  color: #72a46d;
+  font-weight: bold;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .classmid-author {
+  font-size: 14px;
+  color: #a7a7a7;
+  margin-top: 4px;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .classmid-author > span {
+  cursor: pointer;
+}
+.container .classmid > .classmid-content > .classmid-tit-right > .classmid-author > span:hover {
+  color: #dd3915;
+}
+.container .classright-main > div > h3 {
+  color: #c0ae7d;
+  font-weight: bold;
+  font-size: 20px;
+}
+.container .classright-main > div > .classright {
+  padding-left: 0;
+}
+.container .classright-main > div > .classright > img {
+  width: 90px;
+  height: 90px;
+}
+.container .classright-main > div > .classright > p {
+  margin-top: 8px;
+}
+.container .classright-main > div > .classright > p:hover {
+  color: #dd3915;
+}
+.container .classright-main > .classright-new > div {
+  padding-left: 0;
+}
+.container .classright-main > .classright-new > div > img {
+  width: 150px;
+  height: 100px;
+}
+.container .classright-main > .classright-new > div > .classright-new-tit > span {
+  cursor: pointer;
+}
+.container .classright-main > .classright-new > div > .classright-new-tit > span:hover {
+  color: #dd3915;
+}
+.container .classright-main > .classright-new > div > .class-tips > span:nth-child(1) {
+  background-color: #ffcd00;
+  color: white;
+  padding: 2px 10px;
+  font-size: 12px;
+}
+.container .classright-main > .classright-new > div > .class-tips > span:nth-child(2) {
+  background-color: #f3f3f3;
+  color: #a7a7a7;
+  padding: 2px 8px;
+  font-size: 12px;
+}
+.container .classright-main > .classright-new > div > .classright-new-material > span {
+  cursor: pointer;
+  font-size: 14px;
+}
+.container .classright-main > .classright-new > div > .classright-new-material > span:hover {
+  color: #dd3915;
+}
+.container .classright-main > .classright-new > div > .classright-new-author {
+  font-size: 14px;
+  color: #a7a7a7;
+}
+.container .classright-main > .classright-new > div > .classright-new-author > span {
+  cursor: pointer;
+}
+.container .classright-main > .classright-new > div > .classright-new-author > span:hover {
+  color: #dd3915;
+}
+.container .classright-main > .classright-new-all > h3 {
+  float: left;
+  margin-right: 10px;
+}
+.container .classright-main > .classright-new-all > span {
+  font-size: 14px;
+  color: #dd3915;
+  line-height: 62px;
+}
+.container .classright-main > .classright-new-all-content > div > img {
+  width: 320px;
+  height: 140px;
+  margin-left: 14px;
+}
+.container .classright-main > .classright-new-all-content > div > p {
+  text-align: center;
+  margin-top: 10px;
+}
+/*控制菜单箭头*/
+.nav-header.collapsed > i.glyphicon-chevron-right:before {
+  content: "\e114";
+}
+.nav-header > i.glyphicon-chevron-right:before {
+  content: "\e113";
+}
+.navbar-default {
+  width: 100%;
+}
+.navbar-default > .nav-header {
+  width: 1050px;
+  height: 70px;
+}
+.navbar-default > .nav-header > .navbar-left {
+  margin: 18px 10px;
+}
+.navbar-default > .nav-header > .navbar-header {
+  height: 70px;
+}
+.navbar-default > .nav-header > .navbar-header > a > img {
+  height: 40px;
+}
+.navbar-default > .nav-header > .libiaoqian > ul > li > a {
+  height: 70px;
+  line-height: 40px;
+  color: #dd3915;
+  font-size: 16px;
+}

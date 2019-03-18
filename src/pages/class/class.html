@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/1.10.2/jquery.min.js"></script>
+    <!-- 最新版本的 Bootstrap 核心 CSS 文件 -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!-- 可选的 Bootstrap 主题文件（一般不用引入） -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap-theme.min.css"
+        integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+
+    <!-- 最新的 Bootstrap 核心 JavaScript 文件 -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+    <script src="./js/class.js" defer async="true"></script>
+    <link rel="stylesheet" href="./css/class.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1022393_bq4vwddqfy9.css">
+</head>
+
+<body>
+    <nav class="navbar navbar-default" role="navigation">
+        <div class="container-fluid nav-header">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#"><img src="./img/logo.png" alt=""></a>
+            </div>
+            <form class="navbar-form navbar-left" role="search">
+                <div class="form-group">
+                    <input type="text" class="form-control" placeholder="Search">
+                </div>
+                <button type="submit" class="btn btn-default">提交</button>
+            </form>
+            <div class="libiaoqian">
+                <ul class="nav navbar-nav">
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">菜谱分类</a></li>
+                    <li><a href="#">菜单</a></li>
+                    <li><a href="#">作品分类</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Java
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">jmeter</a></li>
+                            <li><a href="#">EJB</a></li>
+                            <li><a href="#">Jasper Report</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">分离的链接</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">另一个分离的链接</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row class-left-up">
+            <span class="nav-min">首页</span> >
+            <span class="nav-min">全部分类</span> >
+            <span class="nav-last">家常菜</span>
+        </div>
+        <div class="row class-left-down">
+            <div class="col-sm-2">
+                <div class="row class-li-tips">
+                    <ul>
+                        <li>全部分类</li>
+                        <li>本周最受欢迎</li>
+                        <li>新秀菜谱</li>
+                        <li>往期头条</li>
+                        <li>厨房101</li>
+                        <li>月度最佳</li>
+                        <li>最新创建</li>
+                        <li>流行菜单</li>
+                    </ul>
+                </div>
+                <div class="row classleft">
+                    <a href="#systemSetting1" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i> 菜式
+                    </a>
+                    <ul id="systemSetting1" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li class="active"><a href="#">家常菜</a></li>
+                        <li><a href="#">快手菜</a></li>
+                        <li><a href="#">下饭菜</a></li>
+                        <li><a href="#">素菜</a></li>
+                        <li><a href="#">大鱼大肉</a></li>
+                        <li><a href="#">下酒菜</a></li>
+                        <li><a href="#">小清新</a></li>
+                        <li><a href="#">创意菜</a></li>
+                    </ul>
+                </div>
+                <div class="row classleft">
+                    <a href="#systemSetting2" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i> 特殊场合
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="systemSetting2" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li class="active"><a href="#">家常菜</a></li>
+                        <li><a href="#">快手菜</a></li>
+                        <li><a href="#">下饭菜</a></li>
+                        <li><a href="#">素菜</a></li>
+                        <li><a href="#">大鱼大肉</a></li>
+                        <li><a href="#">下酒菜</a></li>
+                        <li><a href="#">小清新</a></li>
+                        <li><a href="#">创意菜</a></li>
+                    </ul>
+                </div>
+                <div class="row classleft">
+                    <a href="#systemSetting3" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i> 特色食品
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="systemSetting3" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li class="active"><a href="#">家常菜</a></li>
+                        <li><a href="#">快手菜</a></li>
+                        <li><a href="#">下饭菜</a></li>
+                        <li><a href="#">素菜</a></li>
+                        <li><a href="#">大鱼大肉</a></li>
+                        <li><a href="#">下酒菜</a></li>
+                        <li><a href="#">小清新</a></li>
+                        <li><a href="#">创意菜</a></li>
+                    </ul>
+                </div>
+                <div class="row classleft">
+                    <a href="#systemSetting4" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i> 人群
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="systemSetting4" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li class="active"><a href="#">家常菜</a></li>
+                        <li><a href="#">快手菜</a></li>
+                        <li><a href="#">下饭菜</a></li>
+                        <li><a href="#">素菜</a></li>
+                        <li><a href="#">大鱼大肉</a></li>
+                        <li><a href="#">下酒菜</a></li>
+                        <li><a href="#">小清新</a></li>
+                        <li><a href="#">创意菜</a></li>
+                    </ul>
+                </div>
+                <div class="row classleft">
+                    <a href="#systemSetting5" class="nav-header collapsed " data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i> 功效
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="systemSetting5" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li class="active"><a href="#">家常菜</a></li>
+                        <li><a href="#">快手菜</a></li>
+                        <li><a href="#">下饭菜</a></li>
+                        <li><a href="#">素菜</a></li>
+                        <li><a href="#">大鱼大肉</a></li>
+                        <li><a href="#">下酒菜</a></li>
+                        <li><a href="#">小清新</a></li>
+                        <li><a href="#">创意菜</a></li>
+                    </ul>
+                </div>
+                <div class="row classleft classleft-last">
+                    <a href="#systemSetting6" class="nav-header collapsed" data-toggle="collapse">
+                        <i class="glyphicon glyphicon-chevron-right"></i> 视频专题
+                        <span class="pull-right glyphicon glyphicon-chevron-toggle"></span>
+                    </a>
+                    <ul id="systemSetting6" class="nav nav-list collapse secondmenu" style="height: 0px;">
+                        <li class="active"><a href="#">家常菜</a></li>
+                        <li><a href="#">快手菜</a></li>
+                        <li><a href="#">下饭菜</a></li>
+                        <li><a href="#">素菜</a></li>
+                        <li><a href="#">大鱼大肉</a></li>
+                        <li><a href="#">下酒菜</a></li>
+                        <li><a href="#">小清新</a></li>
+                        <li><a href="#">创意菜</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-6 classmid">
+                <div class="row classmid-tit">
+                    <h1>家常菜</h1>
+                </div>
+                <div class="row classmid-tittoo">
+                    <span>最近流行</span> |
+                    <span>最受欢迎</span> |
+                    <span>评分</span>
+                </div>
+                <div class="row classmid-content">
+                    <div class="col-sm-6">
+                        <img src="./img/hongsaozhuti.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6 classmid-tit-right">
+                        <div class="row classmid-tit-small">
+                            <h4>美味</h4>
+                        </div>
+                        <div class="row class-tips">
+                            <span>独家</span>
+                            <span>步骤图</span>
+                        </div>
+                        <div class="row classmid-material">
+                            <span>猪蹄</span>、
+                            <span>猪蹄</span>、
+                            <span>猪蹄</span>、
+                            <span>猪蹄</span>、
+                        </div>
+                        <div class="row classmid-score">
+                            <span>综合评分</span>
+                            <span>9.3</span>
+                            <span>（七天内8人做过）</span>
+                        </div>
+                        <div class="row classmid-author">
+                            <span>tangtang糖糖 <i class="glyphicon glyphicon-fire"></i> </span>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="col-sm-4 classright-main">
+                <div class="row">
+                    <h3>相关菜谱</h3>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 classright">
+                        <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>翠竹报春</p>
+                    </div>
+                    <div class="col-sm-4 classright">
+                        <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>爆炒金针菇</p>
+                    </div>
+                    <div class="col-sm-4 classright">
+                        <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>佛手观音莲</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm-4 classright">
+                        <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>翠竹报春</p>
+                    </div>
+                    <div class="col-sm-4 classright">
+                        <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>爆炒金针菇</p>
+                    </div>
+                    <div class="col-sm-4 classright">
+                        <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>佛手观音莲</p>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <h3>最新发布菜谱</h3>
+                </div>
+                <div class="row classright-new">
+                    <div class="col-sm-6">
+                        <img src="./img/hongsaozhuti.jpg" alt="">
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="row classright-new-tit">
+                            <span>酸菜鱼（微辣微麻版）</span>
+                        </div>
+                        <div class="row class-tips">
+                            <span>独家</span>
+                            <span>步骤图</span>
+                        </div>
+                        <div class="row classright-new-material">
+                            <span>猪蹄</span>、
+                            <span>猪蹄</span>、
+                            <span>猪蹄</span>、
+                            <span>猪蹄</span>、
+                        </div>
+                        <div class="row classright-new-author">
+                            <span>tangtang糖糖 <i class="glyphicon glyphicon-fire"></i> </span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row classright-new-all">
+                    <h3>家常菜的相关菜单</h3><span>全部</span>
+                </div>
+                <div class="row classright-new-all-content">
+                    <div class="row">
+                        <img src="./img/hongsaozhuti.jpg" alt="">
+                    </div>
+                    <div class="row">
+                        <p>家常菜</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>
