@@ -56,6 +56,9 @@
         }
     } //中间部分css
     .classmid {
+        & {
+            padding-left: 40px;
+        }
         &>.classmid-tit {
             &>h1 {
                 font-weight: 700;
@@ -69,6 +72,9 @@
             margin-bottom: 20px;
         }
         &>.classmid-content {
+            & {
+                margin-bottom: 30px;
+            }
             & div {
                 padding-left: 0;
                 &>img {
@@ -80,6 +86,11 @@
                 &>.classmid-tit-small {
                     &>h4 {
                         font-weight: 700;
+                        width: 230px;
+                        white-space: nowrap;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        overflow: hidden; // border: 1px solid red;
                     }
                 }
                 &>.class-tips {
@@ -128,14 +139,10 @@
                     margin-top: 4px;
                 }
             }
-        }
-        //分页css
-        &>.classmid-fenye{
-            text-align: center;
-            
-        }
-        
-
+        } //分页css
+        // &>.classmid-fenye{
+        //     text-align: center;
+        // }
     } //y右边部分css
     .classright-main {
         &>div {
@@ -159,6 +166,9 @@
             }
         }
         &>.classright-new {
+            & {
+                margin-bottom: 20px;
+            }
             &>div {
                 padding-left: 0;
                 &>img {
@@ -248,12 +258,11 @@
 
 //header
 .navbar-default {
-    
     width: 100%;
     &>.nav-header {
         width: 1050px;
         height: 70px;
-        &>.navbar-left{
+        &>.navbar-left {
             margin: 18px 10px;
         }
         &>.navbar-header {
@@ -262,20 +271,18 @@
                 height: 40px;
             }
         }
-        &>.libiaoqian{
-            &>ul{
-                &>li{
-                    &>a{
+        &>.libiaoqian {
+            &>ul {
+                &>li {
+                    &>a {
                         height: 70px;
                         line-height: 40px;
                         color: #dd3915;
                         font-size: 16px;
                     }
-                    
                 }
-                
             }
-            &>.navbar-nav-right{
+            &>.navbar-nav-right {
                 float: right;
                 margin-right: 10px;
             }

@@ -20,6 +20,7 @@
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
         crossorigin="anonymous"></script>
     <script src="./js/class.js" defer async="true"></script>
+    <script src="./js/bootstrap-paginator.js"></script>
     <link rel="stylesheet" href="./css/class.css">
     <link rel="stylesheet" href="https://at.alicdn.com/t/font_1022393_bq4vwddqfy9.css">
 </head>
@@ -190,7 +191,7 @@
                     <span>最受欢迎</span> |
                     <span>评分</span>
                 </div>
-                <div class="row classmid-content">
+                <!-- <div class="row classmid-content">
                     <div class="col-sm-6">
                         <img src="./img/hongsaozhuti.jpg" alt="">
                     </div>
@@ -203,73 +204,80 @@
                             <span>步骤图</span>
                         </div>
                         <div class="row classmid-material">
-                            <span>猪蹄</span>、
-                            <span>猪蹄</span>、
-                            <span>猪蹄</span>、
-                            <span>猪蹄</span>、
+                            <span>猪蹄,猪蹄,猪蹄</span>
                         </div>
                         <div class="row classmid-score">
                             <span>综合评分</span>
                             <span>9.3</span>
-                            <span>（七天内8人做过）</span>
+                            <span>（七过天内8人做）</span>
                         </div>
                         <div class="row classmid-author">
                             <span>tangtang糖糖 <i class="glyphicon glyphicon-fire"></i> </span>
                         </div>
                     </div>
 
-                </div>
+                </div> -->
 
                 <!-- 分页 -->
-                <div class="classmid-fenye">
-                    <ul class="pagination">
-                        <li><a href="#">&laquo;</a></li>
-                        <li class="active"><a href="#">1</a></li>
-                        <li class="disabled"><a href="#">2</a></li>
-                        <li><a href="#">3</a></li>
-                        <li><a href="#">4</a></li>
-                        <li><a href="#">5</a></li>
-                        <li><a href="#">&raquo;</a></li>
-                    </ul>
+                <div class="classmid-fenye" id="Paginator" style="text-align: center">
+                    <nav aria-label="Page navigation">
+                        <ul class="pagination">
+                            <li>
+                                <a href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <li><a href="#">1</a></li>
+                            <li><a href="#">2</a></li>
+                            <li><a href="#">3</a></li>
+                            <li><a href="#">4</a></li>
+                            <li><a href="#">5</a></li>
+                            <li>
+                                <a href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
             </div>
             <div class="col-sm-4 classright-main">
                 <div class="row">
                     <h3>相关菜谱</h3>
                 </div>
-                <div class="row">
+                <div class="row aboutdish1">
                     <div class="col-sm-4 classright">
-                        <img src="./img/cuizhubaochun.jpg" alt="">
-                        <p>翠竹报春</p>
+                        <!-- <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>翠竹报春</p> -->
                     </div>
                     <div class="col-sm-4 classright">
-                        <img src="./img/cuizhubaochun.jpg" alt="">
-                        <p>爆炒金针菇</p>
+                        <!-- <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>爆炒金针菇</p> -->
                     </div>
                     <div class="col-sm-4 classright">
-                        <img src="./img/cuizhubaochun.jpg" alt="">
-                        <p>佛手观音莲</p>
+                        <!-- <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>佛手观音莲</p> -->
                     </div>
                 </div>
-                <div class="row">
+                <div class="row aboutdish2">
                     <div class="col-sm-4 classright">
-                        <img src="./img/cuizhubaochun.jpg" alt="">
-                        <p>翠竹报春</p>
+                        <!-- <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>翠竹报春</p> -->
                     </div>
                     <div class="col-sm-4 classright">
-                        <img src="./img/cuizhubaochun.jpg" alt="">
-                        <p>爆炒金针菇</p>
+                        <!-- <img src="./img/cuizhubaochun.jpg" alt="">
+                        <p>爆炒金针菇</p> -->
                     </div>
                     <div class="col-sm-4 classright">
-                        <img src="./img/cuizhubaochun.jpg" alt="">
-                        <p>佛手观音莲</p>
+                        <!-- <img src="./img/cuizhubaochun.jpg" alt=""> -->
+                        <!-- <p>佛手观音莲</p> -->
                     </div>
                 </div>
 
-                <div class="row">
+                <div class="row newdish-title">
                     <h3>最新发布菜谱</h3>
                 </div>
-                <div class="row classright-new">
+                <!-- <div class="row classright-new">
                     <div class="col-sm-6">
                         <img src="./img/hongsaozhuti.jpg" alt="">
                     </div>
@@ -279,31 +287,27 @@
                         </div>
                         <div class="row class-tips">
                             <span>独家</span>
-                            <span>步骤图</span>
                         </div>
                         <div class="row classright-new-material">
-                            <span>猪蹄</span>、
-                            <span>猪蹄</span>、
-                            <span>猪蹄</span>、
-                            <span>猪蹄</span>、
+                            <span>猪蹄</span>
                         </div>
                         <div class="row classright-new-author">
                             <span>tangtang糖糖 <i class="glyphicon glyphicon-fire"></i> </span>
                         </div>
                     </div>
-                </div>
+                </div> -->
 
                 <div class="row classright-new-all">
                     <h3>家常菜的相关菜单</h3><span>全部</span>
                 </div>
-                <div class="row classright-new-all-content">
+                <!-- <div class="row classright-new-all-content">
                     <div class="row">
                         <img src="./img/hongsaozhuti.jpg" alt="">
                     </div>
                     <div class="row">
                         <p>家常菜</p>
                     </div>
-                </div>
+                </div> -->
             </div>
 
         </div>

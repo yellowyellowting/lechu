@@ -340,3 +340,29 @@ a {
   background-color: #8d8986;
   color: #ffffff;
 }
+.navbar-default {
+  width: 100%;
+}
+.navbar-default > .nav-header {
+  width: 1050px;
+  height: 70px;
+}
+.navbar-default > .nav-header > .navbar-left {
+  margin: 18px 10px;
+}
+.navbar-default > .nav-header > .navbar-header {
+  height: 70px;
+}
+.navbar-default > .nav-header > .navbar-header > a > img {
+  height: 40px;
+}
+.navbar-default > .nav-header > .libiaoqian > ul > li > a {
+  height: 70px;
+  line-height: 40px;
+  color: #dd3915;
+  font-size: 16px;
+}
+.navbar-default > .nav-header > .libiaoqian > .navbar-nav-right {
+  float: right;
+  margin-right: 10px;
+}

@@ -27,101 +27,99 @@
 }
 
 //header
-#header{
-    &{
+#header {
+    & {
         width: 100%;
-        height:  7*@size;
-
-    };
-    .wrapper{
-       &{
-        height:  100%;
-        width: 100%;
-        padding: 0 0;
-        margin: auto;
-        min-width: 100*@size;
-       }
-       >.navbar-default{
-        width: 82%;
-        margin: 0;
-       }
-        .navbar{
-        border: 0;
-       }
-        .navbar-brand img{
+        height: 7*@size;
+    }
+    ;
+    .wrapper {
+        & {
+            height: 100%;
+            width: 100%;
+            padding: 0 0;
+            margin: auto;
+            min-width: 100*@size;
+        }
+        >.navbar-default {
+            width: 82%;
+            margin: 0;
+        }
+        .navbar {
+            border: 0;
+        }
+        .navbar-brand img {
             width: 10*@size;
             height: 4*@size;
             line-height: 7*@size;
         }
-        .nav-header{
-        &{
-            
-            height: 7*@size;
-            line-height: 7*@size;
-            background: #ffffff;
-        }
-        .navbar-header{
-            margin-right: 13*@size;
-        }
-        .input-box{
-            display: inline-block;
-            height: 7*@size;
-        }
-        .navbar-form {
-            margin: 0;
-        }
-        .form-control{
-            width: 30*@size;
-            height: 4*@size;
-            line-height: 7*@size;
-            float: left;
-            border-top-right-radius: 0;
-            border-bottom-right-radius: 0;
-            border-color: #f0ecec;
-            box-shadow: none;
-            font-weight: 300;
-        }
-        .btn-default{
-            height: 4*@size;
-            width:  6*@size;
-            float: left;
-            border-left: 0;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            border:none;
-            background-color: #dd3915;
-            color: white;
-            font-weight: 300;
-        }
-        .nav-menu{
-                &{
+        .nav-header {
+            & {
+                height: 7*@size;
+                line-height: 7*@size;
+                background: #ffffff;
+            }
+            .navbar-header {
+                margin-right: 13*@size;
+            }
+            .input-box {
+                display: inline-block;
+                height: 7*@size;
+            }
+            .navbar-form {
+                margin: 0;
+            }
+            .form-control {
+                width: 30*@size;
+                height: 4*@size;
+                line-height: 7*@size;
+                float: left;
+                border-top-right-radius: 0;
+                border-bottom-right-radius: 0;
+                border-color: #f0ecec;
+                box-shadow: none;
+                font-weight: 300;
+            }
+            .btn-default {
+                height: 4*@size;
+                width: 6*@size;
+                float: left;
+                border-left: 0;
+                border-top-left-radius: 0;
+                border-bottom-left-radius: 0;
+                border: none;
+                background-color: #dd3915;
+                color: white;
+                font-weight: 300;
+            }
+            .nav-menu {
+                & {
                     float: left;
                     width: 30*@size;
                     font-size: 1.8*@size;
                     display: flex;
                     justify-content: space-around;
                 }
-                a{
+                a {
                     color: @primary-color;
                 }
             }
-        .navbar-right{
-            &{
-                height: 7*@size;
-                line-height: 7*@size;
-            }
-            li{
-                padding: @size;
-                .line{
-                    height: 4@size;
-                    border-right:0.1@size solid #cccccc;
+            .navbar-right {
+                & {
+                    height: 7*@size;
+                    line-height: 7*@size;
+                }
+                li {
+                    padding: @size;
+                    .line {
+                        height: 4@size;
+                        border-right: 0.1@size solid #cccccc;
+                    }
                 }
             }
         }
     }
-    }
 }
-
 
 .attention {
     background-color: #f5f6f5;
@@ -363,6 +361,40 @@
                         color: #ffffff;
                     }
                 }
+            }
+        }
+    }
+}
+
+//header
+.navbar-default {
+    width: 100%;
+    &>.nav-header {
+        width: 1050px;
+        height: 70px;
+        &>.navbar-left {
+            margin: 18px 10px;
+        }
+        &>.navbar-header {
+            height: 70px;
+            &>a>img {
+                height: 40px;
+            }
+        }
+        &>.libiaoqian {
+            &>ul {
+                &>li {
+                    &>a {
+                        height: 70px;
+                        line-height: 40px;
+                        color: #dd3915;
+                        font-size: 16px;
+                    }
+                }
+            }
+            &>.navbar-nav-right {
+                float: right;
+                margin-right: 10px;
             }
         }
     }
