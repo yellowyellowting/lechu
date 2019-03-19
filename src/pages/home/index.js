@@ -2,13 +2,17 @@ import $ from 'jquery';
 import {fashionSearch} from '../../utils/module/search';
 import {creatMenuList} from '../../utils/module/creatMenuList';
 import {newFashionList} from '../../utils/module/newFashionList';
+import {newRecipe} from '../../utils/module/newRecipe';
+// import {slide} from '../../utils/module/search';
+import {timeList} from '../../utils/module/timeList';
+import {fashionMenu} from '../../utils/module/fashionMenu';
 
 $(function () {
     //内容盒子左边的菜单列表
     creatMenuList();
 
-    // 轮播
-    function slide1() {
+    // 轮播图
+    function slide() {
         var mySwiper = new Swiper('.swiper-container', {
             loop: true, // 循环模式选项
             // 如果需要分页器
@@ -18,60 +22,15 @@ $(function () {
             autoplay: true,
         })
     }
-    slide1();
+    slide();
+
+    // 新秀菜谱
+    newRecipe();
 
     //最近流行
     newFashionList();
 
     // 时令食材
-    function timeList(){
-        var timeArr=[
-            {
-                url:'./img/1.jpg',
-                name:'草莓'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'草莓'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'草莓'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'草莓'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'草莓'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'草莓'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'草莓'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'草莓'
-            }
-        ];
-        $(timeArr).each(function(){
-            $('.time_list').append(`
-            <div class="col-sm-3 col-md-3">
-                <div class="thumbnail">
-                    <img src=${this.url} alt="通用的占位符缩略图">
-                <div class="caption text-center">
-                    <h6>${this.name}</h6>
-                </div>
-                </div>
-            </div>
-            `)
-        })
-    }
     timeList();
 
     // 作品展示列表
@@ -151,11 +110,11 @@ $(function () {
             rank:'icon-up'
         },
         {
-            name:'可乐鸡翅',
+            name:'早餐',
             rank:'icon-down'
         },
         {
-            name:'可乐鸡翅',
+            name:'鱼香茄子',
             rank:'icon-up'
         },
         {
@@ -173,7 +132,7 @@ $(function () {
             rank:'icon-up'
         },
         {
-            name:'可乐鸡翅',
+            name:'凉拌黄瓜',
             rank:'icon-down'
         },
         {
@@ -195,36 +154,6 @@ $(function () {
     fashionSearch(arr2,dom2,6);
 
     // 流行菜单 
-    function fashionMenu(){
-        var arr=[
-            {
-                img:'./img/1.jpg',
-                name:'简易'
-            },
-            {
-                img:'./img/1.jpg',
-                name:'唯美食与爱不可辜负'
-            },
-            {
-                img:'./img/1.jpg',
-                name:'唯美食与爱不可辜负'
-            },
-            {
-                img:'./img/1.jpg',
-                name:'唯美食与爱不可辜负'
-            }
-        ];
-        $(arr).each(function(){
-            $('.menu .item').append(`
-                <div class="thumbnail">
-                    <img src=${this.img} alt="通用的占位符缩略图">
-                    <div class="caption text-center">
-                        <p>${this.name}</p>
-                    </div>
-                </div>
-            `)
-        })
-    }
     fashionMenu();
 
     // 下厨房的厨友们 渲染数据
@@ -363,6 +292,4 @@ $(function () {
         }
     }
     getUserInfo();
-
-    console.log(localStorage.getItem('ip'))
 })
