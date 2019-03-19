@@ -1,5 +1,6 @@
 import { baseUrl } from '../config/env';
 
+// 前端请求配置
 export default (url = '', data = {}, type = 'GET', method = 'fetch') => {
 	type = type.toUpperCase();
 	url = baseUrl + url;

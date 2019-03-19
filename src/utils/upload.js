@@ -1,5 +1,6 @@
 import { baseUrl } from '../config/env';
 
+// 文件上传
 function getBody(xhr) {
     const text = xhr.responseText || xhr.response;
     if (!text) {
