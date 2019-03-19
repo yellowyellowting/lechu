@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>创建菜谱</title>
+    <link rel="stylesheet" href="./css/buildemenu.css">
+    <link rel="stylesheet" href="https://at.alicdn.com/t/font_1085898_6ugth8v3lkc.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+    <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+    <!--[if lt IE 9]>
+        <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
+    <![endif]-->
+</head>
+
+<body>
+    <header id="header">
+        <div class="wrapper" id="topAnchor">
+            <nav class="navbar navbar-default" role="navigation">
+                <div class="container-fluid  nav-header">
+                    <div class="navbar-header">
+                        <a class="navbar-brand" href="#">
+                            <img src='./img/logo.png'>
+                        </a>
+                    </div>
+                    <div class="input-box">
+                        <form class="navbar-form navbar-left" role="search">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="搜索菜谱、美食">
+                                <button type="submit" class="btn btn-default">搜索</button>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="nav-menu">
+                        <a href="#">首页</a>
+                        <a href="#">菜谱分类</a>
+                        <a href="#">菜单</a>
+                        <a href="#">作品动态</a>
+                    </div>
+                    <div class=" navbar-right">
+                        <i class="iconfont icon-gongneng"></i>
+                        <i class="iconfont icon-gongneng"></i>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </header>
+    <div class="clear"></div>
+    <main id="main">
+        <div class="main-wrapper">
+            <div class="container-fuiled">
+                <div class="row clearfix">
+                    <div class="col-md-8 column">
+                        <input type='text' class="add" name='add' placeholder="添加菜谱名称"></input>
+                        <div class="recipe-cover-box"></div>
+                    </div>
+                    <div class="col-md-4 column">
+                        <p class="draft">
+                            <span>草稿箱</span>
+                        </p>
+                        <h3>
+                            推荐至分类
+                        </h3>
+                        <div>
+                            <form class="form-inline">
+                                <div class="form-group">
+                                    <input type="text" class="form-control ipt" id="exampleInputName2" placeholder="添加">
+                                </div>
+                                <div class="example">如：快手菜、早餐、汤羹、饼干、零食等，不建议输入食材名。 (使用空格或逗号来分隔分类)</div>
+                            </form>
+                        </div>
+                        <h3>同步</h3>
+                        <div>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 豆瓣网
+                            </label>
+                            <br />
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox2" value="option2"> QQ空间
+                            </label>
+                            <br />
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox3" value="option3"> 新浪微博
+                            </label>
+                        </div>
+                        <h3>允许改编</h3>
+                        <div>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 其他人可使用或改编文字，生成新菜谱
+                            </label>
+                        </div>
+                        <h3>独家菜谱</h3>
+                        <div>
+                            <label class="checkbox-inline">
+                                <input type="checkbox" id="inlineCheckbox1" value="option1"> 独家菜谱仅在下厨房发布，拥有特殊标识
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-wrapper">
+                <div class="container-fuiled">
+                    <div class="row clearfix">
+                        <div class="col-md-8 column column_1">
+                            <div class="page-header">
+                                <div class="img-box">
+                                    <img src="./img/logo.png" />
+                                </div>
+                                <div class="name">
+                                    用户xxxx
+                                </div>
+                            </div>
+                            <div class="describe">
+                                <textarea class="textcontent" rows="5" cols="5"></textarea>
+                                <span class="placehoder">
+                                    <i class="iconfont icon-bi"></i>
+                                    点击添加菜谱描述
+                                </span>
+                            </div>
+                            <h3 class="title material">用料</h3>
+                            <table class="material-table"></table>
+                            <button type="button" class="btn btn-default addline add-material-btn"> 追加一行用料 </button>
+                            <div class="title-box">
+                                <h1 class="title practice">
+                                    做法
+                                </h1>
+                                <div class="red">
+                                    批量上传步骤图
+                                    <span class="gray">按住“⌘”批量选择文件</span>
+                                    <input class="multi-file-upload" type="file" name="files" multiple />
+                                </div>
+                            </div>
+                            <div class="step_box"></div>
+                            <button type="button" class="btn btn-default addline add-step-btn"> 追加一个步骤 </button>
+                            <div class="jumbotron">
+                                <p class="title">小贴士</p>
+                                <textarea class="addtip"></textarea>
+                                <span class="placehoder">
+                                    <i class="iconfont icon-bi"></i>
+                                    点击添加小贴士
+                                </span>
+                            </div>
+                            <button type="button" class="btn btn-default addline relase">发布菜谱 </button>
+                            <button type="button" class="btn btn-default addline temporary"> 存为草稿 </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer id="footer">
+        <a href="#topAnchor">
+            <img class='top' src="https://s.chuimg.com/pic/2013/scroll_top.png">
+        </a>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/js/bootstrap.min.js"></script>
+    <script src="./js/builemenu.js"></script>
+
+</body>
+
+</html>

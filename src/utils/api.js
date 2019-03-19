@@ -42,4 +42,9 @@ export const createRecipe = (recipeInfo) => request('/recipe/create', recipeInfo
 /**
  * 创建菜谱,跳转详情
  */
-export const showDetail = (id) => request('/recipe/detail', id, 'GET');
+export const getRecipeDetail = (id) => request('/recipe/detail', { id }, 'GET');
+
+/**
+ * 获取厨师用户名
+ */
+export const getRecipesilfrecipe = () => request('/recipe/self');

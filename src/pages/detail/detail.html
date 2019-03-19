@@ -2,198 +2,330 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>详情页</title>
-  <link rel="stylesheet" href="./css/detail.css">
-  <link rel="stylesheet" href="https://at.alicdn.com/t/font_1085898_p982w3t3sp.css">
-  <link rel="shortcuticon" href="/favicon.ico" />
-  <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> -->
-  <!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
-  <!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
-  <!--[if lt IE 9]>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>详情页</title>
+	<link rel="stylesheet" href="./css/detail.css">
+	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1085898_qnw9tchaq4q.css">
+	<link rel="shortcuticon" href="/favicon.ico" />
+	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> -->
+	<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
+	<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
+	<!--[if lt IE 9]>
         <script src="https://cdn.jsdelivr.net/npm/html5shiv@3.7.3/dist/html5shiv.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/respond.js@1.4.2/dest/respond.min.js"></script>
     <![endif]-->
 </head>
 
 <body>
-  <header id="header">
-    <div class="wrapper" id="topAnchor">
-      <nav class="navbar navbar-default" role="navigation">
-        <div class="container-fluid  nav-header">
-          <div class="navbar-header">
-            <a class="navbar-brand" href="#">
-              <img src='./img/logo.png'>
-            </a>
-          </div>
-          <div class="input-box">
-            <form class="navbar-form navbar-left" role="search">
-              <div class="form-group">
-                <input type="text" class="form-control" placeholder="搜索菜谱、美食">
-                <button type="submit" class="btn btn-default">搜索</button>
-              </div>
-            </form>
-          </div>
-          <div class="nav-menu">
-            <a href="#">首页</a>
-            <a href="#">菜谱分类</a>
-            <a href="#">菜单</a>
-            <a href="#">作品动态</a>
-          </div>
-          <div class=" navbar-right">
-            <i class="iconfont icon-gongneng"></i>
-            <i class="iconfont icon-gongneng"></i>
-          </div>
-        </div>
-      </nav>
-    </div>
-  </header>
-  <div class="clear"></div>
-  <main id="main">
-    <div class="main-wrapper">
-      <div class="container-fuiled">
-        <div class="row clearfix">
-          <div class="col-md-8 column">
-            <input type='text' class="add"></input>
-            <div class="jumbotron cover_box">
-              <div class="cover"></div>
-            </div>
-          </div>
-          <div class="col-md-4 column">
-            <div class="row clearfix right_siderbar">
-              <div class="col-md-12 column">
-                <div class="row">
-                  <div class="col-md-6 img_col">
-                    <div class="thumbnail">
-                      <img alt="300x200" src="http://t12.baidu.com/it/u=446400014,60694732&fm=76" />
-                    </div>
-                  </div>
-                  <div class="col-md-6  img_col">
-                    <div class="thumbnail">
-                      <img alt="300x200" src="http://t12.baidu.com/it/u=446400014,60694732&fm=76" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row clearfix right_siderbar right_siderbar_2">
-              <div class="col-md-12 column">
-                <div class="row">
-                  <div class="col-md-6 img_col">
-                    <div class="thumbnail">
-                      <img alt="300x200" src="http://t12.baidu.com/it/u=446400014,60694732&fm=76" />
-                    </div>
-                  </div>
-                  <div class="col-md-6  img_col">
-                    <div class="thumbnail">
-                      <img alt="300x200" src="http://t12.baidu.com/it/u=446400014,60694732&fm=76" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="row clearfix right_siderbar right_siderbar_3">
-              <div class="row clearfix">
-                <div class="col-md-12 column">
-                  <div class="carousel slide" id="carousel-647249">
-                    <ol class="carousel-indicators">
-                      <li class="active" data-slide-to="0" data-target="#carousel-647249">
-                      </li>
-                      <li data-slide-to="1" data-target="#carousel-647249">
-                      </li>
-                      <li data-slide-to="2" data-target="#carousel-647249">
-                      </li>
-                    </ol>
-                    <div class="carousel-inner">
-                      <div class="item active">
-                        <img alt="【红糖发糕】" src="http://i1.chuimg.com/e500755479a24f71ac1e71b9804022cb_465w_620h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh" />
-                        <div class="carousel-caption">
-                          <h4>
-                              【红糖发糕】
-                          </h4>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <img alt="戚风蛋糕" src="http://i2.chuimg.com/e98ea8f05edd11e7bc9d0242ac110002_3024w_4032h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
-                        <div class="carousel-caption">
-                          <h4>
-                              戚风蛋糕
-                          </h4>
-                        </div>
-                      </div>
-                      <div class="item">
-                        <img alt="虾仁鸡蛋羹" src="http://i2.chuimg.com/8fa6950242d411e7947d0242ac110002_3024w_3024h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
-                        <div class="carousel-caption">
-                          <h4>
-                              虾仁鸡蛋羹
-                          </h4>
-                        </div>
-                      </div>
-                    </div> <a class="left carousel-control" href="#carousel-647249" data-slide="prev"><i class="iconfont icon-arrow-left"></i></a>
-                    <a class="right carousel-control" href="#carousel-647249" data-slide="next"><i class="iconfont icon-arrow-right"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="content-wrapper">
-        <div class="container-fuiled">
-          <div class="row clearfix">
-            <div class="col-md-8 column column_1">
-              <div class="page-header">
-                <div class="img-box">
-                  <img src="./img/logo.png" />
-                </div>
-                <div class="name">
-                  用户xxxx
-                </div>
-              </div>
-              <div class="describe">
-                <textarea class="textcontent" rows="5" cols="5"></textarea>
-                <span class="placehoder">
-                  <i class="iconfont icon-bi"></i>
-                  点击添加菜谱描述
-                </span>
-              </div>
-              <h3 class="title material">用料</h3>
-              <table class="table">
-                <tbody></tbody>
-              </table>
-              <button type="button" class="btn btn-default addline addmaterial"> 追加一行用料 </button>
-              <div class="title-box">
-                
-                </div>
-              </div>
-              <div class="step_box"></div>
-              <button type="button" class="btn btn-default addline addstep"> 追加一个步骤 </button>
-              <div class="jumbotron">
-                <p class="title">小贴士</p>
-                <textarea class="addtip"></textarea>
-                <span class="placehoder">
-                  <i class="iconfont icon-bi"></i>
-                  点击添加小贴士
-                </span>
-              </div>
-              <button type="button" class="btn btn-default addline relase">发布菜谱 </button>
-              <button type="button" class="btn btn-default addline temporary"> 存为草稿 </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </main>
-  <footer id="footer">
-    <a href="#topAnchor">
-      <img class='top' src="https://s.chuimg.com/pic/2013/scroll_top.png">
-    </a>
-  </footer>
-  <script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
-  <script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src="./js/detail.js"></script>
+	<header id="header">
+		<div class="wrapper" id="topAnchor">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="container-fluid  nav-header">
+					<div class="navbar-header">
+						<a class="navbar-brand" href="#">
+							<img src='./img/logo.png'>
+						</a>
+					</div>
+					<div class="input-box">
+						<form class="navbar-form navbar-left" role="search">
+							<div class="form-group">
+								<input type="text" class="form-control" placeholder="搜索菜谱、美食">
+								<button type="submit" class="btn btn-default">搜索</button>
+							</div>
+						</form>
+					</div>
+					<div class="nav-menu">
+						<a href="#">首页</a>
+						<a href="#">菜谱分类</a>
+						<a href="#">菜单</a>
+						<a href="#">作品动态</a>
+					</div>
+					<div class="navbar-right">
+						<a href="#" class="login"><span> 登录 </span></a>
+						<a href="#" class="register"><span> 注册 </span></a>
+					</div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="clear"></div>
+	<main id="main">
+		<div class="main-wrapper">
+			<div class="container-fuiled">
+				<div class="row clearfix">
+					<div class="col-md-8 column">
+						<div class="nav_box">
+							<a href="./index.html"><span> 首页 </span><span> > </span></a>
+							<a href="./class.html"><span> 菜谱 </span><span> > </span></a>
+							<span class="nav-name">肥牛小米粥</span>
+						</div>
+						<input type='text' class="add" placeholder="肥牛小米粥"></input>
+						<div class="jumbotron cover_box">
+							<div class="cover">
+								<div class="upload-preview">
+									<img class="preview-image" src='http://i2.chuimg.com/20d731bbe1b54d22829a7faa707cf54d_1920w_2560h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90' />
+								</div>
+							</div>
+						</div>
+						<div class="btn_box">
+							<div class="seats"><span>10 </span>人做过</div>
+							<button type="button" class="btn btn-default addline collection">立即收藏</button>
+						</div>
+					</div>
+					<div class="col-md-4 column">
+						<div class="row clearfix right_siderbar">
+							<div class="col-md-12 column">
+								<div class="row">
+									<div class="col-md-6 img_col">
+										<div class="thumbnail">
+											<img alt="300x200" src="http://i2.chuimg.com/2bd44d2446d44b38a8aae54a6dd067d6_1836w_2448h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
+										</div>
+									</div>
+									<div class="col-md-6  img_col">
+										<div class="thumbnail">
+											<img alt="300x200" src="http://i2.chuimg.com/7072deaa857d4bd1b497386067b9395c_3024w_3024h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row clearfix right_siderbar right_siderbar_2">
+							<div class="col-md-12 column">
+								<div class="row">
+									<div class="col-md-6 img_col">
+										<div class="thumbnail">
+											<img alt="300x200" src="http://i1.chuimg.com/022d207fc8fa4d3d8c2e63d617045e15_6000w_4000h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh" />
+										</div>
+									</div>
+									<div class="col-md-6  img_col">
+										<div class="thumbnail">
+											<img alt="300x200" src="http://i1.chuimg.com/66be049c8ac211e6b87c0242ac110003_3164w_2109h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh" />
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row clearfix right_siderbar right_siderbar_3">
+							<div class="row clearfix">
+								<div class="col-md-12 column">
+									<div class="carousel slide" id="carousel-647249">
+										<ol class="carousel-indicators">
+											<li class="active" data-slide-to="0" data-target="#carousel-647249">
+											</li>
+											<li data-slide-to="1" data-target="#carousel-647249">
+											</li>
+											<li data-slide-to="2" data-target="#carousel-647249">
+											</li>
+										</ol>
+										<div class="carousel-inner">
+											<div class="item active">
+												<img alt="【红糖发糕】" src="http://i2.chuimg.com/c83d4578877c11e6b87c0242ac110003_666w_1000h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
+												<div class="carousel-caption">
+													<h4>
+														【红糖发糕】
+													</h4>
+												</div>
+											</div>
+											<div class="item">
+												<img alt="戚风蛋糕" src="http://i2.chuimg.com/8a1ff7a25e7c483e9fd1f6d9f634231e_918w_1224h.jpg?imageView2/1/w/280/h/280/interlace/1/q/90" />
+												<div class="carousel-caption">
+													<h4>
+														戚风蛋糕
+													</h4>
+												</div>
+											</div>
+											<div class="item">
+												<img alt="虾仁鸡蛋羹" src="http://i1.chuimg.com/41ae7086b16e43c9be12847c7cb30dc1_918w_1224h.jpg@2o_50sh_1pr_1l_280w_280h_1c_1e_90q_1wh" />
+												<div class="carousel-caption">
+													<h4>
+														虾仁鸡蛋羹
+													</h4>
+												</div>
+											</div>
+										</div> <a class="left carousel-control" href="#carousel-647249" data-slide="prev"><i class="iconfont icon-arrow-left"></i></a>
+										<a class="right carousel-control" href="#carousel-647249" data-slide="next"><i class="iconfont icon-arrow-right"></i></a>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="content-wrapper">
+				<div class="container-fuiled">
+					<div class="row clearfix">
+						<div class="col-md-8 column column_1">
+							<div class="page-header">
+								<div class="img-box">
+									<img src="./img/logo.png" />
+								</div>
+								<div class="name">
+									用户xxxx
+								</div>
+							</div>
+							<div class="describe">
+								<textarea class="textcontent" rows="5" cols="5"></textarea>
+								<h3 class="title material">用料</h3>
+								<table class="material-table">
+									<tr class="material-row">
+										<td class="text-input">
+											<input type="text" class='ipts ipt_ingredients' placeholder="桂皮，大料，丁香，香叶">
+										</td>
+										<td class="text-input">
+											<input type="text" class='ipts ipt_dosage' placeholder="5g">
+										</td>
+									</tr>
+									<tr class="material-row">
+										<td class="text-input">
+											<input type="text" class='ipts ipt_ingredients' placeholder="土猪花肉">
+										</td>
+										<td class="text-input">
+											<input type="text" class='ipts ipt_dosage' placeholder="3g">
+										</td>
+									</tr>
+									<tr class="material-row">
+										<td class="text-input">
+											<input type="text" class='ipts ipt_ingredients' placeholder="百叶结">
+										</td>
+										<td class="text-input">
+											<input type="text" class='ipts ipt_dosage' placeholder="4g">
+										</td>
+									</tr>
+									<tr class="material-row">
+										<td class="text-input">
+											<input type="text" class='ipts ipt_ingredients' placeholder="冰糖，生抽，酱油，盐">
+										</td>
+										<td class="text-input">
+											<input type="text" class='ipts ipt_dosage' placeholder="2颗">
+										</td>
+									</tr>
+								</table>
+								<div class="title-box"></div>
+								<div class="step_box"></div>
+							</div>
+						</div>
+						<div class="col-md-4 colum">
+							<!-- 侧边栏 -->
+							<div class="row clearfix right_siderbar right_siderbar_3">
+								<div class="row clearfix poprecipe">
+									<div class="col-md-12 column">
+										<div class="row col-xs-12 col-sm-12">
+											<h3 class="">流行搜索</h3>
+											<div class="container-fuiled">
+												<div class="row clearfix">
+													<div class="col-md-6 column">
+														<ol>
+															<li>
+																<i class="iconfont icon-meishi14"></i>
+																流行搜索
+															</li>
+															<li>
+																<i class="iconfont icon-meishi13"></i>
+																流行搜索
+															</li>
+															<li>
+																<i class="iconfont icon-meishi12"></i>
+																流行搜索
+															</li>
+															<li>
+																<i class="iconfont icon-meishi11"></i>
+																流行搜索
+															</li>
+															<li>
+																<i class="iconfont icon-meishi10"></i>
+																流行搜索
+															</li>
+														</ol>
+													</div>
+													<div class="col-md-6 column">
+														<ol>
+															<li>
+																<i class="iconfont icon-meishi9"></i>
+																流行搜索
+															</li>
+															<li>
+																<i class="iconfont icon-meishi8"></i>
+																流行搜索
+															</li>
+															<li>
+																<i class="iconfont icon-meishi7"></i>
+																流行搜索
+															</li>
+															<li>
+																<i class="iconfont icon-meishi6"></i>
+																流行搜索
+															</li>
+															<li>
+																<i class="iconfont icon-meishi5"></i>
+																流行搜索
+															</li>
+														</ol>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="row clearfix right_siderbar right_siderbar_3 "">
+								<div class=" row clearfix poprecipe">
+								<div class="col-md-12 column">
+									<div class="container-fuiled">
+										<div class="row clearfix">
+											<div class="col-md-12 column">
+												<h3 class="side_menu">
+													被大家加入到以下菜单
+													<small>菜单</small>
+												</h3>
+												<div class="side_img">
+													<img alt="140x140" src="http://i1.chuimg.com/66be049c8ac211e6b87c0242ac110003_3164w_2109h.jpg@2o_50sh_1pr_1l_235w_138h_1c_1e_90q_1wh" />
+													<p>烘培零食分类</p>
+												</div>
+												<div class="side_img">
+													<img alt="140x140" src="http://i2.chuimg.com/e335f316f37911e6947d0242ac110002_1280w_960h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
+													<p>烘培零食分类</p>
+												</div>
+												<div class="side_img">
+													<img alt="140x140" src="http://i2.chuimg.com/0dafdc66896611e6a9a10242ac110002_640w_640h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
+													<p>烘培零食分类</p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row clearfix right_siderbar right_siderbar_3 "">
+								<div class=" row clearfix poprecipe">
+							<div class="col-md-12 column">
+								<p>
+									该菜谱创建于<span></span>
+								</p>
+								<p>
+									2019人收藏
+								</p>
+								<p>
+									版权归作者所有,没有作者本人的书面许可，任何人不得转载或使用部分或整体内容
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		</div>
+	</main>
+	<footer id="footer">
+		<a href="#topAnchor">
+			<img class='top' src="https://s.chuimg.com/pic/2013/scroll_top.png">
+		</a>
+	</footer>
+	<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
+	<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
+	<script src="./js/detail.js"></script>
 
 
 </body>
