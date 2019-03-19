@@ -80,6 +80,9 @@ body {
   text-decoration: none;
   color: #ffffff;
 }
+.content ul .list_item {
+  height: 780px;
+}
 .content ul li {
   width: 130px;
   height: 32px;

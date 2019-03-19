@@ -1,95 +1,11 @@
 import $ from 'jquery';
-// import 'bootstrap';
 import {fashionSearch} from '../../utils/module/search';
+import {creatMenuList} from '../../utils/module/creatMenuList';
+import {newFashionList} from '../../utils/module/newFashionList';
 
 $(function () {
     //内容盒子左边的菜单列表
-    var arr = [
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        },
-        {
-            icon: 'icon-food',
-            name: '家常菜'
-        }
-    ];
-    function creatList(arr) {
-
-        $(arr).each(function () {
-            // console.log(this)
-            $('.list').prepend(`
-                <li>
-                    <a href="#">
-                        <i class="iconfont ${this.icon}"></i>
-                        <span>${this.name}</span>
-                    </a>
-                </li>
-        `)
-        })
-
-    }
-    creatList(arr);
+    creatMenuList();
 
     // 轮播
     function slide1() {
@@ -105,85 +21,7 @@ $(function () {
     slide1();
 
     //最近流行
-    function fashList(){
-        var fashArr=[
-            {
-            url:'./img/1.jpg',
-            name:'鱼香茄子0',
-            num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子1',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子2',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子3',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子4',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子5',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子6',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子7',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子8',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子9',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子8',
-                num:'234人做过'
-            },
-            {
-                url:'./img/1.jpg',
-                name:'鱼香茄子9',
-                num:'234人做过'
-            }
-         ]
-         fashArr.forEach(function(ele){
-            $('.fash_h3').after(`
-            <div class="col-sm-6 col-md-6">
-                <div class="thumbnail">
-                    <img src=${ele.url} alt="通用的占位符缩略图">
-                <div class="caption text-center">
-                    <p>${ele.name}</p>
-                    <h6>${ele.num}</h6>
-                </div>
-                </div>
-            </div>
-            `)
-         })
-         
-    }
-    fashList();
+    newFashionList();
 
     // 时令食材
     function timeList(){
@@ -525,4 +363,6 @@ $(function () {
         }
     }
     getUserInfo();
+
+    console.log(localStorage.getItem('ip'))
 })
