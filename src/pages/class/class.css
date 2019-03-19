@@ -114,6 +114,9 @@
 .container .classmid > .classmid-content > .classmid-tit-right > .classmid-author > span:hover {
   color: #dd3915;
 }
+.container .classmid > .classmid-fenye {
+  text-align: center;
+}
 .container .classright-main > div > h3 {
   color: #c0ae7d;
   font-weight: bold;
@@ -220,4 +223,8 @@
   line-height: 40px;
   color: #dd3915;
   font-size: 16px;
+}
+.navbar-default > .nav-header > .libiaoqian > .navbar-nav-right {
+  float: right;
+  margin-right: 10px;
 }
