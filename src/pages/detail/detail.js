@@ -4,7 +4,6 @@ import { getRecipeDetail } from '../../utils/api';
 
 //获取节点
 
-
 /**
  * 数据渲染
  */

@@ -47,4 +47,4 @@ export const getRecipeDetail = (id) => request('/recipe/detail', { id }, 'GET');
 /**
  * 获取厨师用户名
  */
-export const getRecipesilfrecipe = () => request('/recipe/self');
+export const getSelfRecipes = () => request('/recipe/self');

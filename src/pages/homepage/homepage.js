@@ -1,7 +1,7 @@
 import $ from 'jquery';
 import { add0, format } from '../../utils/format';
 import { getPopRecipes } from '../../utils/api';
-import { getRecipesilfrecipe } from '../../utils/api';
+import { getSelfRecipes } from '../../utils/api';
 console.log(333);
 console.log($('.nav-tabs a'));
 $(".nav-tabs li").on("click", function () {
@@ -68,11 +68,10 @@ getPopRecipes()
   .then(PopRecipes => render(PopRecipes, '.all-box'))
 
 // 渲染自建菜谱
-getRecipesilfrecipe()
-  .then(silfrecipe => {
-    var self = silfrecipe.recipes;
+getSelfRecipes()
+  .then(selfRecipe => {
+    var self = selfRecipe.recipes;
     console.log(self)
     renderRecipe(self, '.creat-box');
-
   })
 
