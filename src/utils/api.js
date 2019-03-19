@@ -32,7 +32,7 @@ export const sendSMSOfRegister = (mobile) => request('/user/sendSMS', { mobile }
 /**
  * 获取流行菜谱
  */
-export const getPopRecipes = () => request('/getPopRecipes');
+export const getPopRecipes = () => request('/recipe/pop');
 
 /**
  * 创建菜谱

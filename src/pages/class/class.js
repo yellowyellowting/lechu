@@ -1,3 +1,4 @@
+import {getPopRecipes} from '../../utils/api';
 $(function () {
 
     //右边的部分数据
@@ -140,44 +141,44 @@ $(function () {
     //分页-前端分页
     //发起请求获取所有数据，且加载第一页数据
     var datav = [];
-    $.getJSON("http://127.0.0.1:3000/recipe/pop", function (data) {
-        // console.log(data)
-        datav = data.data
-        console.log(datav)
-        var str = ""
-        $(datav).each(function (i, ele) {
-            if (i > 9) return
-            // console.log(ele)
-            str += `<div class="row classmid-content">
-            <div class="col-sm-6">
-            <img src=${ele.thumbnail} alt="">
-        </div>
-        <div class="col-sm-6 classmid-tit-right">
-            <div class="row classmid-tit-small">
-                <h4>${this.name}</h4>
-            </div>
-            <div class="row class-tips">
-                <span>独家</span>
-                <span>步骤图</span>
-            </div>
-            <div class="row classmid-material">
-                <span>${this.dishStuff}</span>
-            </div>
-            <div class="row classmid-score">
-                <span>综合评分</span>
-                <span>${this.dishScore}</span>
-                <span>${this.stats}</span>
-            </div>
-            <div class="row classmid-author">
-                <span>${this.cookName} <i class="glyphicon glyphicon-fire"></i> </span>
-            </div>
-        </div>
-        </div>
-            `
-        })
-        $(".classmid-tittoo").after(str)
-    })
     //分页查询代码
-    
+    getPopRecipes().then(poprecipe => {
+        console.log(poprecipe);
+        datav = poprecipe
+            console.log(datav)
+            var str = ""
+            $(datav).each(function (i, ele) {
+                if (i > 9) return
+                // console.log(ele)
+                str += `<div class="row classmid-content">
+                <div class="col-sm-6">
+                <img src=${ele.thumbnail} alt="">
+            </div>
+            <div class="col-sm-6 classmid-tit-right">
+                <div class="row classmid-tit-small">
+                    <h4>${this.name}</h4>
+                </div>
+                <div class="row class-tips">
+                    <span>独家</span>
+                    <span>步骤图</span>
+                </div>
+                <div class="row classmid-material">
+                    <span>${this.dishStuff}</span>
+                </div>
+                <div class="row classmid-score">
+                    <span>综合评分</span>
+                    <span>${this.dishScore}</span>
+                    <span>${this.stats}</span>
+                </div>
+                <div class="row classmid-author">
+                    <span>${this.cookName} <i class="glyphicon glyphicon-fire"></i> </span>
+                </div>
+            </div>
+            </div>
+                `
+            })
+            $(".classmid-tittoo").after(str)
+
+    })
 
 })
