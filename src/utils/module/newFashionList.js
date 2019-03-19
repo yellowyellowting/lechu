@@ -3,7 +3,6 @@ function newFashionList() {
     $.ajax({
         url: 'http://127.0.0.1:3000/recipe/pop',
         success: function (data) {
-            console.log(data.data)
             let dataArr = data.data;
             dataArr.forEach(function (ele) {
                 $('.fash_h3').after(`

@@ -134,6 +134,9 @@ body {
 }
 .content .center .box .caption p {
   font-size: 14px;
+  display: inline-block;
+  height: 20px;
+  overflow: hidden;
 }
 .content .fash h3 {
   color: #fad800;
@@ -175,6 +178,11 @@ body {
 .content .time .caption:hover {
   color: #dd3915;
   cursor: pointer;
+}
+.content .time h6 {
+  display: inline-block;
+  height: 13px;
+  overflow: hidden;
 }
 .content .zp {
   margin-top: 880px;
