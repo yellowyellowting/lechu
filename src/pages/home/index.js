@@ -111,24 +111,24 @@ $(function () {
         },
         {
             name:'早餐',
-            rank:'icon-down'
+            rank:'icon-up'
         },
         {
             name:'鱼香茄子',
             rank:'icon-up'
         },
         {
-            name:'可乐鸡翅',
+            name:'青团',
             rank:'icon-down'
         },
         {
-            name:'可乐鸡翅',
+            name:'汤',
             rank:'icon-up'
         }
     ];
     var arr2=[
         {
-            name:'可乐鸡翅',
+            name:'红烧肉',
             rank:'icon-up'
         },
         {
@@ -136,15 +136,15 @@ $(function () {
             rank:'icon-down'
         },
         {
-            name:'可乐鸡翅',
+            name:'牛肉',
             rank:'icon-up'
         },
         {
-            name:'可乐鸡翅',
+            name:'蛋糕',
             rank:'icon-down'
         },
         {
-            name:'可乐鸡翅',
+            name:'排骨',
             rank:'icon-up'
         }
     ];
