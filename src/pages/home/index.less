@@ -81,6 +81,9 @@ body {
                 color: @primary-color;
             }
         }
+        .icon-favorite{
+            margin-top: 0;
+        }
     } // 搜索栏
     .navbar-form {
         margin-top: 20px;
@@ -228,14 +231,8 @@ body {
             height: 13px;
             overflow: hidden;
         }
-        .time_list{
-            img{
-                display: inline-block;
-                width: 90px;
-                height: 50px;
-            }
-        }
     }
+    // 作品展示列表
     .zp {
         margin-top: 960px;
         width: 666px;
@@ -249,9 +246,12 @@ body {
                 width: 80px;
                 height: 80px;
                 float: right;
+                margin-right: 2px;
             }
             p {
                 float: left;
+                font-size: 14px;
+                color: gray;
             }
             .des {
                 width: 300px;
@@ -360,6 +360,7 @@ body {
             }
         }
     }
+    // 下厨房的厨友们
     .friends {
         h3 {
             .titleH3();
@@ -399,8 +400,20 @@ body {
                         margin-top: 30px;
                     }
                 }
+                span,p{
+                    font-size: 14px;
+                    color: gray;
+                }
+                h4:hover{
+                    color: @primary-color;
+                }
             }
         }
+    }
+    // 图表
+    #main{
+        margin-left: 70px;
+        margin-top: 20px;
     }
 }
 

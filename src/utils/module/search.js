@@ -1,3 +1,4 @@
+//流行搜索
 function fashionSearch(arr,dom,num){
     // $('.search .left')
     $(arr).each(function(index){

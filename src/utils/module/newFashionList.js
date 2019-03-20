@@ -5,7 +5,6 @@ function newFashionList() {
         success: function (data) {
             let dataArr = data.data;
             let resArr=dataArr.slice(0,12);
-            console.log(resArr)
             resArr.forEach(function (ele) {
                 $('.fash_h3').after(`
                 <a href="./detail.html?id=${ele.id}" class="item">

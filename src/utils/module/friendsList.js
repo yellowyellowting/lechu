@@ -5,7 +5,6 @@
         success:function(data){
             let dataArr=data.data;
             let resArr=dataArr.slice(0,7);
-            console.log(resArr)
             $(resArr).each(function(){
                 $('.friends .itemlist').append(`
                 <div class="row item">
