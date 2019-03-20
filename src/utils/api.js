@@ -42,7 +42,7 @@ export const createReview = (obj) => request('/comment/create', obj , 'POST')
 /**
  * 读取评论,
  */
-export const getReview = () => request('/comment/list')
+export const getReview = (comments) => request('/comment/list' ,comments)
 
 /**
  * 创建菜谱

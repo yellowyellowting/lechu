@@ -134,7 +134,7 @@ $(function () {
 
                 var obj = new Object();
                 obj.img = "./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg";
-                obj.userId = "匿名";
+                obj.userId = "懒人";
                 obj.recipeId = $(this).parents(".works-main").attr("id");
                 obj.content = $(this).siblings(".works-comment").val();
 
@@ -154,15 +154,16 @@ $(function () {
             })
             
             //评论传染后端
-            console.log(obj)
-            createReview().then( obj=> {
-                console.log(obj)
+            // console.log(obj)
+            createReview(obj).then( result=> {
+                console.log(result)
 
             })
-
-
-
         });
+        // getReview(comments).then( comments=> {
+        //     console.log(comments)
+
+        // })
 
 
 
