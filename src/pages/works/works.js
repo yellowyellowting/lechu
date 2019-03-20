@@ -1,6 +1,9 @@
 // import $ from "jquery";
 // import bootstrap from"bootstrap";
-import { createReview, getReview } from '../../utils/api';
+import {
+    createReview,
+    getReview
+} from '../../utils/api';
 $(function () {
 
     //点赞事件相关的代码
@@ -72,7 +75,7 @@ $(function () {
     //分页查询代码
     $.getJSON("http://127.0.0.1:3000/recipe/pop", function (data) {
         // console.log(data)
-        datav = data.data;//存储数据
+        datav = data.data; //存储数据
         // console.log(datav)
         var str = "";
 
@@ -131,41 +134,59 @@ $(function () {
             if ($(this).siblings(".works-comment").val() == "") {
                 alert("评论不能为空!")
             } else {
-
                 var obj = new Object();
                 obj.img = "./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg";
                 obj.userId = "懒人";
                 obj.recipeId = $(this).parents(".works-main").attr("id");
                 obj.content = $(this).siblings(".works-comment").val();
-
-
-
                 $(this).parents(".comment-allin").find(".comment-list").addCommentList({
                     data: [],
                     add: obj
                 });
                 $(this).parents(".comment-allin").find(".works-comment").val("")
             }
-
             //返回每个回复体内容
             $(".reply-btn").on("click", function () {
                 var replayuser = $(this).parent().parent().find(".username-content").text()
                 $(this).parents(".comment-allin").find(".works-comment").val("@" + replayuser + " ")
             })
-            
-            //评论传染后端
-            // console.log(obj)
-            createReview(obj).then( result=> {
-                console.log(result)
-
+            //评论传给后端
+            console.log(obj)
+            createReview(obj).then(result => {
+                // console.log(result)
             })
         });
-        // getReview(comments).then( comments=> {
-        //     console.log(comments)
+        $(".works-main").each(function () {
+            // console.log($(this).attr("id"))
+            var comments = new Object()
+            comments.recipeId = $(this).attr("id")
+            // console.log(comments)
+            $.getJSON("http://127.0.0.1:3000/comment/list", comments, function (data) {
+                // console.log(data)
+                var clist = data.data
+                // console.log(clist)
+                if (clist.length > 0) {
+                    // console.log(clist)
+                    // console.log(this)
+                    for (var key in clist) {
+                        // console.log(clist[key].recipe_id)
+                        // console.log(this)
+                        if ($(".works-main").attr("id")==clist[key].recipe_id) {
+                            console.log($(".works-main").attr("id"))
+                            $(".").find(".comment-list").addCommentList({
+                                data: [],
+                                add: clist
+                            });
+                        }
 
-        // })
+                    }
 
 
+
+                }
+
+            })
+        })
 
 
     })
