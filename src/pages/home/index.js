@@ -6,6 +6,8 @@ import {newRecipe} from '../../utils/module/newRecipe';
 // import {slide} from '../../utils/module/search';
 import {timeList} from '../../utils/module/timeList';
 import {fashionMenu} from '../../utils/module/fashionMenu';
+import {zpList} from '../../utils/module/zpList';
+import {friendsList} from '../../utils/module/friendsList';
 
 $(function () {
     //内容盒子左边的菜单列表
@@ -34,74 +36,7 @@ $(function () {
     timeList();
 
     // 作品展示列表
-    function zpList(){
-        var zpArr=[
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            }
-        ];
-        $(zpArr).each(function(){
-            $('.zp_item').append(`
-            <a href="#" class="list-group-item item">
-            <div class="des">
-              <h4 class="list-group-item-heading">
-                ${this.title}
-              </h4><br>
-              <p class="list-group-item-text">
-                ${this.des}
-              </p>
-            </div>
-            <div>
-              <img src=${this.img1} alt="">
-              <img src=${this.img2} alt="">
-              <img src=${this.img3} alt="">
-            </div>
-          </a>
-            `)
-        })
-    }
     zpList();
-    console.log(fashionSearch)
-    window.fashionSearch=fashionSearch;
 
     // 流行搜索渲染
     var arr1=[
@@ -111,24 +46,24 @@ $(function () {
         },
         {
             name:'早餐',
-            rank:'icon-down'
+            rank:'icon-up'
         },
         {
             name:'鱼香茄子',
             rank:'icon-up'
         },
         {
-            name:'可乐鸡翅',
+            name:'青团',
             rank:'icon-down'
         },
         {
-            name:'可乐鸡翅',
+            name:'汤',
             rank:'icon-up'
         }
     ];
     var arr2=[
         {
-            name:'可乐鸡翅',
+            name:'红烧肉',
             rank:'icon-up'
         },
         {
@@ -136,15 +71,15 @@ $(function () {
             rank:'icon-down'
         },
         {
-            name:'可乐鸡翅',
+            name:'牛肉',
             rank:'icon-up'
         },
         {
-            name:'可乐鸡翅',
+            name:'蛋糕',
             rank:'icon-down'
         },
         {
-            name:'可乐鸡翅',
+            name:'排骨',
             rank:'icon-up'
         }
     ];
@@ -157,72 +92,6 @@ $(function () {
     fashionMenu();
 
     // 下厨房的厨友们 渲染数据
-    function friendsList(){
-        var arr=[
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            }
-        ];
-        // console.log($('.friends .itemlist'))
-        $(arr).each(function(){
-            $('.friends .itemlist').append(`
-            <div class="row item">
-                      <div class="col-xs-3 col-sm-3">
-                        <img class="img-circle" src="./img/1.jpg" alt="">
-                      </div>
-                      <div class="col-xs-6 col-sm-6">
-                        <h4>悦己2016</h4>
-                        <p><span>123</span>关注</p>
-                        <p><span>46</span>个菜谱<span>567</span>个作品</p>
-                      </div>
-                      <div class="col-xs-3 col-sm-3 pull-right" style="padding-right: 0">
-                        <div id="watch">
-                          <span>关注</span>
-                        </div>
-                      </div>
-                  </div>
-            `)
-        })
-    }
     friendsList();
 
     //用户信息显示
@@ -259,8 +128,8 @@ $(function () {
             //2.nav部分更换用户信息
             // console.log($('.userinfo'))
             $('.userinfo').append(`
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+            <li><a href="./register.html"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+            <li><a href="./login.html"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
             `)
         }else{
             //用户已登录

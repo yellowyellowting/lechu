@@ -5,7 +5,7 @@
         success:function(data){
             let dataArr=data.data;
             let resArr=dataArr.splice(5,4);
-            console.log(resArr)
+            // console.log(resArr)
             $(resArr).each(function(){
                 $('.menu .item').append(`
                     <div class="thumbnail">

@@ -37,6 +37,7 @@ function render(recipe) {
 
 
 var id = getQueryString('id'); //传入字符串
+console.log(id);
 (function () {
     if (!id) {
         alert("餐馆ID不能为空");
@@ -44,6 +45,7 @@ var id = getQueryString('id'); //传入字符串
     }
     getRecipeDetail(id)
         .then(recipe => {
+            console.log(recipe);
             render(recipe);
         })
         .catch(error => {
