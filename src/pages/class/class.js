@@ -1,4 +1,4 @@
-import {getPopRecipes} from '../../utils/api';
+import { getPopRecipes } from '../../utils/api';
 $(function () {
 
     //右边的部分数据
@@ -142,43 +142,157 @@ $(function () {
     //发起请求获取所有数据，且加载第一页数据
     var datav = [];
     //分页查询代码
+    // $.getJSON("http://127.0.0.1:3000/recipe/pop", function (data) {
+    //     // console.log(data);
+    //     datav = data.data
+    //     console.log(datav)
+    //     var str = ""
+    //     $(datav).each(function (i, ele) {
+    //         if (i > 9) return
+    //         console.log(ele)
+    //         str += `
+    //             <div class="col-sm-6">
+    //                 <img src=${this.thumbnail} alt="">
+    //             </div>
+    //             <div class="col-sm-6 classmid-tit-right">
+    //                 <div class="row classmid-tit-small">
+    //                     <h4>${this.name}</h4>
+    //                 </div>
+    //                 <div class="row class-tips">
+    //                     <span>独家</span>
+    //                     <span>步骤图</span>
+    //                 </div>
+    //                 <div class="row classmid-material">
+    //                     <span>${this.dishStuff}</span>
+    //                 </div>
+    //                 <div class="row classmid-score">
+    //                     <span>综合评分</span>
+    //                     span>${this.dishScore}</span>
+    //                     <span>${this.stats}</span>
+    //                 </div>
+    //                 <div class="row classmid-author">
+    //                     <span>${this.cookName} <i class="glyphicon glyphicon-fire"></i> </span>
+    //                 </div>
+    //             </div>
+    //             `
+    //     })
+    //     $(".classmid-content").append(str)
+    // })
     getPopRecipes().then(poprecipe => {
-        console.log(poprecipe);
+        // console.log(poprecipe);
         datav = poprecipe
-            console.log(datav)
-            var str = ""
-            $(datav).each(function (i, ele) {
-                if (i > 9) return
-                // console.log(ele)
-                str += `<div class="row classmid-content">
+        // console.log(datav)
+        var str = ""
+        $(datav).each(function (i, ele) {
+            if (i > 9) return
+            // console.log(ele)
+            str += `
                 <div class="col-sm-6">
-                <img src=${ele.thumbnail} alt="">
-            </div>
-            <div class="col-sm-6 classmid-tit-right">
-                <div class="row classmid-tit-small">
-                    <h4>${this.name}</h4>
+                    <img src=${this.thumbnail} alt="">
                 </div>
-                <div class="row class-tips">
-                    <span>独家</span>
-                    <span>步骤图</span>
+                <div class="col-sm-6 classmid-tit-right">
+                    <div class="row classmid-tit-small">
+                        <h4>${this.name}</h4>
+                    </div>
+                    <div class="row class-tips">
+                        <span>独家</span>
+                        <span>步骤图</span>
+                    </div>
+                    <div class="row classmid-material">
+                        <span>${this.dishStuff}</span>
+                    </div>
+                    <div class="row classmid-score">
+                        <span>综合评分</span>
+                        <span>${this.dishScore}</span>
+                        <span>${this.stats}</span>
+                    </div>
+                    <div class="row classmid-author">
+                        <span>${this.cookName} <i class="glyphicon glyphicon-fire"></i> </span>
+                    </div>
                 </div>
-                <div class="row classmid-material">
-                    <span>${this.dishStuff}</span>
-                </div>
-                <div class="row classmid-score">
-                    <span>综合评分</span>
-                    <span>${this.dishScore}</span>
-                    <span>${this.stats}</span>
-                </div>
-                <div class="row classmid-author">
-                    <span>${this.cookName} <i class="glyphicon glyphicon-fire"></i> </span>
-                </div>
-            </div>
-            </div>
                 `
-            })
-            $(".classmid-tittoo").after(str)
+        })
+        $(".classmid-content").append(str)
+    })
+    //下一页
+    var currentP = 1, pageNum = 10; //默认的当前页，每页的数据条数
+    $("#nextPage").on("click", function () {
+        var totP = datav.length / pageNum; //总的页码
+        var nextPage = currentP + 1; //currentP*10--nextPage*10
+        console.log("nextPage:", nextPage, "totP:", Math.ceil(totP))
+        if (nextPage > totP) { alert("已经到了最后一页"); return; }
+        var str = "";
+        for (let i = currentP * pageNum; i < nextPage * pageNum; i++) {
+            str += `
+            <div class="col-sm-6">
+            <img src=${datav[i].thumbnail} alt="">
+        </div>
+        <div class="col-sm-6 classmid-tit-right">
+            <div class="row classmid-tit-small">
+                <h4>${datav[i].name}</h4>
+            </div>
+            <div class="row class-tips">
+                <span>独家</span>
+                <span>步骤图</span>
+            </div>
+            <div class="row classmid-material">
+                <span>${datav[i].dishStuff}</span>
+            </div>
+            <div class="row classmid-score">
+                <span>综合评分</span>
+                <span>${datav[i].dishScore}</span>
+                <span>${datav[i].stats}</span>
+            </div>
+            <div class="row classmid-author">
+                <span>${datav[i].cookName} <i class="glyphicon glyphicon-fire"></i> </span>
+            </div>
+        </div>
 
+            `
+        }
+        $(".classmid-content").find("*").remove()
+        $(".classmid-content").append(str)
+        currentP = nextPage; //修正当前页的值
     })
 
+    //上一页
+    $("#beforePage").on("click", function () {
+        var totP = datav.length / pageNum;//总的页码
+        var beforePage = currentP - 1;
+        console.log("beforePage:", beforePage, "totP:", Math.ceil(totP))
+
+        if (beforePage < 1) { alert("已经到了第一页"); return; }
+
+        var str = "";
+        for (let i = (beforePage - 1) * pageNum; i < beforePage * pageNum; i++) {
+            str += `
+            <div class="col-sm-6">
+            <img src=${datav[i].thumbnail} alt="">
+        </div>
+        <div class="col-sm-6 classmid-tit-right">
+            <div class="row classmid-tit-small">
+                <h4>${datav[i].name}</h4>
+            </div>
+            <div class="row class-tips">
+                <span>独家</span>
+                <span>步骤图</span>
+            </div>
+            <div class="row classmid-material">
+                <span>${datav[i].dishStuff}</span>
+            </div>
+            <div class="row classmid-score">
+                <span>综合评分</span>
+                <span>${datav[i].dishScore}</span>
+                <span>${datav[i].stats}</span>
+            </div>
+            <div class="row classmid-author">
+                <span>${datav[i].cookName} <i class="glyphicon glyphicon-fire"></i> </span>
+            </div>
+        </div>
+            `
+        }
+        $(".classmid-content").find("*").remove()
+        $(".classmid-content").append(str)
+        currentP = beforePage; //修正当前页的值
+    })
 })

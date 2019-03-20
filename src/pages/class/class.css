@@ -74,6 +74,9 @@
   width: 215px;
   height: 136px;
 }
+.container .classmid > .classmid-content > .classmid-tit-right {
+  margin-bottom: 20px;
+}
 .container .classmid > .classmid-content > .classmid-tit-right > .classmid-tit-small > h4 {
   font-weight: 700;
   width: 230px;
