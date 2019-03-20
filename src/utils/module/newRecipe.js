@@ -8,7 +8,7 @@ function newRecipe() {
             $(resArr).each(function () {
                 $('.box .boxlist').append(`
                 <div class="col-sm-4 col-md-4">
-                    <div class="thumbnail">
+                    <div class="thumbnail img">
                         <img src=${this.thumbnail} alt="通用的占位符缩略图">
                         <div class="caption text-center">
                             <p id="name">${this.name}</p>

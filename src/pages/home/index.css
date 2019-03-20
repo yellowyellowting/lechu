@@ -138,6 +138,18 @@ body {
   height: 20px;
   overflow: hidden;
 }
+.content .center .box .thumbnail {
+  margin-bottom: 15px;
+}
+.content .center .box .img {
+  width: 130px;
+  height: 130px;
+}
+.content .center .box .img img {
+  display: inline-block;
+  width: 120px;
+  height: 75px;
+}
 .content .fash h3 {
   color: #fad800;
   padding-left: 15px;
@@ -154,6 +166,12 @@ body {
 .content .fash .caption:hover {
   color: #dd3915;
   cursor: pointer;
+}
+.content .fash .item p {
+  display: inline-block;
+  font-size: 14px;
+  height: 16px;
+  overflow: hidden;
 }
 .content .time {
   background-color: #F5F6F5;
@@ -185,7 +203,7 @@ body {
   overflow: hidden;
 }
 .content .zp {
-  margin-top: 880px;
+  margin-top: 960px;
   width: 666px;
 }
 .content .zp a {

@@ -6,6 +6,7 @@ import {newRecipe} from '../../utils/module/newRecipe';
 // import {slide} from '../../utils/module/search';
 import {timeList} from '../../utils/module/timeList';
 import {fashionMenu} from '../../utils/module/fashionMenu';
+import {zpList} from '../../utils/module/zpList';
 
 $(function () {
     //内容盒子左边的菜单列表
@@ -34,74 +35,7 @@ $(function () {
     timeList();
 
     // 作品展示列表
-    function zpList(){
-        var zpArr=[
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            },
-            {
-                title:'#蜜桃☞早餐日记#',
-                des:'便当做起来，早餐也不能落后',
-                img1:'./img/1.jpg',
-                img2:'./img/1.jpg',
-                img3:'./img/1.jpg'
-            }
-        ];
-        $(zpArr).each(function(){
-            $('.zp_item').append(`
-            <a href="#" class="list-group-item item">
-            <div class="des">
-              <h4 class="list-group-item-heading">
-                ${this.title}
-              </h4><br>
-              <p class="list-group-item-text">
-                ${this.des}
-              </p>
-            </div>
-            <div>
-              <img src=${this.img1} alt="">
-              <img src=${this.img2} alt="">
-              <img src=${this.img3} alt="">
-            </div>
-          </a>
-            `)
-        })
-    }
     zpList();
-    console.log(fashionSearch)
-    window.fashionSearch=fashionSearch;
 
     // 流行搜索渲染
     var arr1=[
