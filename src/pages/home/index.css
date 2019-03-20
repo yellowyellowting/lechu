@@ -59,6 +59,9 @@ body {
   line-height: 40px;
   color: #dd3915;
 }
+.container nav .navbar-nav .icon-favorite {
+  margin-top: 0;
+}
 .container nav .navbar-form {
   margin-top: 20px;
 }
@@ -207,11 +210,6 @@ body {
   height: 13px;
   overflow: hidden;
 }
-.content .time .time_list img {
-  display: inline-block;
-  width: 90px;
-  height: 50px;
-}
 .content .zp {
   margin-top: 960px;
   width: 666px;
@@ -227,9 +225,12 @@ body {
   width: 80px;
   height: 80px;
   float: right;
+  margin-right: 2px;
 }
 .content .zp a p {
   float: left;
+  font-size: 14px;
+  color: gray;
 }
 .content .zp a .des {
   width: 300px;
@@ -369,6 +370,18 @@ body {
   line-height: 40px;
   text-align: center;
   margin-top: 30px;
+}
+.content .friends .itemlist .item span,
+.content .friends .itemlist .item p {
+  font-size: 14px;
+  color: gray;
+}
+.content .friends .itemlist .item h4:hover {
+  color: #dd3915;
+}
+.content #main {
+  margin-left: 70px;
+  margin-top: 20px;
 }
 .foot .btn a {
   display: inline-block;
