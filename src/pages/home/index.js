@@ -7,6 +7,7 @@ import {newRecipe} from '../../utils/module/newRecipe';
 import {timeList} from '../../utils/module/timeList';
 import {fashionMenu} from '../../utils/module/fashionMenu';
 import {zpList} from '../../utils/module/zpList';
+import {friendsList} from '../../utils/module/friendsList';
 
 $(function () {
     //内容盒子左边的菜单列表
@@ -91,72 +92,6 @@ $(function () {
     fashionMenu();
 
     // 下厨房的厨友们 渲染数据
-    function friendsList(){
-        var arr=[
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            },
-            {
-                username:'悦己2016',
-                watchNum:'123',
-                menu:'46',
-                zpNum:'234'
-            }
-        ];
-        // console.log($('.friends .itemlist'))
-        $(arr).each(function(){
-            $('.friends .itemlist').append(`
-            <div class="row item">
-                      <div class="col-xs-3 col-sm-3">
-                        <img class="img-circle" src="./img/1.jpg" alt="">
-                      </div>
-                      <div class="col-xs-6 col-sm-6">
-                        <h4>悦己2016</h4>
-                        <p><span>123</span>关注</p>
-                        <p><span>46</span>个菜谱<span>567</span>个作品</p>
-                      </div>
-                      <div class="col-xs-3 col-sm-3 pull-right" style="padding-right: 0">
-                        <div id="watch">
-                          <span>关注</span>
-                        </div>
-                      </div>
-                  </div>
-            `)
-        })
-    }
     friendsList();
 
     //用户信息显示

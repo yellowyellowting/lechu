@@ -1,49 +1,5 @@
 // 作品展示列表
 function zpList(){
-    var zpArr=[
-        {
-            title:'#蜜桃☞早餐日记#',
-            des:'便当做起来，早餐也不能落后',
-            img1:'./img/1.jpg',
-            img2:'./img/1.jpg',
-            img3:'./img/1.jpg'
-        },
-        {
-            title:'#蜜桃☞早餐日记#',
-            des:'便当做起来，早餐也不能落后',
-            img1:'./img/1.jpg',
-            img2:'./img/1.jpg',
-            img3:'./img/1.jpg'
-        },
-        {
-            title:'#蜜桃☞早餐日记#',
-            des:'便当做起来，早餐也不能落后',
-            img1:'./img/1.jpg',
-            img2:'./img/1.jpg',
-            img3:'./img/1.jpg'
-        },
-        {
-            title:'#蜜桃☞早餐日记#',
-            des:'便当做起来，早餐也不能落后',
-            img1:'./img/1.jpg',
-            img2:'./img/1.jpg',
-            img3:'./img/1.jpg'
-        },
-        {
-            title:'#蜜桃☞早餐日记#',
-            des:'便当做起来，早餐也不能落后',
-            img1:'./img/1.jpg',
-            img2:'./img/1.jpg',
-            img3:'./img/1.jpg'
-        },
-        {
-            title:'#蜜桃☞早餐日记#',
-            des:'便当做起来，早餐也不能落后',
-            img1:'./img/1.jpg',
-            img2:'./img/1.jpg',
-            img3:'./img/1.jpg'
-        }
-    ];
     $.ajax({
         url:'http://127.0.0.1:3000/recipe/pop',
         success:function(data){

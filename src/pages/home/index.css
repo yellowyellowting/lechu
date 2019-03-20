@@ -173,6 +173,11 @@ body {
   height: 16px;
   overflow: hidden;
 }
+.content .fash .item img {
+  display: inline-block;
+  width: 220px;
+  height: 128px;
+}
 .content .time {
   background-color: #F5F6F5;
 }
