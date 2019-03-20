@@ -259,8 +259,8 @@ $(function () {
             //2.nav部分更换用户信息
             // console.log($('.userinfo'))
             $('.userinfo').append(`
-            <li><a href="#"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
-            <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
+            <li><a href="./register.html"><span class="glyphicon glyphicon-user"></span> 注册</a></li>
+            <li><a href="./login.html"><span class="glyphicon glyphicon-log-in"></span> 登录</a></li>
             `)
         }else{
             //用户已登录

@@ -45,6 +45,12 @@ export const createRecipe = (recipeInfo) => request('/recipe/create', recipeInfo
 export const getRecipeDetail = (id) => request('/recipe/detail', { id }, 'GET');
 
 /**
- * 获取厨师用户名
+ * 获取自建菜谱
  */
 export const getSelfRecipes = () => request('/recipe/self');
+
+/**
+ * 获取详情爬数据
+ */
+
+export const getspiderdetail = (id) => request('/spider/recipeDetail', {id});
