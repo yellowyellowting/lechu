@@ -403,7 +403,7 @@
 #footer {
     &{
         width: 100%;
-        margin-top: 50*@size;
+        margin-top: 30*@size;
         color: 1.2*@size;
     }
    .container {
@@ -445,3 +445,237 @@
     font-weight: 300;
 }
 
+.works-main {
+    border: 1px solid rgb(236, 236, 236);
+    margin-top: 25px;
+    width: 660px;
+    font-size: 16px;
+    &>.top-works-main {
+        margin: 0 20px;
+        padding: 14px 0;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        &>.top-works-main-left {
+            width: 540px;
+            &>.works-items:hover {
+                color: white;
+                background-color: #dd3915;
+            }
+            &>span {
+                font-weight: bold;
+            }
+            &>a {
+                color: #dd3915;
+                text-decoration: none;
+                &>img {
+                    width: 48px;
+                    height: 48px;
+                    border-radius: 50%;
+                    margin-right: 10px;
+                }
+            }
+        }
+        &>.top-works-main-right {
+            line-height: 48px;
+            font-size: 12px;
+            color: rgb(129, 129, 129);
+        }
+    }
+    &>.mid-works-main {
+        width: 660px;
+        height: 280px;
+        &>.mid-works-main-image {
+            float: left;
+            width: 280px;
+            height: 280px; // border: 1px solid red;
+            margin-left: 20px;
+            margin-bottom: 20px;
+            &>.works-image {
+                width: 280px;
+                height: 280px;
+                position: absolute;
+                cursor: pointer;
+            }
+            &>.on-works-image {
+                float: left;
+                position: relative;
+                left: 95px;
+                top: 120px;
+                background-color: #cc2e0a;
+                width: 100px;
+                height: 45px;
+                border: 3px solid rgba(255, 255, 255, 0.4);
+                border-radius: 2px;
+                text-align: center;
+                line-height: 40px;
+                color: #ffffff;
+                background-clip: padding-box;
+                display: none;
+                cursor: pointer;
+                &:hover {
+                    filter: brightness(108%);
+                }
+                &>.icon-taoxin {
+                    font-size: 15px;
+                }
+            }
+        }
+        &>.works-intro {
+            float: right;
+            margin: 0 20px;
+            width: 318px;
+            &>span {
+                color: #dd3915;
+                font-weight: bold;
+                cursor: pointer;
+                &:hover {
+                    background-color: #dd3915;
+                    color: white;
+                }
+            }
+            &>.works-like {
+                float: right;
+                margin-top: 190px;
+                &>i {
+                    font-size: 20px;
+                    color: #8d8986;
+                    cursor: pointer;
+                }
+                &>.works-like-number {
+                    color: #8d8986;
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}
+
+.works-like-button-new {
+    color: #e8afa6;
+}
+
+.bottom-works-main {
+    background-color: #f5f6f5;
+    height: 62px;
+    width: 100%;
+    padding: 18px 20px;
+    display: flex;
+    &>input:nth-child(1) {
+        width: 100%;
+        font-size: 12px;
+        border: none;
+        outline: none;
+        padding-left: 6px;
+    }
+    &>input:nth-child(2) {
+        width: 70px;
+        font-size: 14px;
+        border: none;
+        outline: none;
+        margin-left: 15px;
+        background-color: #dd3915;
+        color: white;
+        display: none;
+    }
+}
+
+//评论区域
+.comment-allin {
+    & {
+        margin-top: 18px;
+    }
+    & .mytextarea {
+        margin-left: 20px;
+    }
+    &>.comment-list {
+        // &>*{
+        //     border: 1px red solid;
+        // }
+        background-color: #f5f6f5;
+        font-size: 12px;
+        padding: 0 20px;
+        padding-top: 20px;
+        & img {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            margin-right: 5px;
+        }
+    }
+}
+
+//评论新增区域
+.comment-info {
+    &>.comment-info-row {
+        width: 620px;
+        display: flex;
+        align-items: center;
+        margin-top: 8px;
+        &>.comment-info-left {
+            cursor: pointer;
+        }
+        &>.comment-info-right {
+            width: 580px;
+            display: flex;
+            justify-content: space-between;
+            &>.comment-info-right-left {
+                width: 540px;
+                &>.username-content {
+                    color: #dd3915;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #dd3915;
+                        color: #ffffff;
+                    }
+                }
+            } // border: 1px solid red;
+            &>.comment-info-right-right {
+                width: 26px;
+                margin-left: 10px;
+                &>.reply-btn {
+                    color: #8d8986;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #8d8986;
+                        color: #ffffff;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//header
+.navbar-default {
+    width: 100%;
+    &>.nav-header {
+        width: 1050px;
+        height: 70px;
+        &>.navbar-left {
+            margin: 18px 10px;
+        }
+        &>.navbar-header {
+            height: 70px;
+            &>a>img {
+                height: 40px;
+            }
+        }
+        &>.libiaoqian {
+            &>ul {
+                &>li {
+                    &>a {
+                        height: 70px;
+                        line-height: 40px;
+                        color: #dd3915;
+                        font-size: 16px;
+                    }
+                }
+            }
+            &>.navbar-nav-right {
+                float: right;
+                margin-right: 10px;
+            }
+        }
+    }
+}
