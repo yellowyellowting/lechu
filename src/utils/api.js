@@ -35,6 +35,16 @@ export const sendSMSOfRegister = (mobile) => request('/user/sendSMS', { mobile }
 export const getPopRecipes = () => request('/recipe/pop');
 
 /**
+ * 创建评论
+ */
+export const createReview = (obj) => request('/comment/create', obj , 'POST')
+
+/**
+ * 读取评论,
+ */
+export const getReview = () => request('/comment/list')
+
+/**
  * 创建菜谱
  */
 export const createRecipe = (recipeInfo) => request('/recipe/create', recipeInfo, 'POST');
