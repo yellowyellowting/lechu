@@ -207,6 +207,11 @@ body {
   height: 13px;
   overflow: hidden;
 }
+.content .time .time_list img {
+  display: inline-block;
+  width: 90px;
+  height: 50px;
+}
 .content .zp {
   margin-top: 960px;
   width: 666px;
