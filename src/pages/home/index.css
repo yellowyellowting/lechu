@@ -38,6 +38,11 @@ body {
   display: inline-block;
   margin-top: 15px;
 }
+.head .userinfo li .exit {
+  z-index: 10;
+  text-align: center;
+  padding-left: 15px;
+}
 .container nav {
   background-color: #f8f8f8;
   min-width: 1020px;
