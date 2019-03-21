@@ -13,18 +13,32 @@
         border: 1px sol #cccccc;
         margin-top: 3*@size;
         .avatar-box{
+            width: 16*@size;
+            height: 16*@size;
+            border-radius: 10*@size;
+            position: relative;
             &{
             width: 16*@size;
             height: 16*@size;
             background: #cccccc;
             border-radius: 10*@size;
             float: left;
-
             } 
-            img{
+            .fileupload {
                 width: 16*@size;
                 height: 16*@size;
                 border-radius: 10*@size;
+                opacity: 0;
+            }
+            .main-title {
+                opacity: 0;
+            }
+            .preview-image {
+                width: 16*@size;
+                height: 16*@size;
+                border-radius: 10*@size;
+                position: absolute;
+                top: 0;
             }
         }
         .title{
@@ -116,7 +130,6 @@
                 }
                 
                 .tab-content{
-                    
                         .content-box{
                             margin-bottom: 50px;
                     }
@@ -154,15 +167,26 @@
                             height:  20*@size;
                         }
                     }
+                        .collection_cover {
+                            width: 23.5*@size;
+                            height: 16*@size;
+                        }
+                        .collection-username {
+                            width: 23.5*@size;
+                            height: 5*@size;
+                            overflow: hidden;
+                        }
                 }
             }
         }
         .btn-box{
             margin-top: 10*@size;
         }
-
-       
-
     }
-
+}
+.all-box {
+    .cover {
+        width: 27*@size;
+        height: 15*@size;
+    }
 }

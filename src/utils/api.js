@@ -50,6 +50,11 @@ export const getReview = (comments) => request('/comment/list' ,comments)
 export const createRecipe = (recipeInfo) => request('/recipe/create', recipeInfo, 'POST');
 
 /**
+ * 创建收藏
+ */
+export const createCollection = (collection) => request('/recipe/collection', collection);
+export const getCollection = () => request('/recipe/getcollection');
+/**
  * 创建菜谱,跳转详情
  */
 export const getRecipeDetail = (id) => request('/recipe/detail', { id }, 'GET');

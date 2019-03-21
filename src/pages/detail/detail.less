@@ -76,6 +76,7 @@
                 color: #ffffff;
                 float: right;
                 border-radius : 0;
+                outline: none;
             }  
             .relase:hover {
                 background: @primary-color;
@@ -677,5 +678,55 @@
                 margin-right: 10px;
             }
         }
+    }
+}
+
+#myModal {
+    position: relative;
+    .col-md-4 {
+        margin-left: 4*@size;
+        margin-top: @size;
+        img {
+            width: 15*@size;
+            height: 15*@size;
+        }
+    }
+    .row {
+        width: 100%;
+        margin: 0;
+    }
+    .column {
+        padding: 0;
+    }
+    .module_tips {
+        width: 90%;
+        height: 23*@size;
+
+        textarea {
+            position: absolute;
+            right: 0;
+            margin: auto;
+            width: 32*@size;
+            height: 20*@size;
+            outline: none;
+        }
+    }
+    .modal-body {
+        .form-control {
+            margin-left: 1.8*@size;
+            outline: none;
+        }
+    }
+    .modal-footer {
+        .btn-primary {
+            background: @primary-color;
+            border:  @primary-color;
+            width: 10*@size;
+        }
+    }
+    .iconfonts {
+        float: right;
+        margin-right: @size;
+        color: @primary-color;
     }
 }

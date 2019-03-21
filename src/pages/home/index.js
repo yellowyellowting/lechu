@@ -11,6 +11,12 @@ import { friendsList } from '../../utils/module/friendsList';
 import {chart} from '../../utils/module/chart';
 import {getUserInfo} from '../../utils/module/getUserInfo';
 
+
+// 头像
+var src = localStorage.getItem('src');
+console.log(src);
+$('.headimg .img-circle').attr('src', src);
+
 $(function () {
     //内容盒子左边的菜单列表
     creatMenuList();

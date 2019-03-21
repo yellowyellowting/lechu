@@ -9,6 +9,7 @@
 	<link rel="stylesheet" href="./css/detail.css">
 	<link rel="stylesheet" href="https://at.alicdn.com/t/font_1085898_7nheoljy3bj.css">
 	<link rel="shortcuticon" href="/favicon.ico" />
+	<link href="https://s.chuimg.com/favicon.ico" rel="shortcut icon">
 	<!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@3.3.7/dist/css/bootstrap.min.css" rel="stylesheet"> -->
 	<!-- HTML5 shim 和 Respond.js 是为了让 IE8 支持 HTML5 元素和媒体查询（media queries）功能 -->
 	<!-- 警告：通过 file:// 协议（就是直接将 html 页面拖拽到浏览器中）访问页面时 Respond.js 不起作用 -->
@@ -37,10 +38,10 @@
 						</form>
 					</div>
 					<div class="nav-menu">
-						<a href="#">首页</a>
-						<a href="#">菜谱分类</a>
+						<a href="./index.html">首页</a>
+						<a href="./class.html">菜谱分类</a>
 						<a href="#">菜单</a>
-						<a href="#">作品动态</a>
+						<a href="./works.html">作品动态</a>
 					</div>
 					<div class="navbar-right">
 						<a href="#" class="login"><span> 登录 </span></a>
@@ -65,13 +66,13 @@
 						<div class="jumbotron cover_box">
 							<div class="cover">
 								<div class="upload-preview">
-									<img class="preview-image" src='http://i2.chuimg.com/20d731bbe1b54d22829a7faa707cf54d_1920w_2560h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90' />
+									<img class="preview-image" src='' />
 								</div>
 							</div>
 						</div>
 						<div class="btn_box">
 							<div class="seats"><span>10 </span>人做过</div>
-							<button type="button" class="btn btn-default addline collection">立即收藏</button>
+							<button class="btn btn-primary btn-lg collection" data-toggle="modal" data-target="#myModal">立即收藏</button>
 						</div>
 					</div>
 					<div class="col-md-4 column">
@@ -220,23 +221,22 @@
 														<ol>
 															<li>
 																<i class="iconfont icon-meishi14"></i>
-																流行搜索
+																可乐鸡翅
 															</li>
 															<li>
 																<i class="iconfont icon-meishi13"></i>
-																流行搜索
+																早餐
 															</li>
 															<li>
 																<i class="iconfont icon-meishi12"></i>
-																流行搜索
-															</li>
+																鱼香茄子 </li>
 															<li>
 																<i class="iconfont icon-meishi11"></i>
-																流行搜索
+																青团
 															</li>
 															<li>
 																<i class="iconfont icon-meishi10"></i>
-																流行搜索
+																汤
 															</li>
 														</ol>
 													</div>
@@ -244,23 +244,23 @@
 														<ol>
 															<li>
 																<i class="iconfont icon-meishi9"></i>
-																流行搜索
+																红烧肉
 															</li>
 															<li>
 																<i class="iconfont icon-meishi8"></i>
-																流行搜索
+																凉拌黄瓜
 															</li>
 															<li>
 																<i class="iconfont icon-meishi7"></i>
-																流行搜索
+																牛肉
 															</li>
 															<li>
 																<i class="iconfont icon-meishi6"></i>
-																流行搜索
+																蛋糕
 															</li>
 															<li>
 																<i class="iconfont icon-meishi5"></i>
-																流行搜索
+																排骨
 															</li>
 														</ol>
 													</div>
@@ -302,7 +302,7 @@
 							<div class=" row clearfix poprecipe">
 								<div class="col-md-12 column">
 									<p>
-										该菜谱创建于<span></span>
+										该菜谱创建于<span class="creat_time"></span>
 									</p>
 									<p>
 										2019人收藏
@@ -321,54 +321,6 @@
 	</main>
 	<div class="clear"></div>
 	<footer id="footer">
-		<!-- <div class="container">
-			<div class="row row-no1">
-				<div class="col-sm-8 col-no1">
-					<div class="row attention">
-						<div class="nav-attention left-nav-attention">
-							参与讨论
-						</div>
-						<div class="row works-main">
-							<div class="top-works-main">
-								<div class="top-works-main-left">
-									<a href="javascript:void(0);">
-										<img src="./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg" alt="">
-										<span>悦己2016</span>
-									</a>
-									<span>做过</span>
-									<a class="works-items" href="javascript:void(0);">双菇菠菜粉丝汤</a>
-								</div>
-								<div class="top-works-main-right">
-									刚刚
-								</div>
-							</div>
-							<div class="mid-works-main">
-								<div class="mid-works-main-image">
-									<img class="works-image" src="./img/07ba7240d0af421897a074a01334f6e6_1280w_922h.jpg" alt="">
-									<div class="on-works-image"><i class="iconfont icon-taoxin"> 赞</i></div>
-								</div>
-								<div class="works-intro">
-									<p>#午餐 • 2019年3月14日# 满满的一锅 吃得干干净净😋duaiduai表示很好吃</p>
-									<span>双菇菠菜粉丝汤的做法</span>
-									<div class="works-like">
-										<i class="iconfont icon-weibiaoti1-copy works-like-button"></i>
-										<span class="works-like-number works-like-number-num">0</span><span class="works-like-number">赞</span>
-									</div>
-								</div>
-							</div>
-							<div class="comment-allin">
-								<div class="comment-list">
-								</div>
-								<div class="bottom-works-main">
-									<input class="works-comment" id="content" type="text" placeholder="评论">
-									<input class="works-comment-button comment" id="comment" type="button" value="评论">
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</div> -->
 		<div class="container">
 			<div class="row clearfix">
 				<div class="col-md-12 column">
@@ -404,6 +356,43 @@
 			<img class='top' src="https://s.chuimg.com/pic/2013/scroll_top.png">
 		</a>
 	</footer>
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+					<h4 class="modal-title" id="myModalLabel"></h4>
+				</div>
+				<div class="container-fuiled">
+					<div class="row clearfix">
+						<div class="col-md-4 column">
+							<div>
+								<img class='collection_img' sec="http://i2.chuimg.com/88a6100271da4c31983d561a7c9492e0_1920w_1080h.jpg?imageView2/1/w/235/h/138/interlace/1/q/90" />
+							</div>
+						</div>
+						<div class="col-md-7 column">
+							<div class="modal-body">
+								<input type="text" class="form-control collection_menu" placeholder="新建菜单">
+							</div>
+							<div class="module_tips">
+								<textarea class="collection_derection"></textarea>
+							</div>
+							<div class="iconfonts">
+								<i class="iconfont icon-weibo"></i>
+								<i class="iconfont icon-qq"></i>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+					<button type="button" class="btn btn-primary">确定</button>
+				</div>
+			</div><!-- /.modal-content -->
+		</div><!-- /.modal -->
+	</div>
+
 	<script src="https://cdn.jsdelivr.net/npm/jquery@1.12.4/dist/jquery.min.js"></script>
 	<script src="http://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script src="./js/detail.js"></script>

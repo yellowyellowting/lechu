@@ -10,6 +10,7 @@ class ImageUpload {
             uploadUrl: '',
             mainTitle: '上传图片',
             subTitle: '',
+            adjustHeight: true,
             pregressTip: '上传中•••'
         }, option);
     }
@@ -44,16 +45,18 @@ class ImageUpload {
         this.previewWrap.on('click', '.preview-close-btn', () => this.hidePreviewImage());
         this.uploadBox.append(this.previewWrap);
         
-        // 异步获取网络图片的真实宽高
-        getImageDimen(imageUrl)
-        .then(({ width, height }) => {
-            // 根据图片真实宽高，调整上传容器的高度，宽度保持不变
-            let adjustHeight = this.uploadBox.width() / width * height;
-            if (adjustHeight > this.uploadBox.height()) {
-                this.uploadBox.attr('original-height', this.uploadBox.height());
-                this.uploadBox.height(adjustHeight);
-            }
-        });
+        if (this.option.adjustHeight) {
+            // 异步获取网络图片的真实宽高
+            getImageDimen(imageUrl)
+            .then(({ width, height }) => {
+                // 根据图片真实宽高，调整上传容器的高度，宽度保持不变
+                let adjustHeight = this.uploadBox.width() / width * height;
+                if (adjustHeight > this.uploadBox.height()) {
+                    this.uploadBox.attr('original-height', this.uploadBox.height());
+                    this.uploadBox.height(adjustHeight);
+                }
+            });
+        }
     }
 
     /**
@@ -102,7 +105,7 @@ class ImageUpload {
         // 显示上传中
         this.showUploadProgress();
         
-        upload('/upload/recipe', file)//后端接口，图片传至后端，后端把图片处理，生成url后再返给前端
+        upload(this.option.uploadUrl, file)
         .then(({ files }) => {
             // 隐藏上传中
             this.hideUploadProgress();
@@ -111,6 +114,8 @@ class ImageUpload {
             const fileInfo = fileList[0] || {};
             if (fileInfo) {
                 this.showPreviewImage(fileInfo.url);
+                // 回调上传完成
+                this.option.onFinish && this.option.onFinish(fileInfo.url)
             }
         })
         .catch(() => {
