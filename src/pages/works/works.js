@@ -109,7 +109,7 @@ $(function () {
                 
               </div>
               <div class="works-intro">
-                <p>#午餐 • 2019年3月14日# 满满的一锅 吃得干干净净😋duaiduai表示很好吃</p>
+                <p>#午餐 • 2019年3月14日# 满满的一锅 吃得干干净净duaiduai表示很好吃</p>
                 <span>${this.name}的做法</span>
                 
               </div>
@@ -131,7 +131,6 @@ $(function () {
             $(this).parent().find(".works-comment-button").animate({
                 width: 'toggle'
             }, "fast");
-
         })
 
         $(".works-comment-button").on("click", function () {
@@ -150,7 +149,7 @@ $(function () {
                 });
                 $(this).parents(".comment-allin").find(".works-comment").val("")
             }
-            
+
             //评论传给后端
             // console.log(obj)
             createReview(obj).then(result => {
@@ -159,7 +158,8 @@ $(function () {
         });
 
         //渲染评论相关代码
-        let s1 = { recipeId: 103708641 }
+        var xxx1 = $(".works-main").eq(0).attr("id")
+        let s1 = { recipeId: xxx1 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s1, function (result) {
             // console.log(result)
             var datav = result.data
@@ -167,7 +167,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708641").find(".comment-list").append(
+                $('#' + xxx1).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
@@ -189,7 +189,8 @@ $(function () {
             });
 
         })
-        let s2 = { recipeId: 103708642 }
+        var xxx2 = $(".works-main").eq(1).attr("id")
+        let s2 = { recipeId: xxx2 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s2, function (result) {
             // console.log(result)
             var datav = result.data
@@ -197,7 +198,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708642").find(".comment-list").append(
+                $('#' + xxx2).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
@@ -219,7 +220,8 @@ $(function () {
             });
 
         })
-        let s3 = { recipeId: 103708643 }
+        var xxx3 = $(".works-main").eq(2).attr("id")
+        let s3 = { recipeId: xxx3 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s3, function (result) {
             // console.log(result)
             var datav = result.data
@@ -227,7 +229,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708643").find(".comment-list").append(
+                $('#' + xxx3).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
@@ -248,7 +250,8 @@ $(function () {
                 );
             });
         })
-        let s4 = { recipeId: 103708644 }
+        var xxx4 = $(".works-main").eq(3).attr("id")
+        let s4 = { recipeId: xxx4 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s4, function (result) {
             // console.log(result)
             var datav = result.data
@@ -256,7 +259,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708644").find(".comment-list").append(
+                $('#' + xxx4).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
@@ -277,7 +280,8 @@ $(function () {
                 );
             });
         })
-        let s5 = { recipeId: 103708645 }
+        var xxx5 = $(".works-main").eq(4).attr("id")
+        let s5 = { recipeId: xxx5 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s5, function (result) {
             // console.log(result)
             var datav = result.data
@@ -285,7 +289,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708645").find(".comment-list").append(
+                $('#' + xxx5).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
@@ -306,7 +310,8 @@ $(function () {
                 );
             });
         })
-        let s6 = { recipeId: 103708646 }
+        var xxx6 = $(".works-main").eq(5).attr("id")
+        let s6 = { recipeId: xxx6 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s6, function (result) {
             // console.log(result)
             var datav = result.data
@@ -314,7 +319,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708646").find(".comment-list").append(
+                $('#' + xxx6).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
@@ -335,7 +340,8 @@ $(function () {
                 );
             });
         })
-        let s7 = { recipeId: 103708647 }
+        var xxx7 = $(".works-main").eq(6).attr("id")
+        let s7 = { recipeId: xxx7 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s7, function (result) {
             // console.log(result)
             var datav = result.data
@@ -343,7 +349,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708647").find(".comment-list").append(
+                $('#' + xxx7).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
@@ -364,7 +370,8 @@ $(function () {
                 );
             });
         })
-        let s8 = { recipeId: 103708648 }
+        var xxx8 = $(".works-main").eq(7).attr("id")
+        let s8 = { recipeId: xxx8 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s8, function (result) {
             // console.log(result)
             var datav = result.data
@@ -372,7 +379,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708648").find(".comment-list").append(
+                $('#' + xxx8).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
@@ -393,7 +400,8 @@ $(function () {
                 );
             });
         })
-        let s9 = { recipeId: 103708649 }
+        var xxx9 = $(".works-main").eq(8).attr("id")
+        let s9 = { recipeId: xxx9 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s9, function (result) {
             // console.log(result)
             var datav = result.data
@@ -401,7 +409,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708649").find(".comment-list").append(
+                $('#' + xxx9).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
@@ -422,7 +430,8 @@ $(function () {
                 );
             });
         })
-        let s10 = { recipeId: 103708650 }
+        var xxx10 = $(".works-main").eq(9).attr("id")
+        let s10 = { recipeId: xxx10 }
         $.getJSON("http://127.0.0.1:3000/comment/list", s10, function (result) {
             // console.log(result)
             var datav = result.data
@@ -430,7 +439,7 @@ $(function () {
             datav.forEach(element => {
                 // console.log(element.content)
                 // console.log(element.user_id)
-                $("#103708650").find(".comment-list").append(
+                $('#' + xxx10).find(".comment-list").append(
                     `<div class='comment-info'>
                             <div class='comment-info-row'>
                                     <div class="comment-info-left">
