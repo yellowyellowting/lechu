@@ -1,6 +1,7 @@
 //用户信息显示
 function getUserInfo() {
     let userStr = localStorage.user;
+    let headPhoto=localStorage.src;
     console.log(userStr)
     var userinfo = {
         headimg: './img/1.jpg',
@@ -13,11 +14,11 @@ function getUserInfo() {
         console.log(user)
         let username = user.username;
         userinfo.username=username;
+        userinfo.headPhoto=headPhoto;
     }else{
         userinfo.username = null;
     }
 
-    // userinfo = null;
     if (userinfo.username == null) {
         //用户未登陆
         //1.内容部分更换用户信息
@@ -51,7 +52,7 @@ function getUserInfo() {
         $('.info').append(`
         <div class="show haslogin">
             <div class="headimg">
-                <img src=${userinfo.headimg} alt="" class="img-circle">
+                <img src=${userinfo.headPhoto} alt="" class="img-circle">
             </div>
             <h4><span>${userinfo.username}&nbsp</span>的厨房</h4>
             <h6>
@@ -68,10 +69,22 @@ function getUserInfo() {
         `)
         //2.nav部分更换用户信息
         $('.userinfo').append(`
-        <li><a href="#"><img src="./img/1.jpg" alt="" class="img-circle"></a></li>
-        <li><i class="iconfont icon-vertical_line"></i></li>
-        <li><a href="./homepage.html" class="homepage" title="个人主页"><i class="iconfont icon-favorite"></i></a></li>
+        <li class="headPhoto">
+        <a href="#"><img src=${userinfo.headPhoto} alt="" class="img-circle" title="退出登陆" id="exitbtn">
+        </a>
+      </li>
+      <li><i class="iconfont icon-vertical_line"></i></li>
+      <li><a href="./homepage.html" class="homepage" title="个人主页"><i class="iconfont icon-favorite"></i></a></li>
         `)
+        exit();
     }
+}
+
+//增加退出按钮
+function exit(){
+    $('#exitbtn').on('click',function(){
+        localStorage.removeItem('user');
+        location.href='./login.html';
+    })
 }
 export { getUserInfo };
