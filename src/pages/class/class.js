@@ -178,6 +178,11 @@ $(function () {
     //     })
     //     $(".classmid-content").append(str)
     // })
+    function loadRecipe(){
+        localStorage.getItem("resArr")
+        console.log(resArr)
+    }
+    loadRecipe()
     getPopRecipes().then(poprecipe => {
         // console.log(poprecipe);
         datav = poprecipe
