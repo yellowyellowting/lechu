@@ -189,6 +189,10 @@ body {
 .content .time {
   background-color: #F5F6F5;
 }
+.content .time .time_list img {
+  width: 90px;
+  height: 60px;
+}
 .content .time h3 {
   color: #fad800;
   padding-left: 15px;
@@ -333,6 +337,7 @@ body {
 }
 .content .menu .item img {
   width: 435px;
+  height: 250px;
 }
 .content .friends h3 {
   color: #fad800;
