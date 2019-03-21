@@ -178,47 +178,86 @@ $(function () {
     //     })
     //     $(".classmid-content").append(str)
     // })
-    function loadRecipe(){
-        localStorage.getItem("resArr")
-        console.log(resArr)
+    function loadRecipe() {
+        var sss = localStorage.getItem("resArr")
+        // console.log(sss)
+        if (!sss) {
+            getPopRecipes().then(poprecipe => {
+                // console.log(poprecipe);
+                datav = poprecipe
+                console.log(datav)
+                var str = ""
+                $(datav).each(function (i, ele) {
+                    if (i > 9) return
+                    // console.log(ele)
+                    str += `
+                        <div class="col-sm-6">
+                            <img src=${this.thumbnail} referrer="no-referrer|origin|unsafe-url" alt="">
+                        </div>
+                        <div class="col-sm-6 classmid-tit-right">
+                            <div class="row classmid-tit-small">
+                                <h4>${this.name}</h4>
+                            </div>
+                            <div class="row class-tips">
+                                <span>独家</span>
+                                <span>步骤图</span>
+                            </div>
+                            <div class="row classmid-material">
+                                <span>${this.dishStuff}</span>
+                            </div>
+                            <div class="row classmid-score">
+                                <span>综合评分</span>
+                                <span>${this.dishScore}</span>
+                                <span>${this.stats}</span>
+                            </div>
+                            <div class="row classmid-author">
+                                <span>${this.cookName} <i class="glyphicon glyphicon-fire"></i> </span>
+                            </div>
+                        </div>
+                        `
+                })
+                $(".classmid-content").append(str)
+            })
+        }
+        else {
+            datav = JSON.parse(sss)
+            console.log(sss)
+            var str = ""
+            $(datav).each(function (i, ele) {
+                if (i > 9) return
+                console.log(ele)
+                str += `
+                        <div class="col-sm-6">
+                            <img src=${this.thumbnail} referrer="no-referrer|origin|unsafe-url" alt="">
+                        </div>
+                        <div class="col-sm-6 classmid-tit-right">
+                            <div class="row classmid-tit-small">
+                                <h4>${this.name}</h4>
+                            </div>
+                            <div class="row class-tips">
+                                <span>独家</span>
+                                <span>步骤图</span>
+                            </div>
+                            <div class="row classmid-material">
+                                <span>${this.dishStuff}</span>
+                            </div>
+                            <div class="row classmid-score">
+                                <span>综合评分</span>
+                                <span>${this.dishScore}</span>
+                                <span>${this.stats}</span>
+                            </div>
+                            <div class="row classmid-author">
+                                <span>${this.cookName} <i class="glyphicon glyphicon-fire"></i> </span>
+                            </div>
+                        </div>
+                        `
+            })
+            // console.log(str)
+            $(".classmid-content").append(str)
+        }
     }
     loadRecipe()
-    getPopRecipes().then(poprecipe => {
-        // console.log(poprecipe);
-        datav = poprecipe
-        console.log(datav)
-        var str = ""
-        $(datav).each(function (i, ele) {
-            if (i > 9) return
-            // console.log(ele)
-            str += `
-                <div class="col-sm-6">
-                    <img src=${this.thumbnail} referrer="no-referrer|origin|unsafe-url" alt="">
-                </div>
-                <div class="col-sm-6 classmid-tit-right">
-                    <div class="row classmid-tit-small">
-                        <h4>${this.name}</h4>
-                    </div>
-                    <div class="row class-tips">
-                        <span>独家</span>
-                        <span>步骤图</span>
-                    </div>
-                    <div class="row classmid-material">
-                        <span>${this.dishStuff}</span>
-                    </div>
-                    <div class="row classmid-score">
-                        <span>综合评分</span>
-                        <span>${this.dishScore}</span>
-                        <span>${this.stats}</span>
-                    </div>
-                    <div class="row classmid-author">
-                        <span>${this.cookName} <i class="glyphicon glyphicon-fire"></i> </span>
-                    </div>
-                </div>
-                `
-        })
-        $(".classmid-content").append(str)
-    })
+
     //下一页
     var currentP = 1, pageNum = 10; //默认的当前页，每页的数据条数
     $("#nextPage").on("click", function () {
