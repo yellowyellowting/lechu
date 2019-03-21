@@ -68,6 +68,11 @@ $(function () {
     //     $(".works-image").css("filter", "brightness(100%)")
     //     $(".on-works-image").hide()
     // })
+    //点击回复添加用户名到input
+    $(document).on("click", ".reply-btn", function () {
+        var replayuser = $(this).parent().parent().find(".username-content").text()
+        $(this).parents(".comment-allin").find(".works-comment").val("@" + replayuser + " ")
+    });
 
 
     //渲染菜谱列表
@@ -78,6 +83,7 @@ $(function () {
         datav = data.data; //存储数据
         // console.log(datav)
         var str = "";
+
 
         $(datav).each(function (i, ele) {
             if (i > 9) return
@@ -118,17 +124,16 @@ $(function () {
             </div>
           </div>
                 `
-
         })
-
-
         $(".attention").after(str)
         //点击评论input弹出按钮
         $(".works-comment").one("click", function () {
             $(this).parent().find(".works-comment-button").animate({
                 width: 'toggle'
             }, "fast");
+
         })
+
         $(".works-comment-button").on("click", function () {
             // console.log(666)
             if ($(this).siblings(".works-comment").val() == "") {
@@ -136,7 +141,7 @@ $(function () {
             } else {
                 var obj = new Object();
                 obj.img = "./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg";
-                obj.userId = "懒人";
+                obj.username = "懒人";
                 obj.recipeId = $(this).parents(".works-main").attr("id");
                 obj.content = $(this).siblings(".works-comment").val();
                 $(this).parents(".comment-allin").find(".comment-list").addCommentList({
@@ -145,49 +150,307 @@ $(function () {
                 });
                 $(this).parents(".comment-allin").find(".works-comment").val("")
             }
-            //返回每个回复体内容
-            $(".reply-btn").on("click", function () {
-                var replayuser = $(this).parent().parent().find(".username-content").text()
-                $(this).parents(".comment-allin").find(".works-comment").val("@" + replayuser + " ")
-            })
+            
             //评论传给后端
-            console.log(obj)
+            // console.log(obj)
             createReview(obj).then(result => {
-                // console.log(result)
+                console.log(result)
             })
         });
-        $(".works-main").each(function () {
-            // console.log($(this).attr("id"))
-            var comments = new Object()
-            comments.recipeId = $(this).attr("id")
-            // console.log(comments)
-            $.getJSON("http://127.0.0.1:3000/comment/list", comments, function (data) {
-                // console.log(data)
-                var clist = data.data
-                // console.log(clist)
-                if (clist.length > 0) {
-                    // console.log(clist)
-                    // console.log(this)
-                    for (var key in clist) {
-                        // console.log(clist[key].recipe_id)
-                        // console.log(this)
-                        if ($(".works-main").attr("id")==clist[key].recipe_id) {
-                            console.log($(".works-main").attr("id"))
-                            $(".").find(".comment-list").addCommentList({
-                                data: [],
-                                add: clist
-                            });
-                        }
 
-                    }
+        //渲染评论相关代码
+        let s1 = { recipeId: 103708641 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s1, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708641").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
 
-
-
-                }
-
-            })
         })
+        let s2 = { recipeId: 103708642 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s2, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708642").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
 
+        })
+        let s3 = { recipeId: 103708643 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s3, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708643").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
+        })
+        let s4 = { recipeId: 103708644 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s4, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708644").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
+        })
+        let s5 = { recipeId: 103708645 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s5, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708645").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
+        })
+        let s6 = { recipeId: 103708646 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s6, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708646").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
+        })
+        let s7 = { recipeId: 103708647 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s7, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708647").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
+        })
+        let s8 = { recipeId: 103708648 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s8, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708648").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
+        })
+        let s9 = { recipeId: 103708649 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s9, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708649").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
+        })
+        let s10 = { recipeId: 103708650 }
+        $.getJSON("http://127.0.0.1:3000/comment/list", s10, function (result) {
+            // console.log(result)
+            var datav = result.data
+            // console.log(datav)
+            datav.forEach(element => {
+                // console.log(element.content)
+                // console.log(element.user_id)
+                $("#103708650").find(".comment-list").append(
+                    `<div class='comment-info'>
+                            <div class='comment-info-row'>
+                                    <div class="comment-info-left">
+                                        <img src='./img/b503afedea09449da16a4e15fcc71ecc_1280w_1280h.jpg'>
+                                    </div>
+                                    <div class="comment-info-right">
+                                        <div class="comment-info-right-left">
+                                            <span class="username-content">${element.user_name}</span>
+                                            <span class='content'>${element.content}</span>
+                                        </div>
+                                        <div class="comment-info-right-right">
+                                            <span class='reply-btn'>回复</span>
+                                        </div>
+                                    </div>
+                            </div>
+                        </div>         
+                    `
+                );
+            });
+        })
 
     })
 
@@ -200,7 +463,7 @@ $(function () {
                                 </div>
                                 <div class="comment-info-right">
                                     <div class="comment-info-right-left">
-                                        <span class="username-content">${obj.userId}</span>
+                                        <span class="username-content">${obj.username}</span>
                                         <span class='content'>${obj.content}</span>
                                     </div>
                                     <div class="comment-info-right-right">
@@ -237,6 +500,8 @@ $(function () {
             $(this).append(str)
         }
     }
+
+
     //初始化数据
     // var arr = [
     //     {

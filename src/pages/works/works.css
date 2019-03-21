@@ -366,3 +366,18 @@ a {
   float: right;
   margin-right: 10px;
 }
+.foot .btn a {
+  display: inline-block;
+  background-color: #87ce73;
+  padding: 15px;
+  color: white;
+  margin-right: 15px;
+  text-decoration: none;
+}
+.foot .des p {
+  font-size: 14px;
+}
+.foot .des p a {
+  color: black;
+  text-decoration: none;
+}

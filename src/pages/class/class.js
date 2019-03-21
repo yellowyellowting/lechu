@@ -181,14 +181,14 @@ $(function () {
     getPopRecipes().then(poprecipe => {
         // console.log(poprecipe);
         datav = poprecipe
-        // console.log(datav)
+        console.log(datav)
         var str = ""
         $(datav).each(function (i, ele) {
             if (i > 9) return
             // console.log(ele)
             str += `
                 <div class="col-sm-6">
-                    <img src=${this.thumbnail} alt="">
+                    <img src=${this.thumbnail} referrer="no-referrer|origin|unsafe-url" alt="">
                 </div>
                 <div class="col-sm-6 classmid-tit-right">
                     <div class="row classmid-tit-small">
