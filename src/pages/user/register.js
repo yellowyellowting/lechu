@@ -1,6 +1,7 @@
 import $ from 'jquery';
 import { sendSMSOfRegister, register } from '../../utils/api';
 
+// 表单验证规则
 const formRules = {
     mobile: [
         {
@@ -79,7 +80,7 @@ const clearInputTip = (target) => {
  * 检查目标的有效性
  */
 const validationInput = (target) => {
-    const value = target.val();
+    const value = target.val(); 
     const name = target.attr('name');
     const rules = formRules[name];
     if (!rules) {

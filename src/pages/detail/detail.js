@@ -78,6 +78,7 @@ $('.btn-primary').on('click', function() {
     console.log(collection);
     createCollection(collection).then(collection => {
         console.log(collection);
+        if(collection)alert('收藏成功');
     })
 
     $('#myModal').hide();
